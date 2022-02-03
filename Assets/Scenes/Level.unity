@@ -133,8 +133,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 227181163}
     m_Modifications:
     - target: {fileID: 1163444060, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
+      propertyPath: m_Intensity
+      value: 6366.1978
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163444060, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623467294, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
+      propertyPath: m_Intensity
+      value: 1209.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641750636, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
+      propertyPath: m_Intensity
+      value: 1209.421
       objectReference: {fileID: 0}
     - target: {fileID: 1641750636, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
       propertyPath: m_Lightmapping
