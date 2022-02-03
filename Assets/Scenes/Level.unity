@@ -133,8 +133,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 227181163}
     m_Modifications:
     - target: {fileID: 1163444060, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
+      propertyPath: m_Intensity
+      value: 6366.1978
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163444060, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
       propertyPath: m_Lightmapping
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623467294, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
+      propertyPath: m_Intensity
+      value: 1209.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641750636, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
+      propertyPath: m_Intensity
+      value: 1209.421
       objectReference: {fileID: 0}
     - target: {fileID: 1641750636, guid: 930df45c605841f4884bd309fa0f8876, type: 3}
       propertyPath: m_Lightmapping
@@ -347,7 +359,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250636689}
-  - component: {fileID: 250636688}
   m_Layer: 0
   m_Name: SceneIDMap
   m_TagString: Untagged
@@ -355,18 +366,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &250636688
-MonoBehaviour:
-  m_ObjectHideFlags: 19
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 250636687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1790155302}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &250636689
 Transform:
   m_ObjectHideFlags: 19
@@ -2680,20 +2679,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cec9cb2cbf9515241b228c536c58758e, type: 3}
---- !u!115 &1790155302
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: SceneObjectIDMapSceneAsset
-  m_Namespace: UnityEngine.Rendering.HighDefinition
 --- !u!1001 &1827080334
 PrefabInstance:
   m_ObjectHideFlags: 0
