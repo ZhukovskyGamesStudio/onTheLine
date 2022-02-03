@@ -1,0 +1,143 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DialogsQueue : MonoBehaviour
+{
+    public static DialogsQueue instance;
+    public Clock Clock;
+    public Room[] allRooms;
+    public CallsTimeTable CallsTimeTable;
+
+    List<QueuePos> timedCallsList;
+    List<Dialog> randomCallsList;
+
+    void Awake()
+    {
+        instance = this;
+        if(CallsTimeTable)
+        {
+            timedCallsList = new List<QueuePos>(CallsTimeTable.callsTimeTable);
+            randomCallsList = new List<Dialog>(CallsTimeTable.randomDialogs);
+        }         
+    }
+
+    public int GetCallsAmount()
+    {
+        return CallsTimeTable.additionalCallsAmount + CallsTimeTable.callsTimeTable.Length;
+    }
+
+    public Call GetCall()
+    {
+        Dialog dialog = GetNextDialog();
+        if (dialog == null)
+            return null;
+        Call call = new Call();
+        call.from = dialog.requirementFrom.roomNumber;
+        call.to = dialog.requirementTo.roomNumber;
+        call.dialog = dialog;
+        return call;
+    }
+
+    Dialog GetNextDialog()
+    {
+        float time = Clock.GetTime();
+        Dialog dialog = GetTimedDialog(time);
+
+        if (dialog == null)
+            dialog = GetRandomDialog();
+        if (dialog == null)
+            Debug.Log("Нет диалога! Время: " + time);
+
+        return dialog;
+    }
+
+    Dialog GetRandomDialog()
+    {
+
+        List<Dialog> available = new List<Dialog>();
+        int topPriority = 0;
+        for (int i = 0; i < randomCallsList.Count; i++)
+        {
+            if (CheckRequirements(randomCallsList[i]))
+            {
+                if (randomCallsList[i].priority < topPriority)
+                    continue;
+                if (randomCallsList[i].priority > topPriority)
+                {
+                    topPriority = randomCallsList[i].priority;
+                    available = new List<Dialog>();
+                }
+                available.Add(randomCallsList[i]);
+            }
+        }
+        if (available.Count > 0)
+        {
+
+            Dialog dialog = available[Random.Range(0, available.Count)];
+            randomCallsList.Remove(dialog);
+            return dialog;
+        }
+        return null;
+
+    }
+
+    Dialog GetTimedDialog(float curTime)
+    {
+        List<QueuePos> available = new List<QueuePos>();
+        for (int i = 0; i < timedCallsList.Count; i++)
+        {
+            if (timedCallsList[i].IsTimeWithinRange(curTime))
+            {
+                available.Add(timedCallsList[i]);
+            }
+        }
+        if (available.Count > 0)
+        {
+
+            QueuePos rnd = available[Random.Range(0, available.Count)];
+            timedCallsList.Remove(rnd);
+            return rnd.dialog;
+        }
+        return null;
+    }
+
+    bool CheckRequirements(Dialog toCheck)
+    {
+        if (toCheck.requireTags != null)
+            for (int i = 0; i < toCheck.requireTags.Count; i++)
+            {
+                if (!TagManager.CheckTag(toCheck.requireTags[i]))
+                {
+                    return false;
+                }
+
+            }
+        if (toCheck.forbiddenTags != null)
+            for (int i = 0; i < toCheck.forbiddenTags.Count; i++)
+            {
+                if (TagManager.CheckTag(toCheck.forbiddenTags[i]))
+                {
+                    return false;
+                }
+
+            }
+        return true;
+    }
+
+}
+
+[System.Serializable]
+public class QueuePos
+{
+    public string name;
+    public Dialog dialog;
+    public float fromTime, toTime;
+    public int priority = 0;
+
+    public bool IsTimeWithinRange(float time)
+    {
+
+        return fromTime <= time && time <= toTime;
+    }
+}

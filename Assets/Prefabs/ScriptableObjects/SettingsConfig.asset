@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689becb70641db64d8f919a29bd6f9d4, type: 3}
+  m_Name: SettingsConfig
+  m_EditorClassIdentifier: 
+  SecondsInOneMinute: 2
+  arriveHour: 7.75
+  leaveHour: 18.15
+  startDayHour: 8
+  endDayHour: 18
+  minTimeBetweenCalls: 30
+  randomTimeBetweenCalls: 10
+  isInstaExitOnEndOfDay: 1
+  isAlphaNumericTumblers: 1
+  isSpaceAlphaButtons: 1
+  payForDay: 10
+  payForCall: 5
+  penaltyIncrease: 5
+  freePenalties: 2
+  foodPrice: 25
+  isWaitingForOperatorHello: 1
+  ringingTimeUntilMistake: 2
+  timeBetweenLetters: 0.05
+  timePauseDoubleDash: 1
+  timeBetweenTwoPeople: 0.35
+  timeBeforeBubbleDissappears: 5
+  timeRingingBeforePick: 2
+  timeRingingBeforePickDelta: 1
+  waitForOperatorAnswer: 60
+  waitForOperatorRing: 60
+  waitForAbonentPick: 30
+  dragDistance: 1
+  ImportantTextColor: {r: 0.9150943, g: 0.5947502, b: 0.082013145, a: 1}
