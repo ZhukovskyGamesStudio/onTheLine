@@ -16396,11 +16396,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tumbler 7
       objectReference: {fileID: 0}
-    - target: {fileID: 3985509127557230821, guid: 7908923d2ac39e54284a309d7eaad0d3,
-        type: 3}
-      propertyPath: TakenPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
       propertyPath: alphaNumber
