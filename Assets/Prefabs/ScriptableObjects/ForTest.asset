@@ -19,7 +19,7 @@ MonoBehaviour:
   endDayHour: 18
   minTimeBetweenCalls: 30
   randomTimeBetweenCalls: 10
-  isInstaExitOnEndOfDay: 1
+  isInstaExitOnEndOfDay: 0
   isAlphaNumericTumblers: 1
   isSpaceAlphaButtons: 1
   payForDay: 10

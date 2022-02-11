@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableItemBehaviour : MonoBehaviour
+public class TableItemBehaviour : InteractableObject
 {
     public float moveSpeed = 10;
     public Transform ItemTakenPos;
@@ -20,8 +20,9 @@ public class TableItemBehaviour : MonoBehaviour
         targetPos = startPos;
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
             transform.position = Vector3.Slerp(transform.position, targetPos, 0.01f * moveSpeed);
@@ -29,8 +30,8 @@ public class TableItemBehaviour : MonoBehaviour
         }
     }
 
-
-    protected virtual void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         TakeDrop();
     }

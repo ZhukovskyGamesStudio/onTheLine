@@ -11,8 +11,8 @@ public class Commutator : MonoBehaviour
     public Bulb[] bulbs;
     public Hole[] holes;
     public Shteker[] Shtekers1, Shtekers2;
-    public Lever[] Tumblers;
-    public Tumbler[] LevelArms;
+    public Lever[] Levers;
+    public Tumbler[] Tumblers;
     public DoorNumber[] DoorNumbers;
     public Facs Facs;
     public Transform DragWall;
@@ -39,12 +39,12 @@ public class Commutator : MonoBehaviour
         }
 
 
-        for (int i = 0; i < Tumblers.Length; i++)
+        for (int i = 0; i < Levers.Length; i++)
         {
+            Levers[i].Shteker1 = Shtekers1[i];
+            Levers[i].Shteker2 = Shtekers2[i];
             Tumblers[i].Shteker1 = Shtekers1[i];
             Tumblers[i].Shteker2 = Shtekers2[i];
-            LevelArms[i].Shteker1 = Shtekers1[i];
-            LevelArms[i].Shteker2 = Shtekers2[i];
         }
     }
 

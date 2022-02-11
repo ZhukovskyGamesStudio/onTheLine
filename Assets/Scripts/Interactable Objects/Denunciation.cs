@@ -6,15 +6,16 @@ public class Denunciation : TableItemBehaviour
 {
     public GameObject DenunciationPanel;
 
-
-    protected override void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         ShowClose();
     }
 
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.End) && DenunciationPanel.activeSelf)
             DenunciationPanel.SetActive(false);
 

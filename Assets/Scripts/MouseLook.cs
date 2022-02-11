@@ -46,6 +46,16 @@ public class MouseLook : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
         }
+
+        if( Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+        {
+            if (hit.transform.gameObject.GetComponent<InteractableObject>())
+            {
+                if (Input.GetMouseButtonDown(0))
+                    hit.transform.gameObject.GetComponent<InteractableObject>().OnmouseDown();
+                //Debug.Log("Hitted Interactable");
+            }
+        }    
     }
 
     void Start()

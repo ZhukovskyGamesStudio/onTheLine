@@ -56,9 +56,9 @@ public class Headphones : MonoBehaviour
 
     protected virtual bool CheckBellsRinging()
     {
-        for (int i = 0; i < Commutator.Tumblers.Length; i++)
+        for (int i = 0; i < Commutator.Levers.Length; i++)
         {
-            if (Commutator.Tumblers[i].isRinging)
+            if (Commutator.Levers[i].isRinging)
                 return true;
         }
         return false;

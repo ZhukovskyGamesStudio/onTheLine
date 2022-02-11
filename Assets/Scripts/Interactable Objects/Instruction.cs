@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Instruction : MonoBehaviour
+public class Instruction : InteractableObject
 {
     bool isTaken;
     MovingBetweenTwoPointObject mbtp;
@@ -11,8 +11,8 @@ public class Instruction : MonoBehaviour
     {
         mbtp = GetComponent<MovingBetweenTwoPointObject>();
     }
-
-    private void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         isTaken = !isTaken;
         if (isTaken) 

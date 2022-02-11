@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Lamp : MonoBehaviour
+public class Lamp : InteractableObject
 {
     public string SceneToLoad = "Level";
     public float BlackingTime = 3f;
     public Image BlackingImage;
     Coroutine coroutine;
 
-    private void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         coroutine = StartCoroutine(BlackingCoroutine());
     }

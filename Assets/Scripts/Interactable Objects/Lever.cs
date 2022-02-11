@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever : MonoBehaviour
+public class Lever : InteractableObject
 {
     public int alphaNumber = 0;
     public MovingBetweenTwoPointObject mbp;
@@ -19,15 +19,22 @@ public class Lever : MonoBehaviour
         settings = Settings.config;
     }
 
-    private void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
+        base.OnmouseDown();
         ChangeState(true);
     }
 
-    private void OnMouseUp()
+    protected override void OnmouseDrag()
     {
-        if (isRinging)
-            ChangeState(false);
+        base.OnmouseDrag();
+    }
+
+    protected override void OnmouseUp()
+    {
+        base.OnmouseUp();
+        ChangeState(false);
     }
 
 
@@ -53,8 +60,9 @@ public class Lever : MonoBehaviour
     }
 
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (settings.isAlphaNumericTumblers)
         {
             if (!(settings.isSpaceAlphaButtons && Input.GetKey(KeyCode.Space)))

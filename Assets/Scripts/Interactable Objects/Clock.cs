@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
-public class Clock : MonoBehaviour
+public class Clock : InteractableObject
 {
     public float SecondsInOneMinute = 1;
     public Transform HoursTransform, MinutesTransform;
@@ -13,7 +13,7 @@ public class Clock : MonoBehaviour
     public UnityEvent OnClockClicked;
     AudioSource audioSource;
     public AudioClip click1, click2, ring;
-
+    bool isDayEnded;
     bool firstRingRang;
     float curTime;
     int curTick;
@@ -52,7 +52,8 @@ public class Clock : MonoBehaviour
         return time;
     }
 
-    void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         OnClockClicked.Invoke();
     }
@@ -78,6 +79,7 @@ public class Clock : MonoBehaviour
     }
     void StartDay()
     {
+        isDayEnded = false;
         onStartDay.Invoke();
         audioSource.PlayOneShot(ring);
     }
@@ -88,20 +90,21 @@ public class Clock : MonoBehaviour
 
     public void EndDay()
     {
-        if(onEndDay != null)
-            onEndDay.Invoke();
+        isDayEnded = true;
+        onEndDay?.Invoke();
         SaveManager.sv.dayResult.isWorkedAllDay = true;
         RingBell();
         Debug.Log("Рабочий день закончен. Обслужите последние звонки");
     }
 
     public void Leave()
-    {        
-        SceneManager.LoadScene("Menu");             
+    {
+        SceneManager.LoadScene("Menu");
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         if (!isGoing)
         {
             curTime = 0;
@@ -125,10 +128,12 @@ public class Clock : MonoBehaviour
             StartDay();
             firstRingRang = true;
         }
-           
-        if (hours + minutes / 60f > Settings.config.leaveHour)
+
+        if (hours + minutes / 60f > Settings.config.leaveHour && !isDayEnded)
+        {
             EndDay();
-        if (hours + minutes / 60f > Settings.config.leaveHour && Settings.config.isInstaExitOnEndOfDay)
-            Leave();
+            if (Settings.config.isInstaExitOnEndOfDay)
+                Leave();
+        }
     }
 }

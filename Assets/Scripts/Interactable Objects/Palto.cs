@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Palto : MonoBehaviour
+public class Palto : InteractableObject
 {
     public string sceneName = "Menu";
 
-    public void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         SceneManager.LoadScene(sceneName);
     }

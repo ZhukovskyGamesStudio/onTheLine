@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4.412525, g: 4.349621, b: 4.9660416, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -322,17 +322,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4216299503158725247, guid: 8f9fe9542c5f87945b8df76d192ea382,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 24033a7acb2a6e1439166086ac2b6965, type: 2}
-    - target: {fileID: 4297687259517717983, guid: 8f9fe9542c5f87945b8df76d192ea382,
-        type: 3}
-      propertyPath: meshForGizmos
-      value: 
-      objectReference: {fileID: -3263092123479240254, guid: ff894e2216e10c8439f7941723fb377f,
-        type: 3}
     - target: {fileID: 5316457745372316856, guid: 8f9fe9542c5f87945b8df76d192ea382,
         type: 3}
       propertyPath: m_RootOrder
@@ -392,11 +381,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PhonesBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 6531552455862658042, guid: 8f9fe9542c5f87945b8df76d192ea382,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f9fe9542c5f87945b8df76d192ea382, type: 3}
@@ -985,6 +969,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 665599126673413928, guid: 4452722bd53aa694dabfa4b5ccbcc4af,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1622279167380303743, guid: 4452722bd53aa694dabfa4b5ccbcc4af,
         type: 3}
       propertyPath: Nothing
@@ -1074,6 +1063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2919829151655676893, guid: 4452722bd53aa694dabfa4b5ccbcc4af,
+        type: 3}
+      propertyPath: field of view
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2919829151655676895, guid: 4452722bd53aa694dabfa4b5ccbcc4af,
         type: 3}

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tumbler : MonoBehaviour
+public class Tumbler : InteractableObject
 {
-    public int alphaNumber;       
+    public int alphaNumber;
     public MovingBetweenTwoPointObject mbp;
 
     [HideInInspector] public Shteker Shteker1, Shteker2;
@@ -19,20 +19,22 @@ public class Tumbler : MonoBehaviour
         settings = Settings.config;
     }
 
-    void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
+        base.OnmouseDown();
         isPressed = !isPressed;
         MoveButtonHead();
     }
 
 
-    void MoveButtonHead( bool isSilent = false) //  0 - right, 1 - left
+    void MoveButtonHead(bool isSilent = false) //  0 - right, 1 - left
     {
-        if(!isSilent)
+        if (!isSilent)
             audioSource.Play();
-        if (isPressed)         
-            mbp.Take();         
-        else                
+        if (isPressed)
+            mbp.Take();
+        else
             mbp.Put();
     }
 
@@ -43,8 +45,9 @@ public class Tumbler : MonoBehaviour
     }
 
 
-    void Update()
+    protected override void  Update()
     {
+        base.Update();
         if (settings.isSpaceAlphaButtons)
         {
             if (Input.GetKey(KeyCode.Space))

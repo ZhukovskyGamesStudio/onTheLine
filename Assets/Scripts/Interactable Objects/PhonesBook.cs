@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PhonesBook : MonoBehaviour
+public class PhonesBook : InteractableObject
 {
     public GameObject PhonesBookPanel;
     DialogsQueue DialogsQueue;
@@ -13,7 +13,7 @@ public class PhonesBook : MonoBehaviour
     MovingBetweenTwoPointObject mbp;
     public MovingBetweenTwoPointObject bookTopMbp;
 
-    Vector3 startPos;
+
     bool isTaken;
 
     public float MoveSpeed;
@@ -26,21 +26,20 @@ public class PhonesBook : MonoBehaviour
     private void Start()
     {
 
-        startPos = transform.position;
-
         DialogsQueue = DialogsQueue.instance;
         FillPeopleList();
     }
 
-
-    private void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         ShowClose();
     }
 
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetKeyDown(KeyCode.Tab))
             ShowClose();
     }

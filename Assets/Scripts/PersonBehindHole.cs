@@ -23,10 +23,11 @@ public class PersonBehindHole : MonoBehaviour
     public void StartNewCall(Call call)
     {
         Call = call;
-        if (call != null)
-            dialog = call.dialog;
+        dialog = call.dialog;
         Pick();
     }
+
+    //Поднимает телефонную трубку. 
     public void Pick()
     {
         if (curState != PersonState.Out)
@@ -43,15 +44,19 @@ public class PersonBehindHole : MonoBehaviour
 
         StartStopWaiting(true);
     }
+
+    //Слышит фразу не из диалога
     public void Hear(string line)
     {
-     //   Debug.Log("Hear " + line);
+     
         if (curState == PersonState.Out)
             return;
         StartStopWaiting(false);
 
         ChooseAnswer(line);
     }
+
+    //Слышит фразу из диалога
     public void Hear(Dialog _dialog, int lineIndex)
     {
         if (curState == PersonState.Out)
@@ -62,10 +67,10 @@ public class PersonBehindHole : MonoBehaviour
         StartStopWaiting(false);
         TalkingBubble.StopSaying();
 
-        if (_dialog.requirementFrom.roomNumber != curHole.number && _dialog.requirementTo.roomNumber != curHole.number)
+        if (!dialog.IsCorrectNumber(curHole.number))
             TalkingBubble.Say("Вы не туда попали", delegate { curHole.PassSound("/dialogEnd/"); Drop(); });
 
-        if (_dialog.lines.Count == lineIndex)
+        if (dialog.lines.Count == lineIndex)
             TalkingBubble.Say(". . .", delegate { curHole.PassSound("/dialogEnd/"); Drop(true); });
         else
         {
@@ -76,7 +81,6 @@ public class PersonBehindHole : MonoBehaviour
                 {
                     if (dialog.bubbleLines[i].lineIndex == lineIndex)
                     {
-                        //Debug.Log(dialog.bubbleLines[i].bubble);
                         string line = dialog.bubbleLines[i].bubble;
                         TalkingBubble.AddListenedCallback(delegate { CharacterTalking.instance.AddBubble(line); });
                     }                         
@@ -84,11 +88,13 @@ public class PersonBehindHole : MonoBehaviour
                 }
             }
 
-            TalkingBubble.Say(_dialog.lines[lineIndex], delegate { curHole.PassSound(_dialog, lineIndex);  });               
+            TalkingBubble.Say(dialog.lines[lineIndex], delegate { curHole.PassSound(dialog, lineIndex);  });               
         }
 
        
     }
+
+    //Выбирает ответ на услышанную фразу
     void ChooseAnswer(string line)
     {
         if(person != null)
@@ -168,6 +174,8 @@ public class PersonBehindHole : MonoBehaviour
                 break;
         }
     }
+
+    //Запускает или останавливает корутин ожидания
     void StartStopWaiting(bool isOn)
     {
         if (coroutine != null)
@@ -177,6 +185,8 @@ public class PersonBehindHole : MonoBehaviour
             coroutine = StartCoroutine(Waiting());
     }
 
+
+    //Ожидает столько времени, сколько указано в настройках. Если не дожидается - кладёт трубку и отправляется "ошибка оператора"
     IEnumerator Waiting()
     {
         float timePass = 0;
@@ -189,13 +199,15 @@ public class PersonBehindHole : MonoBehaviour
         Drop();
     }
 
+    //Кладёт трубку. Если разговор закончен корректно - сохраняет обслуженный звонок
+    //Обнуляет все значения
     void Drop(bool isEndenProperly = false)
     {
         if (isEndenProperly)
         {
             SaveManager.AddServedCall();
         }
-           
+        Call = null;   
         dialog = null;
         curState = PersonState.Out;
         TalkingBubble.StopSaying();

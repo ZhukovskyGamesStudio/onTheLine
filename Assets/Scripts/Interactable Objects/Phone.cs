@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Phone : MonoBehaviour
+public class Phone : InteractableObject
 {
     public float handleSpeed;
     public Transform Phonehandle;
@@ -24,15 +24,16 @@ public class Phone : MonoBehaviour
         isTaken = false;
     }
 
-    private void Update()
-    {            
+    protected override void Update()
+    {
+        base.Update();
 
         if (Vector3.Distance(Phonehandle.position, targetPos) > 0.05f)
         {
             Phonehandle.position = Vector3.Slerp(Phonehandle.position, targetPos, 0.01f * handleSpeed);
             Phonehandle.rotation = Quaternion.Slerp(Phonehandle.rotation, targetRot, 0.01f * handleSpeed);
         }
-           
+
     }
 
     public void TakeDrop()
@@ -42,8 +43,8 @@ public class Phone : MonoBehaviour
         targetRot = isTaken ? PhoneFinPos.rotation : startRot;
         Phonehandle.parent = isTaken ? Camera.main.transform : PhoneParent;
     }
-
-    private void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
         TakeDrop();
     }

@@ -43,6 +43,12 @@ public class Dialog : ScriptableObject
     {
         return from.CheckShablon(requirementFrom) && to.CheckShablon(requirementTo);
     }
+
+    public bool IsCorrectNumber(int number)
+    {
+        return requirementFrom.roomNumber == number || requirementTo.roomNumber == number;
+    }
+
 }
 [System.Serializable]
 public class BubbleLine

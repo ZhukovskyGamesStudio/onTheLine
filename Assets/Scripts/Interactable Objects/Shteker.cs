@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shteker : MonoBehaviour
+public class Shteker : InteractableObject
 {
     public float moveSpeed;
     public float rotateSpeed;
@@ -27,7 +27,7 @@ public class Shteker : MonoBehaviour
 
     private void Start()
     {
-        
+
         audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         bodyTransform = transform;
@@ -40,8 +40,9 @@ public class Shteker : MonoBehaviour
     }
 
 
-    public void OnMouseDrag()
+    protected override void OnmouseDrag()
     {
+        base.OnmouseDrag();
         Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit);
 
         if (hit.transform.CompareTag("ShtekerField"))
@@ -57,19 +58,22 @@ public class Shteker : MonoBehaviour
 
         if (!isInField)
             targetRot = Quaternion.Euler(-45, 0, -25);
-        
+
     }
 
-    private void OnMouseDown()
+    [HideInInspector]
+    public override void OnmouseDown()
     {
+        base.OnmouseDown();
         ShtekerBody.layer = LayerMask.NameToLayer("Ignore Raycast");
         Commutator.dragWallStatic.gameObject.SetActive(true);
         if (curHole)
             curHole.ShtekerOut(this);
     }
 
-    private void OnMouseUp()
+    protected override void OnmouseUp()
     {
+        base.OnmouseUp();
         if (isInField)
         {
             bodyTransform.position = finPos;
