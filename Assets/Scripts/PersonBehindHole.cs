@@ -100,14 +100,11 @@ public class PersonBehindHole : MonoBehaviour
         if(person != null)
         {
             if (person.HasAnswer(line))
-            {
-                Debug.Log("answer exists");
+            {                     
                 string answer = person.Hear(line);
                 TalkingBubble.Say(answer, delegate { StartStopWaiting(true); });
                 return;
             }
-            else
-                Debug.Log("answer not exist");
         }
        
 
@@ -144,13 +141,12 @@ public class PersonBehindHole : MonoBehaviour
                 }
                 return;
             case "/hello1/":
-                if (curState == PersonState.DialogStarted || curState == PersonState.WaitingForConnection)
+                if (curState == PersonState.DialogStarted || curState == PersonState.WaitingForConnection || Call == null)
                     return;
                 curState = PersonState.WaitingForConnection;
                 TalkingBubble.Say(Call.dialog.SayToOperator, delegate { StartStopWaiting(true); });
                 return;
             case "/disconnectSound/":
-                Debug.Log("curstate " + curState);
                 if (curState == PersonState.DialogStarted)
                 {
                     curHole.mistakeEvent.Invoke("Абонент отключён от звонка во время разговора!");

@@ -22,10 +22,8 @@ public class TagManager : MonoBehaviour
     }
     public static void AddTag(Tags newTag)
     {
-        instance.tags.Add(newTag);
-        CheckTag(newTag);
-
-
+        if (!CheckTag(newTag))
+            instance.tags.Add(newTag);
     }
 
     public static bool CheckTag(Tags toCheck)
@@ -36,5 +34,5 @@ public class TagManager : MonoBehaviour
    [System.Serializable]
 public enum Tags
 {
-    toysRobbery,toysSaved
+    none, toysRobbery, toysSaved, girlFound, girlFoundWrong
 }

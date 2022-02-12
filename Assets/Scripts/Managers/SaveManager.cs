@@ -42,7 +42,7 @@ public class SaveManager : MonoBehaviour
 
     public static void AddPenalty()
     {
-        Debug.Log("Вам начислен штраф.");
+        Debug.Log("Вам начислен денежный штраф.");
         sv.dayResult.penaltyAmount++;
     }
 

@@ -26,8 +26,9 @@ public class TalkingBubble : MonoBehaviour
         RightText.text = " . . . ";
         LeftText.text = " . . . ";
     }
+
     public void Say(string toSay, UnityAction callbackAction)
-    {             
+    {
         callback.RemoveAllListeners();
         callback.AddListener(callbackAction);
         if (printingCoroutine != null)
@@ -67,36 +68,40 @@ public class TalkingBubble : MonoBehaviour
 
     public void TurnOn(bool _isOn, bool isRight = false)
     {
-      
+
         isOn = _isOn;
         ChangeSide(isRight);
         if (_isOn && isTalkingNow)
             Headphones.PlayStopTalking(gameObject, true);
         else
             Headphones.PlayStopTalking(gameObject, false);
-        curText.text = " . . . ";
+
+        if (curText.text.Contains("<b><color=#") && !curText.text.Contains("></color></b>"))
+            curText.text = "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) + ">. . .</color></b>";
+        else
+            curText.text = " . . . ";
     }
 
 
     IEnumerator PrintNumerator(string toSay)
     {
-       
+
         curText.text = "";
         isTalkingNow = true;
         if (isOn)
             Headphones.PlayStopTalking(gameObject, true);
-
-        if (toSay[0] == '-')
-        {
-            toSay = toSay.Remove(0, 1);
-            yield return new WaitForSeconds(settings.timePauseDoubleDash);
-        }
 
         bool isImportant = false;
         bool isListeningImportant = false;
 
         for (int i = 0; i < toSay.Length; i++)
         {
+            if (toSay[i] == '~')
+            {
+                yield return new WaitForSeconds(settings.timePauseDoubleDash);
+                continue;
+            }
+
             if (toSay[i] == '$')
             {
                 isImportant = !isImportant;
@@ -108,8 +113,7 @@ public class TalkingBubble : MonoBehaviour
                 else
                 {
                     if (isListeningImportant)
-                        if(listenedImportantCallback != null)
-                            listenedImportantCallback.Invoke();
+                        listenedImportantCallback?.Invoke();
                     isListeningImportant = false;
                     listenedImportantCallback.RemoveAllListeners();
                 }
@@ -126,7 +130,7 @@ public class TalkingBubble : MonoBehaviour
         isTalkingNow = false;
         Headphones.PlayStopTalking(gameObject, false);
         yield return new WaitForSeconds(settings.timeBetweenTwoPeople);
-        callback.Invoke();
+        callback?.Invoke();
         yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);
         curText.text = " . . . ";
         yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);

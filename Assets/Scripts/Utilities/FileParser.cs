@@ -81,7 +81,6 @@ public class FileParser : MonoBehaviour
 
         bool inDialog = false;
         bool inOperator = false;
-        bool inBubbleLines = false;
         for (int j = 0; j < lines.Length; j++)
         {
             if (lines[j].IndexOf("//") == 0)
@@ -98,11 +97,11 @@ public class FileParser : MonoBehaviour
                 inDialog = false;
                 inOperator = false;
                 string line = lines[j].Remove(lines[j].IndexOf("UNLOCK:"), "UNLOCK:".Length);
-                
-                
+
+
                 line = line.Trim();
 
-                string[] unparsed = line.Split(" ",StringSplitOptions.RemoveEmptyEntries);
+                string[] unparsed = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
                 dialog.requireTags = new List<Tags>();
                 dialog.forbiddenTags = new List<Tags>();
                 for (int i = 0; i < unparsed.Length; i++)
@@ -110,8 +109,8 @@ public class FileParser : MonoBehaviour
                     if (unparsed[i] == "")
                         continue;
 
-                    
-                    if(unparsed[i][0] == '!')
+
+                    if (unparsed[i][0] == '!')
                     {
                         string inverted = unparsed[i].Substring(1);
                         dialog.forbiddenTags.Add((Tags)(Enum.Parse(typeof(Tags), inverted)));
@@ -120,7 +119,7 @@ public class FileParser : MonoBehaviour
                     {
                         dialog.requireTags.Add((Tags)(Enum.Parse(typeof(Tags), unparsed[i])));
                     }
-                       
+
 
                 }
             }
@@ -168,23 +167,19 @@ public class FileParser : MonoBehaviour
             {
                 inOperator = true;
                 inDialog = false;
-                inBubbleLines = false;
 
             }
             if (lines[j].Contains("DIALOG:"))
             {
                 inDialog = true;
                 inOperator = false;
-                inBubbleLines = false;
                 continue;
             }
-            if (lines[j].Contains("BUBBLES:"))
+            if (lines[j].Contains("$>")) //Символ, после которого надо написать бабл информацию
             {
-                inDialog = false;
-                inOperator = false;
-                inBubbleLines = true;
-                continue;
+                lines[j] = AddBublToDialog(dialog, lines[j], dialog.lines.Count-1);
             }
+
             if (inOperator)
             {
                 try
@@ -235,29 +230,23 @@ public class FileParser : MonoBehaviour
                 }
                 continue;
             }
-            if (inBubbleLines)
-            {
-                try
-                {
-                    if (lines[j].Length > 0)
-                    {
-                        string line = lines[j].Substring(2);
-                        BubbleLine bl = new BubbleLine();
-                        bl.lineIndex = int.Parse("" + lines[j][0]);
-                        bl.bubble = line;
-                        dialog.bubbleLines.Add(bl);
-
-                    }
-                }
-                catch
-                {
-                    Debug.Log("Crash at: dialog " + 3 + " line " + dialog.lines.Count);
-                }
-                continue;
-            }
 
         }
         return dialog;
+    }
+
+    //Добавляет к диалогу бабл, находящийся в этой строке.
+    //Возвращает строку без бабла и технических символов
+    private static string AddBublToDialog(Dialog dialog, string line, int lineIndex)
+    {
+        int pos = line.IndexOf("$>");
+        string bublLine = line.Substring(pos + 2).TrimEnd();
+        BubbleLine bl = new BubbleLine();
+        bl.lineIndex = lineIndex;
+        bl.bubble = bublLine;
+        dialog.bubbleLines.Add(bl);
+        string res = line.Substring(0, pos + 1);
+        return res;
     }
 }
 #endif

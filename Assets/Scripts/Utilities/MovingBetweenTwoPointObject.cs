@@ -61,9 +61,9 @@ public class MovingBetweenTwoPointObject : MonoBehaviour
         {
             isMoving = false;
             if (isTaken)
-                OnTaken.Invoke();
+                OnTaken?.Invoke();
             else
-                OnPut.Invoke();
+                OnPut?.Invoke();
         }
     }
 

@@ -18,12 +18,12 @@ public class Person : ScriptableObject
     readonly static string[] manNames = { "Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор" };
     readonly static string[] surnames = { "Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)" };
 
-    public List< LineAnswer> answers;
+    public List<LineAnswer> answers;
     public Person()
     {
 
     }
-    public Person(Work _work,Temperament _temperament, Age _age, Sex _sex, Criminal _criminal = Criminal.None)
+    public Person(Work _work, Temperament _temperament, Age _age, Sex _sex, Criminal _criminal = Criminal.None)
     {
         this.Work = _work;
         this.Temperament = _temperament;
@@ -36,9 +36,10 @@ public class Person : ScriptableObject
     {
         for (int i = 0; i < answers.Count; i++)
         {
-
             if (answers[i].line == line)
+            {
                 return true;
+            }
         }
         return false;
     }
@@ -47,14 +48,13 @@ public class Person : ScriptableObject
     {
         for (int i = 0; i < answers.Count; i++)
         {
-            if(answers[i].line == line)
+            if (answers[i].line == line)
             {
-                Debug.Log("Added tag " + answers[i].newTag);
-                TagManager.AddTag(answers[i].newTag);
+                if(answers[i].newTag != Tags.none)
+                    TagManager.AddTag(answers[i].newTag);
                 return answers[i].answer;
             }
         }
-        Debug.Log("No answer here");
         return null;
     }
 
@@ -67,27 +67,27 @@ public class Person : ScriptableObject
     {
         Person person = new Person();
         person.Sex = (Sex)Random.Range(0, 2);
-        person.Name = person.Sex == Sex.Woman ? womanNames[Random.Range(0,womanNames.Length)] : manNames[Random.Range(0, manNames.Length)];
+        person.Name = person.Sex == Sex.Woman ? womanNames[Random.Range(0, womanNames.Length)] : manNames[Random.Range(0, manNames.Length)];
         person.Surname = surnames[Random.Range(0, surnames.Length)];
         person.Work = (Work)Random.Range(0, 4);
         person.Temperament = (Temperament)Random.Range(0, 3);
         person.Age = (Age)Random.Range(0, 3);
         person.Criminal = Criminal.None;
-       
-       
+
+
         return person;
     }
     public static Person Generate(PersonShablon shablon)
     {
         Person person = new Person();
-       
+
         if (shablon.Work == Work.Any)
             person.Work = (Work)Random.Range(0, 4);
         else
             person.Work = shablon.Work;
 
         if (shablon.Temperament == Temperament.Any)
-            person.Temperament = (Temperament)Random.Range(0,3);
+            person.Temperament = (Temperament)Random.Range(0, 3);
         else
             person.Temperament = shablon.Temperament;
 
@@ -174,7 +174,7 @@ public enum Criminal
     Any = -1,
     None = 0,
     Criminal
-}    
+}
 
 [System.Serializable]
 public class PersonShablon
@@ -229,6 +229,7 @@ public class PersonShablon
 public class LineAnswer
 {
     public string line, answer;
-    public Tags newTag;
+    public Tags newTag = Tags.none;
+    public Tags requireTag = Tags.none;
 }
 //добавить известность - чем более известен персонаж, тем чаще о нём говорят другие в диалогах

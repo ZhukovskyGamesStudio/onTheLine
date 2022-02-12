@@ -33,8 +33,6 @@ MonoBehaviour:
     Criminal: -1
     isDead: 0
     roomNumber: 4
-  fromNumber: 0
-  toNumber: 0
   SayToOperator: " \u0421\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u0435 \u0441
     \u0422\u0438\u0442\u043E\u0432\u044B\u043C \u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\u043E\u043C
     \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430.\r"
@@ -73,6 +71,8 @@ MonoBehaviour:
     \u0443 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C.\r\n\u0414\u0430\u0432\u0430\u0439,
     \u0435\u0449\u0451 \u0443\u0432\u0438\u0434\u0438\u043C\u0441\u044F.\r"
   - "\u0423\u0433\u0443\r"
-  requireTags: []
+  bubbleLines: []
+  requireTags: 
+  forbiddenTags: 
   toUnlock: []
   priority: 0
