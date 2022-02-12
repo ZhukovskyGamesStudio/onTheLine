@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class Clock : InteractableObject
 {
+    public static Clock instance;
     public float SecondsInOneMinute = 1;
     public Transform HoursTransform, MinutesTransform;
     public int hours, minutes;
@@ -21,6 +22,7 @@ public class Clock : InteractableObject
     public UnityAction onStartDay, onEndDay;
     void Awake()
     {
+        instance = this;
         audioSource = GetComponent<AudioSource>();
     }
 

@@ -8,7 +8,6 @@ public class Commutator : MonoBehaviour
     [Min(0)] public int minHoleNumber = 0, maxHoleNumber;
 
     [Header("Interactive Parts")]
-    public Bulb[] bulbs;
     public Hole[] holes;
     public Shteker[] Shtekers1, Shtekers2;
     public Lever[] Levers;

@@ -18,10 +18,10 @@ MonoBehaviour:
     dialog: {fileID: 11400000, guid: 11ee46683bdd4114e8bbc8483643de40, type: 2}
     fromTime: 8.5
     toTime: 10
-    priority: 0
+    priority: 1
   - name: "\u0411\u0430\u043D\u0434\u0438\u0442\u044B \u0434\u043E\u0433\u043E\u0432\u0430\u0440\u0438\u0432\u0430\u044E\u0442\u0441\u044F"
     dialog: {fileID: 11400000, guid: 493feaa7d119f8647881525df264c24f, type: 2}
-    fromTime: 8.5
+    fromTime: 10
     toTime: 14
     priority: 0
   - name: "\u0421\u043E\u0444\u0430 \u0437\u0432\u043E\u043D\u0438\u0442 \u041C\u0430\u043A\u0430\u0440\u0443"
