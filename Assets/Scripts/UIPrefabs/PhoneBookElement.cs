@@ -19,7 +19,7 @@ public class PhoneBookElement : MonoBehaviour
             Text a = obj.GetComponent<Text>();
 
             a.text = string.Format("    {0} {1} ",
-               room.roomMembers[i].Name, room.roomMembers[i].Surname
+               room.roomMembers[i].Surname,  room.roomMembers[i].Name
               );
             if (room.roomMembers[i].isDead)
                 a.text = StrikeThrough(a.text);
