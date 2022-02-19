@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +15,7 @@ public class Dialog : ScriptableObject
 
     public string[] toUnlock;
 
-    public int priority;      //Сделать парсинг из текста
+    public int priority;      //РЎРґРµР»Р°С‚СЊ РїР°СЂСЃРёРЅРі РёР· С‚РµРєСЃС‚Р°
     
     public void Copy(Dialog dialog)
     {

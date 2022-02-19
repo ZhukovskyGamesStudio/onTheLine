@@ -44,8 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b2970ac95edf458bbcb57fad40d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenCalls: 30
-  randomTimeBetweenCalls: 10
-  callsAmount: 12
+  forceThisDay: {fileID: 0}
+  TrainingManager: {fileID: 2445688090291145912, guid: 843a47d146bfa7b4682a782c6fa4cc54,
+    type: 3}
   Commutator: {fileID: 0}
-  Clock: {fileID: 0}

@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class MovingBetweenTwoPointObject : MonoBehaviour
 {
     public float moveSpeed = 10;
+    private Vector3 _takenPosition, _takenRotation;
     public Vector3 TakenPosition, TakenRotation;
     public Mesh meshForGizmos;
     public UnityEvent OnTaken, OnPut;
@@ -15,8 +14,8 @@ public class MovingBetweenTwoPointObject : MonoBehaviour
     bool isTaken;
     bool isMoving;
 
-    private void Start()
-    {
+    private void Start() {
+        _takenPosition = TakenPosition;
         startPos = transform.localPosition;
         startRot = transform.localRotation;
         targetPos = startPos;
@@ -24,6 +23,12 @@ public class MovingBetweenTwoPointObject : MonoBehaviour
 
     private void Update()
     {
+        if (_takenPosition != TakenPosition || _takenRotation != TakenRotation) {
+            _takenPosition = TakenPosition;
+            _takenRotation = TakenRotation;
+            isMoving = true;
+        }
+        
         takenPos = startPos + TakenPosition;
         takenRot = startRot * Quaternion.Euler(TakenRotation);
     }

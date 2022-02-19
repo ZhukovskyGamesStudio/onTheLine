@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 2919829151544410642}
   - component: {fileID: 2919829151544410653}
   - component: {fileID: 2919829151544410652}
-  - component: {fileID: 2919829151544410655}
-  - component: {fileID: 2919829151544410640}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -103,40 +101,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2919829151544410655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2919829151544410654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629bd26842100c44e998b0ae6f9ec62c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 0
-  sensitivityX: 3
-  sensitivityY: 3
-  minimumX: -75
-  maximumX: 75
-  minimumY: -80
-  maximumY: 70
-  SensivityMultiplier: 1
---- !u!114 &2919829151544410640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2919829151544410654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d4489d3fb53be4db55f8d3f43f2530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CenterPoint: {fileID: 0}
-  MouseLook: {fileID: 2919829151544410655}
 --- !u!1 &2919829151578472945
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +749,8 @@ GameObject:
   - component: {fileID: 2919829151655676883}
   - component: {fileID: 2919829151655676895}
   - component: {fileID: 3353307372858182751}
+  - component: {fileID: 1854860844338408176}
+  - component: {fileID: 4188558506431526181}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1059,6 +1025,41 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &1854860844338408176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919829151655676894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d4489d3fb53be4db55f8d3f43f2530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CenterPoint: {fileID: 0}
+  MouseLook: {fileID: 0}
+--- !u!114 &4188558506431526181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919829151655676894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629bd26842100c44e998b0ae6f9ec62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headTransform: {fileID: 2919829151544410643}
+  axes: 0
+  sensitivityX: 3
+  sensitivityY: 3
+  minimumX: -75
+  maximumX: 75
+  minimumY: -80
+  maximumY: 70
+  SensivityMultiplier: 1
 --- !u!1 &9002320040227808410
 GameObject:
   m_ObjectHideFlags: 0

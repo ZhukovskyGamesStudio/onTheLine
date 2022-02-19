@@ -1,32 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PhonesBook : InteractableObject
 {
     public GameObject PhonesBookPanel;
-    DialogsQueue DialogsQueue;
     public GameObject PeopleListGrid1, PeopleListGrid2;
     public GameObject RoomWithPeoplePrefab;
     public GameObject bookTop;
-    MovingBetweenTwoPointObject mbp;
+    MovingBetweenTwoPointObject _mbp;
     public MovingBetweenTwoPointObject bookTopMbp;
 
-
-    bool isTaken;
+    private bool _isTaken;
 
     public float MoveSpeed;
 
     private void Awake()
     {
-        mbp = GetComponent<MovingBetweenTwoPointObject>();
+        _mbp = GetComponent<MovingBetweenTwoPointObject>();
     }
 
     private void Start()
     {
-
-        DialogsQueue = DialogsQueue.instance;
         FillPeopleList();
     }
 
@@ -46,15 +40,15 @@ public class PhonesBook : InteractableObject
 
     public void ShowClose()
     {
-        isTaken = !isTaken;
-        if (isTaken)
+        _isTaken = !_isTaken;
+        if (_isTaken)
         {
-            mbp.Take();
+            _mbp.Take();
             bookTopMbp.Take();
         }
         else
         {
-            mbp.Put();
+            _mbp.Put();
             bookTopMbp.Put();
         }
     }
@@ -70,10 +64,9 @@ public class PhonesBook : InteractableObject
     }
 
 
-    void FillPeopleList()
-    {
-        //Переписать под большое количество страниц
-        Room[] rooms = DialogsQueue.allRooms;
+    void FillPeopleList() {
+        Day curDay =  SaveManager.GetDay();
+        Room[] rooms = curDay.allRooms;
         for (int i = 0; i < rooms.Length; i++)
         {
             if (i < rooms.Length / 2)
@@ -92,15 +85,5 @@ public class PhonesBook : InteractableObject
         }
         LayoutRebuilder.ForceRebuildLayoutImmediate(PeopleListGrid1.GetComponent<RectTransform>());
         LayoutRebuilder.ForceRebuildLayoutImmediate(PeopleListGrid2.GetComponent<RectTransform>());
-
-        /*
-            SaveProfile saveProfile = Building.Load();
-            for (int i = 0; i < saveProfile.rooms.Length; i++)
-            {
-                GameObject obj = Instantiate(RoomWithPeoplePrefab, PeopleListGrid.transform);
-                obj.SetActive(true);
-                obj.GetComponent<PhoneBookElement>().SetUI(saveProfile.rooms[i]);
-            }  
-        */
     }
 }

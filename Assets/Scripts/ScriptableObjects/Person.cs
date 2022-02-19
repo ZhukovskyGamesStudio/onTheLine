@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,9 +13,9 @@ public class Person : ScriptableObject
     public Criminal Criminal;
     public bool isDead;
     public int roomNumber;
-    readonly static string[] womanNames = { "Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна" };
-    readonly static string[] manNames = { "Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор" };
-    readonly static string[] surnames = { "Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)" };
+    readonly static string[] womanNames = { "РќР°С‚Р°С€Р°", "Р”РёР°РЅР°", "РЎР°С€Р°", "Р›РёР·Р°", "РЎРѕС„РёСЏ", "РљСЃРµРЅРёСЏ", "Р—СѓС…СЂР°", "РђРЅРЅР°" };
+    readonly static string[] manNames = { "Р‘РѕСЂРёСЃ", "Р“РµРѕСЂРіРёР№", "РЇСЂРѕСЃР»Р°РІ", "РРѕСЃРёС„", "Р’Р»Р°РґРёРјРёСЂ", "Р¤С‘РґРѕСЂ", "РњР°РєСЃРёРј", "Р’РёРєС‚РѕСЂ" };
+    readonly static string[] surnames = { "Р“СЂРёРЅРµРІРёС‡", "РџРѕР»РёС‰СѓРє", "Р•СЃРёРЅ(Р°)", "РљРѕР»РµРіРѕРІ(Р°)", "РЎРµРјС‘РЅРѕРІ(Р°)", "РљР°СЂРїРѕРІ(Р°)", "Р›СѓС‡РёРЅРѕРІ(Р°)", "РЎРёРґРѕСЂРѕРІ(Р°)" };
 
     public List<LineAnswer> answers;
     public Person()
@@ -60,7 +59,7 @@ public class Person : ScriptableObject
 
 
     /// <summary>
-    /// Генерирует только не криминальных людей. Криинальность надо задать вручную.
+    /// Р“РµРЅРµСЂРёСЂСѓРµС‚ С‚РѕР»СЊРєРѕ РЅРµ РєСЂРёРјРёРЅР°Р»СЊРЅС‹С… Р»СЋРґРµР№. РљСЂРёРёРЅР°Р»СЊРЅРѕСЃС‚СЊ РЅР°РґРѕ Р·Р°РґР°С‚СЊ РІСЂСѓС‡РЅСѓСЋ.
     /// </summary>
     /// <returns></returns>
     public static Person Generate()
@@ -108,7 +107,7 @@ public class Person : ScriptableObject
 
 
         person.Name = person.Sex == Sex.Woman ? womanNames[Random.Range(0, womanNames.Length)] : manNames[Random.Range(0, manNames.Length)];
-        person.Surname = Random.Range(0, 2) == 1 ? "Гриневич" : "Полищук";
+        person.Surname = Random.Range(0, 2) == 1 ? "Р“СЂРёРЅРµРІРёС‡" : "РџРѕР»РёС‰СѓРє";
 
 
         return person;
@@ -187,9 +186,9 @@ public class PersonShablon
     public Criminal Criminal;
     public bool isDead;
     public int roomNumber;
-    readonly static string[] womanNames = { "Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна" };
-    readonly static string[] manNames = { "Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор" };
-    readonly static string[] surnames = { "Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)" };
+    readonly static string[] womanNames = { "РќР°С‚Р°С€Р°", "Р”РёР°РЅР°", "РЎР°С€Р°", "Р›РёР·Р°", "РЎРѕС„РёСЏ", "РљСЃРµРЅРёСЏ", "Р—СѓС…СЂР°", "РђРЅРЅР°" };
+    readonly static string[] manNames = { "Р‘РѕСЂРёСЃ", "Р“РµРѕСЂРіРёР№", "РЇСЂРѕСЃР»Р°РІ", "РРѕСЃРёС„", "Р’Р»Р°РґРёРјРёСЂ", "Р¤С‘РґРѕСЂ", "РњР°РєСЃРёРј", "Р’РёРєС‚РѕСЂ" };
+    readonly static string[] surnames = { "Р“СЂРёРЅРµРІРёС‡", "РџРѕР»РёС‰СѓРє", "Р•СЃРёРЅ(Р°)", "РљРѕР»РµРіРѕРІ(Р°)", "РЎРµРјС‘РЅРѕРІ(Р°)", "РљР°СЂРїРѕРІ(Р°)", "Р›СѓС‡РёРЅРѕРІ(Р°)", "РЎРёРґРѕСЂРѕРІ(Р°)" };
 
     public PersonShablon()
     {
@@ -232,4 +231,4 @@ public class LineAnswer
     public Tags newTag = Tags.none;
     public Tags requireTag = Tags.none;
 }
-//добавить известность - чем более известен персонаж, тем чаще о нём говорят другие в диалогах
+//РґРѕР±Р°РІРёС‚СЊ РёР·РІРµСЃС‚РЅРѕСЃС‚СЊ - С‡РµРј Р±РѕР»РµРµ РёР·РІРµСЃС‚РµРЅ РїРµСЂСЃРѕРЅР°Р¶, С‚РµРј С‡Р°С‰Рµ Рѕ РЅС‘Рј РіРѕРІРѕСЂСЏС‚ РґСЂСѓРіРёРµ РІ РґРёР°Р»РѕРіР°С…

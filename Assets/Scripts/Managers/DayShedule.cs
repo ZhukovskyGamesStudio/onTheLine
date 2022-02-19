@@ -1,38 +1,25 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
 
-public class DayShedule : MonoBehaviour
+public class DayShedule
 {
-    public Clock Clock;
-    public List<SheduledEvent> eventsList;
+    private Clock Clock;
+    private List<SheduledEvent> eventsList;
 
-    private void Update()
-    {
+    public DayShedule(List<SheduledEvent> eventsL, Clock clock){
+        eventsList = eventsL;
+        Clock = clock;
+    }
+
+    public void CheckEvent(){
         if (eventsList != null)
-            if (eventsList.Count > 0)
-            {
+            if (eventsList.Count > 0){
                 float time = Clock.GetTime();
-                if (time > eventsList[0].time)
-                {
-                    eventsList[0].eventInvokeMethod.Invoke();
+                if (time > eventsList[0].time){
+                    eventsList[0].eventInvokeMethod?.Invoke();
+                    if(eventsList[0].tagToAdd!=null)
+                        TagManager.AddTag(eventsList[0].tagToAdd);
                     eventsList.RemoveAt(0);
-                }                       
+                }
             }
     }
-    public void AddTag(Tags newTag)
-    {
-        Debug.Log("Added tag " + newTag);
-        TagManager.AddTag(newTag);
-    }
-
-}
-   [System.Serializable]
-public class SheduledEvent
-{
-    public float time;
-    public UnityEvent eventInvokeMethod;
-
-
 }

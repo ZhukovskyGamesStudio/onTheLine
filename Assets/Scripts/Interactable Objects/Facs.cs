@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,6 +18,7 @@ public class Facs : MonoBehaviour
 
     public void NewPenalty(string exp)
     {
+        Debug.Log("Вам начислен денежный штраф.");
         if (Coroutine != null)
             StopCoroutine(Coroutine);
         Coroutine = StartCoroutine(PenaltyCoroutine(exp));

@@ -1,30 +1,27 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class DialogsQueue : MonoBehaviour
+public class DialogsQueue 
 {
-    public static DialogsQueue instance;
-    public Clock Clock;
-    public Room[] allRooms;
-    public CallsTimeTable CallsTimeTable;
-
     List<QueuePos> timedCallsList;
     List<Dialog> randomCallsList;
+    private CallsTimeTable callsTimeTable;
 
-    void Awake()
-    {
-        instance = this;
-        if(CallsTimeTable)
-        {
-            timedCallsList = new List<QueuePos>(CallsTimeTable.callsTimeTable);
-            randomCallsList = new List<Dialog>(CallsTimeTable.randomDialogs);
-        }         
+    public DialogsQueue(CallsTimeTable timeTable){
+        callsTimeTable = timeTable;
+        if (callsTimeTable != null) {
+            timedCallsList = new List<QueuePos>(callsTimeTable.callsTimeTable);
+            randomCallsList = new List<Dialog>(callsTimeTable.randomDialogs);
+        } else {
+            timedCallsList = new List<QueuePos>();
+            randomCallsList = new List<Dialog>();
+        }
     }
 
     public int GetCallsAmount()
     {
-        return CallsTimeTable.additionalCallsAmount + CallsTimeTable.callsTimeTable.Length;
+        return DayManager.Day.CallsTimeTable.additionalCallsAmount + DayManager.Day.CallsTimeTable.callsTimeTable.Length;
     }
 
     public Call GetCall()
@@ -41,7 +38,7 @@ public class DialogsQueue : MonoBehaviour
 
     Dialog GetNextDialog()
     {
-        float time = Clock.GetTime();
+        float time = Clock.instance.GetTime();
         Dialog dialog = GetTimedDialog(time);
 
         if (dialog == null)

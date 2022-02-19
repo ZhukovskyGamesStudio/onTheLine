@@ -1,22 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 
 public class InteractableObject : MonoBehaviour
 {
-    bool isDragging;
+    bool _isDragging;
 
     [HideInInspector]
     public virtual void OnmouseDown()
     {
-        isDragging = true;
+        _isDragging = true;
     }
 
     protected virtual void Update()
     {
-        if (isDragging)
+        if (_isDragging)
         {
             OnmouseDrag();
 
@@ -27,7 +24,7 @@ public class InteractableObject : MonoBehaviour
 
     protected virtual void OnmouseUp()
     {
-        isDragging = false;
+        _isDragging = false;
     }
 
     protected virtual void OnmouseDrag()

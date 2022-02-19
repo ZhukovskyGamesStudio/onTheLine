@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PersonBehindHole : MonoBehaviour
@@ -27,7 +26,7 @@ public class PersonBehindHole : MonoBehaviour
         Pick();
     }
 
-    //Поднимает телефонную трубку. 
+    //РџРѕРґРЅРёРјР°РµС‚ С‚РµР»РµС„РѕРЅРЅСѓСЋ С‚СЂСѓР±РєСѓ. 
     public void Pick()
     {
         if (curState != PersonState.Out)
@@ -40,12 +39,12 @@ public class PersonBehindHole : MonoBehaviour
         if (!Settings.config.isWaitingForOperatorHello && curHole.isOpros && Call != null)
             Hear("/hello1/");
         else
-            TalkingBubble.Say("Ало", delegate { curHole.PassSound("/picked/"); });
+            TalkingBubble.Say("РђР»Рѕ", delegate { curHole.PassSound("/picked/"); });
 
         StartStopWaiting(true);
     }
 
-    //Слышит фразу не из диалога
+    //РЎР»С‹С€РёС‚ С„СЂР°Р·Сѓ РЅРµ РёР· РґРёР°Р»РѕРіР°
     public void Hear(string line)
     {
      
@@ -56,7 +55,7 @@ public class PersonBehindHole : MonoBehaviour
         ChooseAnswer(line);
     }
 
-    //Слышит фразу из диалога
+    //РЎР»С‹С€РёС‚ С„СЂР°Р·Сѓ РёР· РґРёР°Р»РѕРіР°
     public void Hear(Dialog _dialog, int lineIndex)
     {
         if (curState == PersonState.Out)
@@ -68,7 +67,7 @@ public class PersonBehindHole : MonoBehaviour
         TalkingBubble.StopSaying();
 
         if (!dialog.IsCorrectNumber(curHole.number))
-            TalkingBubble.Say("Вы не туда попали", delegate { curHole.PassSound("/dialogEnd/"); Drop(); });
+            TalkingBubble.Say("Р’С‹ РЅРµ С‚СѓРґР° РїРѕРїР°Р»Рё", delegate { curHole.PassSound("/dialogEnd/"); Drop(); });
 
         if (dialog.lines.Count == lineIndex)
             TalkingBubble.Say(". . .", delegate { curHole.PassSound("/dialogEnd/"); Drop(true); });
@@ -94,7 +93,7 @@ public class PersonBehindHole : MonoBehaviour
        
     }
 
-    //Выбирает ответ на услышанную фразу
+    //Р’С‹Р±РёСЂР°РµС‚ РѕС‚РІРµС‚ РЅР° СѓСЃР»С‹С€Р°РЅРЅСѓСЋ С„СЂР°Р·Сѓ
     void ChooseAnswer(string line)
     {
         if(person != null)
@@ -118,7 +117,7 @@ public class PersonBehindHole : MonoBehaviour
                     {
                         if (Call != null)
                         {
-                            curHole.mistakeEvent.Invoke("Абоненты доложили что разговор подслушан!");
+                            curHole.mistakeEvent.Invoke("РђР±РѕРЅРµРЅС‚С‹ РґРѕР»РѕР¶РёР»Рё С‡С‚Рѕ СЂР°Р·РіРѕРІРѕСЂ РїРѕРґСЃР»СѓС€Р°РЅ!");
                             Drop();
                             curHole.PassSound("/dialogEnd/");
                             return;
@@ -126,7 +125,7 @@ public class PersonBehindHole : MonoBehaviour
                     }
                     else if (curState == PersonState.WaitingForConnection)
                     {
-                        //добавить реплику повтора для оператора
+                        //РґРѕР±Р°РІРёС‚СЊ СЂРµРїР»РёРєСѓ РїРѕРІС‚РѕСЂР° РґР»СЏ РѕРїРµСЂР°С‚РѕСЂР°
                     }
                     else
                     {
@@ -136,8 +135,8 @@ public class PersonBehindHole : MonoBehaviour
                 }
                 else
                 {
-                    //Диалог со случайным номером
-                    TalkingBubble.Say("Я вас не вызывала.", delegate { Drop(); });
+                    //Р”РёР°Р»РѕРі СЃРѕ СЃР»СѓС‡Р°Р№РЅС‹Рј РЅРѕРјРµСЂРѕРј
+                    TalkingBubble.Say("РЇ РІР°СЃ РЅРµ РІС‹Р·С‹РІР°Р»Р°.", delegate { Drop(); });
                 }
                 return;
             case "/hello1/":
@@ -149,7 +148,7 @@ public class PersonBehindHole : MonoBehaviour
             case "/disconnectSound/":
                 if (curState == PersonState.DialogStarted)
                 {
-                    curHole.mistakeEvent.Invoke("Абонент отключён от звонка во время разговора!");
+                    curHole.mistakeEvent.Invoke("РђР±РѕРЅРµРЅС‚ РѕС‚РєР»СЋС‡С‘РЅ РѕС‚ Р·РІРѕРЅРєР° РІРѕ РІСЂРµРјСЏ СЂР°Р·РіРѕРІРѕСЂР°!");
                     Drop();
                 }
                   
@@ -162,16 +161,16 @@ public class PersonBehindHole : MonoBehaviour
                 if (Call != null)
                     TalkingBubble.Say(Call.dialog.lines[0], delegate { curHole.PassSound(Call.dialog, 0); });
                 else
-                    // Здесь должен подставляться диалог между незнакомцами
+                    // Р—РґРµСЃСЊ РґРѕР»Р¶РµРЅ РїРѕРґСЃС‚Р°РІР»СЏС‚СЊСЃСЏ РґРёР°Р»РѕРі РјРµР¶РґСѓ РЅРµР·РЅР°РєРѕРјС†Р°РјРё
                     TalkingBubble.Say(betweenRandomDialog.lines[0], delegate { curHole.PassSound(betweenRandomDialog, 0); });
                 break;
             default:
-                TalkingBubble.Say("Что? Ничего не понятно.", delegate { curHole.PassSound("Что? Ничего не понятно."); });
+                TalkingBubble.Say("Р§С‚Рѕ? РќРёС‡РµРіРѕ РЅРµ РїРѕРЅСЏС‚РЅРѕ.", delegate { curHole.PassSound("Р§С‚Рѕ? РќРёС‡РµРіРѕ РЅРµ РїРѕРЅСЏС‚РЅРѕ."); });
                 break;
         }
     }
 
-    //Запускает или останавливает корутин ожидания
+    //Р—Р°РїСѓСЃРєР°РµС‚ РёР»Рё РѕСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєРѕСЂСѓС‚РёРЅ РѕР¶РёРґР°РЅРёСЏ
     void StartStopWaiting(bool isOn)
     {
         if (coroutine != null)
@@ -182,7 +181,7 @@ public class PersonBehindHole : MonoBehaviour
     }
 
 
-    //Ожидает столько времени, сколько указано в настройках. Если не дожидается - кладёт трубку и отправляется "ошибка оператора"
+    //РћР¶РёРґР°РµС‚ СЃС‚РѕР»СЊРєРѕ РІСЂРµРјРµРЅРё, СЃРєРѕР»СЊРєРѕ СѓРєР°Р·Р°РЅРѕ РІ РЅР°СЃС‚СЂРѕР№РєР°С…. Р•СЃР»Рё РЅРµ РґРѕР¶РёРґР°РµС‚СЃСЏ - РєР»Р°РґС‘С‚ С‚СЂСѓР±РєСѓ Рё РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ "РѕС€РёР±РєР° РѕРїРµСЂР°С‚РѕСЂР°"
     IEnumerator Waiting()
     {
         float timePass = 0;
@@ -191,12 +190,12 @@ public class PersonBehindHole : MonoBehaviour
             timePass += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        curHole.mistakeEvent.Invoke("Абонент не дождался обслуживания!");
+        curHole.mistakeEvent.Invoke("РђР±РѕРЅРµРЅС‚ РЅРµ РґРѕР¶РґР°Р»СЃСЏ РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ!");
         Drop();
     }
 
-    //Кладёт трубку. Если разговор закончен корректно - сохраняет обслуженный звонок
-    //Обнуляет все значения
+    //РљР»Р°РґС‘С‚ С‚СЂСѓР±РєСѓ. Р•СЃР»Рё СЂР°Р·РіРѕРІРѕСЂ Р·Р°РєРѕРЅС‡РµРЅ РєРѕСЂСЂРµРєС‚РЅРѕ - СЃРѕС…СЂР°РЅСЏРµС‚ РѕР±СЃР»СѓР¶РµРЅРЅС‹Р№ Р·РІРѕРЅРѕРє
+    //РћР±РЅСѓР»СЏРµС‚ РІСЃРµ Р·РЅР°С‡РµРЅРёСЏ
     void Drop(bool isEndenProperly = false)
     {
         if (isEndenProperly)

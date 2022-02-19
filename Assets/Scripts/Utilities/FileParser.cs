@@ -1,10 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
+
 #if UNITY_EDITOR
 [ExecuteAlways]
 public class FileParser : MonoBehaviour
@@ -175,7 +174,7 @@ public class FileParser : MonoBehaviour
                 inOperator = false;
                 continue;
             }
-            if (lines[j].Contains("$>")) //Ñèìâîë, ïîñëå êîòîðîãî íàäî íàïèñàòü áàáë èíôîðìàöèþ
+            if (lines[j].Contains("$>")) //Ð¡Ð¸Ð¼Ð²Ð¾Ð», Ð¿Ð¾ÑÐ»Ðµ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð³Ð¾ Ð½Ð°Ð´Ð¾ Ð½Ð°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð±Ð°Ð±Ð» Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ
             {
                 lines[j] = AddBublToDialog(dialog, lines[j], dialog.lines.Count-1);
             }
@@ -235,8 +234,8 @@ public class FileParser : MonoBehaviour
         return dialog;
     }
 
-    //Äîáàâëÿåò ê äèàëîãó áàáë, íàõîäÿùèéñÿ â ýòîé ñòðîêå.
-    //Âîçâðàùàåò ñòðîêó áåç áàáëà è òåõíè÷åñêèõ ñèìâîëîâ
+    //Ð”Ð¾Ð±Ð°Ð²Ð»ÑÐµÑ‚ Ðº Ð´Ð¸Ð°Ð»Ð¾Ð³Ñƒ Ð±Ð°Ð±Ð», Ð½Ð°Ñ…Ð¾Ð´ÑÑ‰Ð¸Ð¹ÑÑ Ð² ÑÑ‚Ð¾Ð¹ ÑÑ‚Ñ€Ð¾ÐºÐµ.
+    //Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð±ÐµÐ· Ð±Ð°Ð±Ð»Ð° Ð¸ Ñ‚ÐµÑ…Ð½Ð¸Ñ‡ÐµÑÐºÐ¸Ñ… ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð²
     private static string AddBublToDialog(Dialog dialog, string line, int lineIndex)
     {
         int pos = line.IndexOf("$>");

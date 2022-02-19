@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
@@ -94,13 +92,16 @@ public class Clock : InteractableObject
     {
         isDayEnded = true;
         onEndDay?.Invoke();
+        SaveManager.sv.currentDay++;
         SaveManager.sv.dayResult.isWorkedAllDay = true;
+        SaveManager.Save();
         RingBell();
-        Debug.Log("Рабочий день закончен. Обслужите последние звонки");
+        Debug.Log("Р Р°Р±РѕС‡РёР№ РґРµРЅСЊ Р·Р°РєРѕРЅС‡РµРЅ. РћР±СЃР»СѓР¶РёС‚Рµ РїРѕСЃР»РµРґРЅРёРµ Р·РІРѕРЅРєРё");
     }
 
     public void Leave()
     {
+        
         SceneManager.LoadScene("Menu");
     }
 

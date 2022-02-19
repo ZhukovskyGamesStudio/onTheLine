@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,16 +20,16 @@ public class FinanceBook : TableItemBehaviour
     {
         int money = SaveManager.sv.money;
         calculatedMoney = money;
-        AddLine("ашкн", money);
+        AddLine("О©╫О©╫О©╫О©╫", money);
 
         if(dayResult != null)
         {
             calculatedMoney += Settings.config.payForDay;
-            AddLine("ярюбйю рекетнмхярйх", Settings.config.payForDay);
+            AddLine("О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫", Settings.config.payForDay);
 
             int bonusForCalls = Settings.config.payForCall * dayResult.callsServed;
             calculatedMoney += bonusForCalls;
-            AddLine("анмся гю гбнмйх  x" + dayResult.callsServed, bonusForCalls);
+            AddLine("О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫  x" + dayResult.callsServed, bonusForCalls);
 
             int penaltySum = 0;
             for (int i = 0; i < dayResult.penaltyAmount; i++)
@@ -43,13 +41,13 @@ public class FinanceBook : TableItemBehaviour
             if (dayResult.penaltyAmount > 0)
             {
                 calculatedMoney -= penaltySum;
-                AddLine("ьрпютш x" + dayResult.penaltyAmount, penaltySum);
+                AddLine("О©╫О©╫О©╫О©╫О©╫О©╫ x" + dayResult.penaltyAmount, penaltySum);
             }
         }
        
 
         isBuyingFood = false;
-        foodLine = AddLine("опнохрюмхе ", Settings.config.foodPrice*-1, ChangeBuyingFood);
+        foodLine = AddLine("О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ ", Settings.config.foodPrice*-1, ChangeBuyingFood);
 
         ChangeBuyingFood();
         UpdateSumLine();
@@ -77,7 +75,7 @@ public class FinanceBook : TableItemBehaviour
 
     void UpdateSumLine()
     {
-        sumLine.SetValues("хрнцн", calculatedMoney);
+        sumLine.SetValues("О©╫О©╫О©╫О©╫О©╫", calculatedMoney);
     }
 
     FinanceLine AddLine(string text, int price, UnityAction onPressed = null)

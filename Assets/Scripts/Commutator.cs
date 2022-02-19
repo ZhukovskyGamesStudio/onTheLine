@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Commutator : MonoBehaviour
 {
@@ -49,7 +47,7 @@ public class Commutator : MonoBehaviour
 
     public Call NewCall()
     {
-        Call newCall = DialogsQueue.instance.GetCall();
+        Call newCall =  DayManager.DialogsQueue.GetCall();
         if (newCall.dialog == null)
             return null;
         //Building.instance.GetNewCall
@@ -95,7 +93,7 @@ public class Commutator : MonoBehaviour
         {
             EndOfCall(Calls[i]);
         }
-        Debug.Log("Все звонки завершены");
+        Debug.Log("Ended all calls ");
     }
 
     public void PassSoundFromOperator(string sound)
@@ -123,7 +121,6 @@ public class Commutator : MonoBehaviour
     {
         Facs.NewPenalty(message + "\n" + message + "!\n" + message.ToUpper() + "!!!\n");
         SaveManager.AddPenalty();
-        Debug.Log("ШТРАФ. " + message);
     }
 }
 

@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class CharacterTalking : MonoBehaviour
@@ -29,8 +27,8 @@ public class CharacterTalking : MonoBehaviour
     void Start()
     {
         //if (Settings.instance.isWaitingForOperatorHello)
-        AddBubble("Добрый день, вы позвонили в телефонную службу.", "/hello/");
-        //AddBubble("В пятой квартире готовится ограбление");
+        AddBubble("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.", "/hello/");
+        //AddBubble("пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 
         OpenClose(false);
     }

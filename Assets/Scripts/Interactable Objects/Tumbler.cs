@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tumbler : InteractableObject
@@ -31,7 +29,7 @@ public class Tumbler : InteractableObject
     void MoveButtonHead(bool isSilent = false) //  0 - right, 1 - left
     {
         if (!isSilent)
-            audioSource.Play();
+            audioSource?.Play();
         if (isPressed)
             mbp.Take();
         else
@@ -40,8 +38,8 @@ public class Tumbler : InteractableObject
 
     public void SendChangedSignal(bool isOpros)
     {
-        Shteker1.ChangeOprosState(isOpros);
-        Shteker2.ChangeOprosState(isOpros);
+        Shteker1?.ChangeOprosState(isOpros);
+        Shteker2?.ChangeOprosState(isOpros);
     }
 
 
