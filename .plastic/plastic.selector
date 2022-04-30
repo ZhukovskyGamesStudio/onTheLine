@@ -1,0 +1,3 @@
+rep "Phone Operator (1)@Pollish@cloud"
+  path "/"
+    smartbranch "/main"
