@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6529674366319507767}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -8.574205, y: -7.402254, z: 12.218981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 2582111908123303267}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!54 &802875614978009735
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   TakenPosition: {x: 0, y: 0, z: 0}
-  TakenRotation: {x: 70, y: 0, z: 0}
+  TakenRotation: {x: -30, y: 0, z: 0}
   meshForGizmos: {fileID: 134890453235596376, guid: 6b6ba25103884704497914a2a51505e2,
     type: 3}
   OnTaken:
