@@ -3,7 +3,7 @@ using UnityEngine;
 public class TrainingManager : MonoBehaviour {
     void Start() {
         SaveManager.sv.isTrainingStarted = true;
-        Debug.Log("This is training Day. Press F to instantly finish it");
+        Debug.Log("This is training Day. Press F to instantly finish it!");
     }
 
     private void Update() {
