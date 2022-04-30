@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="186c77c6-c2d9-4c26-81c4-724bfc508a96" name="Changes" comment="" />
+    <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/TrainingManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers/TrainingManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WelcomeLetter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WelcomeLetter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdminPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdminPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Alexander SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Alexander SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/AnonymousPro-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/AnonymousPro-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,12 +36,12 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Coding" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scenes/Menu.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/AdminPanel.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,6 +66,7 @@
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Coding" />
+      <force-push-target remote-path="origin" branch="Design" />
     </force-push-targets>
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -57,7 +79,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\2021.3.1f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Unity\2021.3.2f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Unity Projects\PhoneOp&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\PhoneOp" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -88,7 +110,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="186c77c6-c2d9-4c26-81c4-724bfc508a96" name="Changes" comment="" />
+      <changelist id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="" />
       <created>1645287715452</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -98,6 +120,8 @@
       <workItem from="1646853115195" duration="593000" />
       <workItem from="1651340281983" duration="4463000" />
       <workItem from="1651344965012" duration="316000" />
+      <workItem from="1655047534200" duration="1844000" />
+      <workItem from="1657129192729" duration="2118000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.">
       <created>1646778182587</created>
@@ -120,7 +144,28 @@
       <option name="project" value="LOCAL" />
       <updated>1651345552763</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="trainingManager debug">
+      <created>1651347883244</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651347883244</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added textures to MenuScene">
+      <created>1655047589839</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655047589839</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added lightning to menu">
+      <created>1655052358338</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655052358338</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +190,9 @@
     <MESSAGE value="Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager." />
     <MESSAGE value="Fixed main menu" />
     <MESSAGE value="FIXED MAIN MENU&#10;&#10;Fixed main menu&#10;&#10;Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.&#10;&#10;Put all data about day in one place&#10;&#10;Upgraded gitIgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIXED MAIN MENU&#10;&#10;Fixed main menu&#10;&#10;Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.&#10;&#10;Put all data about day in one place&#10;&#10;Upgraded gitIgnore" />
+    <MESSAGE value="trainingManager debug" />
+    <MESSAGE value="Added textures to MenuScene" />
+    <MESSAGE value="Added lightning to menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added lightning to menu" />
   </component>
 </project>

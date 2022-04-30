@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SaveManager : MonoBehaviour
-{
+public class SaveManager : MonoBehaviour {
     #region Singleton
 
     public static SaveManager instance;
@@ -21,28 +20,25 @@ public class SaveManager : MonoBehaviour
 
     [SerializeField]
     private Day[] days;
+
     public static SaveProfile sv;
     public UnityAction OnUnloadScene;
 
     private int _profile = 1;
-    
 
-    public static  void Save()
-    {
+    public static void Save() {
         JsonUtil.Save(sv, instance._profile);
     }
 
-    public static void StartNewDay()
-    {
+    public static void StartNewDay() {
         sv.dayResult = new DayResult();
     }
 
     public static Day GetDay() {
         return instance.days[sv.currentDay];
     }
-    
-    public static void ChangeMoney(int delta)
-    {
+
+    public static void ChangeMoney(int delta) {
         sv.money += delta;
         if (sv.money < 0)
             sv.money = 0;
@@ -53,34 +49,29 @@ public class SaveManager : MonoBehaviour
         sv = JsonUtil.Load(profile);
         return sv;
     }
-    
-    public static int LoadDay(){
+
+    public static int LoadDay() {
         if (!sv.isTrainingComplete)
             return 0;
         return sv.currentDay;
     }
-    
-    public static void SetTrainingComplete()
-    {
+
+    public static void SetTrainingComplete() {
         Debug.Log("Обучение завершено.");
         sv.isTrainingComplete = true;
     }
 
-    public static void AddServedCall()
-    {
+    public static void AddServedCall() {
         Debug.Log("Звонок обслужен. Вам начислен бонус.");
         sv.dayResult.callsServed++;
     }
 
-    public static void AddPenalty()
-    {
+    public static void AddPenalty() {
         Debug.Log("Вам начислен денежный штраф.");
         sv.dayResult.penaltyAmount++;
     }
 
-
-    private void OnDestroy()
-    {
+    private void OnDestroy() {
         OnUnloadScene?.Invoke();
         JsonUtil.Save(sv, _profile);
     }

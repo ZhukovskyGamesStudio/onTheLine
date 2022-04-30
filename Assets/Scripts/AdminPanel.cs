@@ -27,7 +27,7 @@ public class AdminPanel : MonoBehaviour {
     public void EraseSavedData() {
         SaveManager.sv = new SaveProfile();
         SaveManager.Save();
-        
+        SceneManager.LoadScene("Menu");
     }
 
     public void StopCalls() {
@@ -35,10 +35,7 @@ public class AdminPanel : MonoBehaviour {
     }
 
     public void StopTime() {
-        if (Time.timeScale == 1)
-            Time.timeScale = 0;
-        else
-            Time.timeScale = 1;
+        Time.timeScale = Time.timeScale == 1 ? 0 : 1;
     }
 
     public void Quit() {
@@ -50,7 +47,7 @@ public class AdminPanel : MonoBehaviour {
             OpenMenu(!AdminMenuPanel.activeSelf);
     }
 
-    public void OpenMenu(bool isOn) {
+    private void OpenMenu(bool isOn) {
         AdminMenuPanel.SetActive(isOn);
         if (isOn)
             CursorManager.ChangeState(true);

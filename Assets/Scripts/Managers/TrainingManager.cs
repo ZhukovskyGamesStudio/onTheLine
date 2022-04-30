@@ -1,9 +1,18 @@
 using UnityEngine;
 
 public class TrainingManager : MonoBehaviour {
+
+    [SerializeField]
+    private GameObject TrainingWarning;
+    
     void Start() {
         SaveManager.sv.isTrainingStarted = true;
-        Debug.Log("This is training Day. Press F to instantly finish it!");
+        ShowIncompleteWarning();
+    }
+
+    private void ShowIncompleteWarning() {
+        TrainingWarning.SetActive(true);
+        Debug.Log("This is training Day. It is not complete! Press F to instantly finish it!");  
     }
 
     private void Update() {
