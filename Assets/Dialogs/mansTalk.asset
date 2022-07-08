@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
+  m_Name: mansTalk
+  m_EditorClassIdentifier: 
+  Id: cfbace63-1c9d-4901-80e3-09673867bb1d
+  requirementFrom:
+    Name: 
+    Surname: 
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 5
+  requirementTo:
+    Name: 
+    Surname: 
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 6
+  SayToOperator: "\u0421\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u0435 \u043C\u0435\u043D\u044F
+    \u0441 \u043C\u0443\u0436\u0441\u043A\u0438\u043C \u043C\u0443\u0436\u0447\u0438\u043D\u043E\u0439."
+  lines:
+  - "\u041F\u0440\u0438\u0432\u0435\u0442 \u043C\u0443\u0436\u0447\u0438\u043D\u0430."
+  - "\u0417\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439~~ \u043C\u0443\u0436\u0447\u0438\u043D\u0430."
+  - "\u0422\u044B \u0441\u0435\u0433\u043E\u0434\u043D\u044F \u043F\u043E\u0439\u0434\u0451\u0448\u044C\n\u0412\n\u0411\u0430\u0440?"
+  - "\u0414\u0430.~\n\u041F\u043E\u0439\u0434\u0443~ \u0432~ \u0431\u0430\u0440."
+  - "\u0418 \u044F."
+  - "\u0414\u043E \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0432 \u0431\u0430\u0440\u0435
+    \u0442\u043E\u0433\u0434\u0430."
+  - "\u041F\u043E\u043A\u0430.."
+  bubbleLines: []
+  requireTags: []
+  produceTags: []
+  forbiddenTags: []
+  Transitions:
+  - thought: "\u041C\u0443\u0436\u0447\u0438\u043D\u044B \u043F\u043E\u0448\u043B\u0438
+      \u0432 \u0431\u0430\u0440"
+    dialog: d8ed657c-8e69-41f9-a0cc-1dcb400cb717
+  Informations:
+  - line: "\u0414\u043E \u0432\u0441\u0442\u0440\u0435\u0447\u0438 \u0432 \u0431\u0430\u0440\u0435
+      \u0442\u043E\u0433\u0434\u0430."
+    thought: "\u041C\u0443\u0436\u0447\u0438\u043D\u044B \u043F\u043E\u0448\u043B\u0438
+      \u0432 \u0431\u0430\u0440"
+  - line: "\u0414\u0430"
+    thought: "\u041C\u0443\u0436\u0447\u0438\u043D\u044B \u043F\u043E\u0448\u043B\u0438
+      \u0432 \u0431\u0430\u0440"
+  priority: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LoadingScreneManager : MonoBehaviour {
+public class LoadingScreenManager : MonoBehaviour {
     void Start() {
         SceneLoadManager.LoadScene("Menu");
     }

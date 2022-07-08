@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2965456089
+    locked: 0
+  - name: Connections
+    uniqueID: 664647839
+    locked: 0
+  - name: DraggableObjects
+    uniqueID: 3423192213
+    locked: 0
+  - name: UI
+    uniqueID: 455729815
+    locked: 0

@@ -19,13 +19,13 @@ public class GMCongratsUI : MonoBehaviour
 
     void CheckWin()
     {
-        if (TagManager.CheckTag(Tags.girlFoundWrong))
+        if (TagManager.CheckTag("girlFoundWrong"))
         {
             WinPanel.SetActive(true);
             Text.text = "Дежурные уехали по неправильному адресу. И девочки там не было." +
                 "\nБыли только женщины и мужчины и пустота. Как у Пелевина. Только без Чапаева.";
         }
-        else if (TagManager.CheckTag(Tags.girlFound))
+        else if (TagManager.CheckTag("girlFound"))
         {
             WinPanel.SetActive(true);
             Text.text = "Вы нашли потерянную девочку! Вы молодец!" +
