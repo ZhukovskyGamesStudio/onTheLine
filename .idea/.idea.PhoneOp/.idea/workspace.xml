@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers/TrainingManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers/TrainingManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WelcomeLetter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WelcomeLetter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AdminPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AdminPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Alexander SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/Alexander SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/AnonymousPro-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/AnonymousPro-Regular SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levitan/LevitanScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/LevitanScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ParserEditorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ParserEditorManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Connection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Connection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/DraggableDialog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/DraggableDialog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +30,83 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="LEVITAN&#10;&#10;Smaller transition space&#10;&#10;Forbidden tags&#10;&#10;Fixed from to &amp; resolutions&#10;&#10;Thought text size&#10;&#10;Visual fixes &amp; LogManager&#10;&#10;Colored arrows&#10;&#10;New UI &amp; fixes &amp; new info System&#10;&#10;Fixes before build&#10;&#10;informations add &amp; save &amp; export&#10;&#10;Saving transitions&#10;&#10;Rich text support&#10;&#10;Bugfixes&#10;&#10;Imported simpleFileBrowser &amp; visual fixes&#10;&#10;Saving cameraPos &amp; fixed multiconnections&#10;&#10;SaveLoad of connections&#10;&#10;Connections &amp; ui fixes&#10;&#10;more fixes&#10;&#10;SaveLoad to json basic&#10;&#10;Base dialogEditing&#10;&#10;Finally working zoom &amp; drag&#10;&#10;Levitan Camera base" />
+        <option name="rewordedMessage" value="LEVITAN&#10;&#10;colors fix&#10;&#10;Fixed thought edit&#10;&#10;LEVITAN&#10;&#10;Smaller transition space&#10;&#10;Forbidden tags&#10;&#10;Fixed from to &amp; resolutions&#10;&#10;Thought text size&#10;&#10;Visual fixes &amp; LogManager&#10;&#10;Colored arrows&#10;&#10;New UI &amp; fixes &amp; new info System&#10;&#10;Fixes before build&#10;&#10;informations add &amp; save &amp; export&#10;&#10;Saving transitions&#10;&#10;Rich text support&#10;&#10;Bugfixes&#10;&#10;Imported simpleFileBrowser &amp; visual fixes&#10;&#10;Saving cameraPos &amp; fixed multiconnections&#10;&#10;SaveLoad of connections&#10;&#10;Connections &amp; ui fixes&#10;&#10;more fixes&#10;&#10;SaveLoad to json basic&#10;&#10;Base dialogEditing&#10;&#10;Finally working zoom &amp; drag&#10;&#10;Levitan Camera base" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="f349ec20e247fbe9276ac028847ac533f91c862a" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/AdminPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ColorManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogsCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A017E354-F315-4926-A561-7FBAC3A64FCC/29/1ed6085c/ReorderableList.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Log.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/5f/c9dd7b1f/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/83/ef6f48de/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205BB2-CB25-478A-9CB0-F5E54CF11441/37/78ed65ac/TextAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6073cf49ed704e958b8a66d540dea94846a800/9c/a5e40348/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/AppManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/DialogsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a017e354f3154926a5617fbac3a64fcc80f800/2e/eee8c2d2/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/d8/e96b9d1d/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A017E354-F315-4926-A561-7FBAC3A64FCC/2d/39d9abd5/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/LogManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Information.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/IConnectable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ColorManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/AppManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/LogManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Log.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/RuntimeParser.cs" />
+      <option value="$USER_HOME$/Desktop/Dialogs/DialogsY, Algebra.json" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialog.cs" />
+      <option value="$PROJECT_DIR$/Assets/Dialogs/DialogsY, Algebra.json" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LoadingScreenManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogsCollection.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/FileParser.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/CameraController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/UI/DialogEditPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/WorkspaceManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/UIManager.cs" />
+      <option value="$USER_HOME$/Desktop/New Dialog.json" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/IDraggable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Transition.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/InformationsHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/TransitionsHolder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/SaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ParserEditorManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Connection.cs" />
+      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/DraggableDialog.cs" />
+      <option value="$USER_HOME$/Desktop/MyHubleFolder/MyHumbleDialog.json" />
+      <option value="$USER_HOME$/Desktop/MyHubleFolder/TestNAME_MyHumbleDialog.json" />
+      <option value="$USER_HOME$/Desktop/MyHubleFolder/_MyHumbleDialog.json" />
+      <option value="$USER_HOME$/Desktop/MyHubleFolder/mark1_MyHumbleDialog.json" />
+    </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -52,21 +117,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3498979" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="Coding" />
       <force-push-target remote-path="origin" branch="Design" />
+      <force-push-target remote-path="origin" branch="feature/levitan" />
     </force-push-targets>
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -122,6 +188,25 @@
       <workItem from="1651344965012" duration="316000" />
       <workItem from="1655047534200" duration="1844000" />
       <workItem from="1657129192729" duration="2118000" />
+      <workItem from="1657293153785" duration="1990000" />
+      <workItem from="1657455534284" duration="12384000" />
+      <workItem from="1657477738125" duration="7650000" />
+      <workItem from="1657526888435" duration="48000" />
+      <workItem from="1657596226131" duration="2562000" />
+      <workItem from="1658340149679" duration="7243000" />
+      <workItem from="1658499968620" duration="34675000" />
+      <workItem from="1658758251551" duration="19163000" />
+      <workItem from="1658940527756" duration="6308000" />
+      <workItem from="1659346753879" duration="370000" />
+      <workItem from="1659348127434" duration="25043000" />
+      <workItem from="1659467882965" duration="2052000" />
+      <workItem from="1660065027358" duration="796000" />
+      <workItem from="1660261873407" duration="3526000" />
+      <workItem from="1660668946440" duration="1799000" />
+      <workItem from="1660756684685" duration="4387000" />
+      <workItem from="1661208754985" duration="4552000" />
+      <workItem from="1661452792834" duration="4269000" />
+      <workItem from="1661501083135" duration="1206000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.">
       <created>1646778182587</created>
@@ -165,7 +250,224 @@
       <option name="project" value="LOCAL" />
       <updated>1655052358338</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="FIXES AND MENU&#10;&#10;other fixes&#10;&#10;Menu letters&#10;&#10;FIXES&#10;&#10;Added lightning to menu&#10;&#10;Added textures to MenuScene&#10;&#10;trainingManager debug">
+      <created>1657223119102</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657223119102</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Levitan Camera base">
+      <created>1657240075767</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657240075767</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finally working zoom &amp; drag">
+      <created>1657466418001</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657466418001</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Base dialogEditing">
+      <created>1657468792485</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657468792485</updated>
+    </task>
+    <task id="LOCAL-00011" summary="SaveLoad to json basic">
+      <created>1657500552963</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657500552963</updated>
+    </task>
+    <task id="LOCAL-00012" summary="more fixes">
+      <created>1657597997964</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657597997964</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Connections &amp; ui fixes">
+      <created>1658356583983</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658356583983</updated>
+    </task>
+    <task id="LOCAL-00014" summary="SaveLoad of connections">
+      <created>1658516839224</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658516839224</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Saving cameraPos &amp; fixed multiconnections">
+      <created>1658519843282</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658519843282</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Imported simpleFileBrowser &amp; visual fixes">
+      <created>1658671737203</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658671737203</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Bugfixes">
+      <created>1658698134529</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658698134529</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Rich text support">
+      <created>1658709642052</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1658709642052</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Saving transitions">
+      <created>1658779297882</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1658779297882</updated>
+    </task>
+    <task id="LOCAL-00020" summary="informations add &amp; save &amp; export">
+      <created>1658786130299</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1658786130299</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Fixes before build">
+      <created>1658944889161</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1658944889161</updated>
+    </task>
+    <task id="LOCAL-00022" summary="New UI &amp; fixes &amp; new info System">
+      <created>1659361540802</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1659361540802</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Colored arrows">
+      <created>1659364912984</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1659364912985</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Visual fixes &amp; LogManager">
+      <created>1659367077842</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1659367077842</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Thought text size">
+      <created>1659367280518</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1659367280518</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixed from to &amp; resolutions">
+      <created>1659368231451</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1659368231451</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Forbidden tags">
+      <created>1659372084277</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1659372084277</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Smaller transition space">
+      <created>1659372668530</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1659372668530</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fixed thought edit">
+      <created>1659378183347</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1659378183347</updated>
+    </task>
+    <task id="LOCAL-00030" summary="colors fix">
+      <created>1659387916005</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1659387916005</updated>
+    </task>
+    <task id="LOCAL-00031" summary="FileParser with JSON">
+      <created>1659469910676</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1659469910676</updated>
+    </task>
+    <task id="LOCAL-00032" summary="FileparserWindow">
+      <created>1660760416141</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1660760416141</updated>
+    </task>
+    <task id="LOCAL-00033" summary="New button">
+      <created>1661452983866</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1661452983866</updated>
+    </task>
+    <task id="LOCAL-00034" summary="doubleClick editing">
+      <created>1661453650192</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1661453650192</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Clamped dialogName length">
+      <created>1661455917980</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1661455917980</updated>
+    </task>
+    <task id="LOCAL-00036" summary="tag size limit">
+      <created>1661456059493</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1661456059493</updated>
+    </task>
+    <task id="LOCAL-00037" summary="fileNames">
+      <created>1661457046620</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1661457046620</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,15 +486,54 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager." />
-    <MESSAGE value="Fixed main menu" />
-    <MESSAGE value="FIXED MAIN MENU&#10;&#10;Fixed main menu&#10;&#10;Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.&#10;&#10;Put all data about day in one place&#10;&#10;Upgraded gitIgnore" />
-    <MESSAGE value="trainingManager debug" />
-    <MESSAGE value="Added textures to MenuScene" />
-    <MESSAGE value="Added lightning to menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added lightning to menu" />
+    <MESSAGE value="Connections &amp; ui fixes" />
+    <MESSAGE value="SaveLoad of connections" />
+    <MESSAGE value="Saving cameraPos &amp; fixed multiconnections" />
+    <MESSAGE value="Imported simpleFileBrowser &amp; visual fixes" />
+    <MESSAGE value="Bugfixes" />
+    <MESSAGE value="Rich text support" />
+    <MESSAGE value="Saving transitions" />
+    <MESSAGE value="informations add &amp; save &amp; export" />
+    <MESSAGE value="Fixes before build" />
+    <MESSAGE value="New UI &amp; fixes &amp; new info System" />
+    <MESSAGE value="Colored arrows" />
+    <MESSAGE value="Visual fixes &amp; LogManager" />
+    <MESSAGE value="Thought text size" />
+    <MESSAGE value="Fixed from to &amp; resolutions" />
+    <MESSAGE value="Forbidden tags" />
+    <MESSAGE value="Smaller transition space" />
+    <MESSAGE value="Fixed thought edit" />
+    <MESSAGE value="colors fix" />
+    <MESSAGE value="FileParser with JSON" />
+    <MESSAGE value="FileparserWindow" />
+    <MESSAGE value="New button" />
+    <MESSAGE value="doubleClick editing" />
+    <MESSAGE value="Clamped dialogName length" />
+    <MESSAGE value="tag size limit" />
+    <MESSAGE value="fileNames" />
+    <option name="LAST_COMMIT_MESSAGE" value="fileNames" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/SaveManager.cs</url>
+          <line>97</line>
+          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Levitan\Scripts\Managers\SaveManager.cs" initialLine="92" containingFunctionPresentation="method 'SaveProject'">
+            <startOffsets>
+              <option value="3757" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3805" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

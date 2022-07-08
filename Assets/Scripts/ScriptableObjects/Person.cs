@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [CreateAssetMenu(fileName = "Person", menuName = "ScriptableObjects/Person", order = 2)]
 [System.Serializable]
-public class Person : ScriptableObject
-{
+public class Person : ScriptableObject {
     public string Name, Surname;
     public Work Work;
     public Temperament Temperament;
@@ -13,17 +14,20 @@ public class Person : ScriptableObject
     public Criminal Criminal;
     public bool isDead;
     public int roomNumber;
-    readonly static string[] womanNames = { "Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна" };
-    readonly static string[] manNames = { "Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор" };
-    readonly static string[] surnames = { "Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)" };
+    readonly static string[] womanNames = {"Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна"};
+
+    readonly static string[] manNames =
+        {"Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор"};
+
+    readonly static string[] surnames =
+        {"Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)"};
 
     public List<LineAnswer> answers;
-    public Person()
-    {
 
+    public Person() {
     }
-    public Person(Work _work, Temperament _temperament, Age _age, Sex _sex, Criminal _criminal = Criminal.None)
-    {
+
+    public Person(Work _work, Temperament _temperament, Age _age, Sex _sex, Criminal _criminal = Criminal.None) {
         this.Work = _work;
         this.Temperament = _temperament;
         this.Age = _age;
@@ -31,72 +35,67 @@ public class Person : ScriptableObject
         this.Criminal = _criminal;
     }
 
-    public bool HasAnswer(string line)
-    {
-        for (int i = 0; i < answers.Count; i++)
-        {
-            if (answers[i].line == line)
-            {
+    public bool HasAnswer(string line) {
+        for (int i = 0; i < answers.Count; i++) {
+            if (answers[i].line == line) {
                 return true;
             }
         }
+
         return false;
     }
 
-    public string Hear(string line)
-    {
-        for (int i = 0; i < answers.Count; i++)
-        {
-            if (answers[i].line == line)
-            {
-                if(answers[i].newTag != Tags.none)
+    public string Hear(string line) {
+        for (int i = 0; i < answers.Count; i++) {
+            if (answers[i].line == line) {
+                if (!string.IsNullOrEmpty(answers[i].newTag))
                     TagManager.AddTag(answers[i].newTag);
                 return answers[i].answer;
             }
         }
+
         return null;
     }
-
 
     /// <summary>
     /// Генерирует только не криминальных людей. Криинальность надо задать вручную.
     /// </summary>
     /// <returns></returns>
-    public static Person Generate()
-    {
+    public static Person Generate() {
         Person person = new Person();
-        person.Sex = (Sex)Random.Range(0, 2);
-        person.Name = person.Sex == Sex.Woman ? womanNames[Random.Range(0, womanNames.Length)] : manNames[Random.Range(0, manNames.Length)];
+        person.Sex = (Sex) Random.Range(0, 2);
+        person.Name = person.Sex == Sex.Woman
+            ? womanNames[Random.Range(0, womanNames.Length)]
+            : manNames[Random.Range(0, manNames.Length)];
         person.Surname = surnames[Random.Range(0, surnames.Length)];
-        person.Work = (Work)Random.Range(0, 4);
-        person.Temperament = (Temperament)Random.Range(0, 3);
-        person.Age = (Age)Random.Range(0, 3);
+        person.Work = (Work) Random.Range(0, 4);
+        person.Temperament = (Temperament) Random.Range(0, 3);
+        person.Age = (Age) Random.Range(0, 3);
         person.Criminal = Criminal.None;
-
 
         return person;
     }
-    public static Person Generate(PersonShablon shablon)
-    {
+
+    public static Person Generate(PersonShablon shablon) {
         Person person = new Person();
 
         if (shablon.Work == Work.Any)
-            person.Work = (Work)Random.Range(0, 4);
+            person.Work = (Work) Random.Range(0, 4);
         else
             person.Work = shablon.Work;
 
         if (shablon.Temperament == Temperament.Any)
-            person.Temperament = (Temperament)Random.Range(0, 3);
+            person.Temperament = (Temperament) Random.Range(0, 3);
         else
             person.Temperament = shablon.Temperament;
 
         if (shablon.Age == Age.Any)
-            person.Age = (Age)Random.Range(0, 3);
+            person.Age = (Age) Random.Range(0, 3);
         else
             person.Age = shablon.Age;
 
         if (shablon.Sex == Sex.Any)
-            person.Sex = (Sex)Random.Range(0, 2);
+            person.Sex = (Sex) Random.Range(0, 2);
         else
             person.Sex = shablon.Sex;
 
@@ -105,16 +104,15 @@ public class Person : ScriptableObject
         else
             person.Criminal = Criminal.Criminal;
 
-
-        person.Name = person.Sex == Sex.Woman ? womanNames[Random.Range(0, womanNames.Length)] : manNames[Random.Range(0, manNames.Length)];
+        person.Name = person.Sex == Sex.Woman
+            ? womanNames[Random.Range(0, womanNames.Length)]
+            : manNames[Random.Range(0, manNames.Length)];
         person.Surname = Random.Range(0, 2) == 1 ? "Гриневич" : "Полищук";
-
 
         return person;
     }
 
-    public bool CheckShablon(PersonShablon shablon)
-    {
+    public bool CheckShablon(PersonShablon shablon) {
         if (isDead)
             return false;
         if (shablon.Work != Work.Any && shablon.Work != this.Work)
@@ -129,11 +127,9 @@ public class Person : ScriptableObject
             return false;
         return true;
     }
-
 }
 
-public enum Work
-{
+public enum Work {
     Any = -1,
     None = 0,
     PhoneOperator,
@@ -143,8 +139,7 @@ public enum Work
     Miner
 }
 
-public enum Temperament
-{
+public enum Temperament {
     Any = -1,
     Funny = 0,
     Friendly,
@@ -152,32 +147,27 @@ public enum Temperament
     Angry
 }
 
-public enum Age
-{
+public enum Age {
     Any = -1,
     Young = 0,
     Adult,
     Old
 }
 
-public enum Sex
-{
+public enum Sex {
     Any = -1,
     Woman = 0,
     Man
 }
 
-
-public enum Criminal
-{
+public enum Criminal {
     Any = -1,
     None = 0,
     Criminal
 }
 
 [System.Serializable]
-public class PersonShablon
-{
+public class PersonShablon {
     public string Name, Surname;
     public Work Work;
     public Temperament Temperament;
@@ -186,17 +176,18 @@ public class PersonShablon
     public Criminal Criminal;
     public bool isDead;
     public int roomNumber;
-    readonly static string[] womanNames = { "Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна" };
-    readonly static string[] manNames = { "Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор" };
-    readonly static string[] surnames = { "Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)" };
+    readonly static string[] womanNames = {"Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна"};
 
-    public PersonShablon()
-    {
+    readonly static string[] manNames =
+        {"Борис", "Георгий", "Ярослав", "Иосиф", "Владимир", "Фёдор", "Максим", "Виктор"};
 
+    readonly static string[] surnames =
+        {"Гриневич", "Полищук", "Есин(а)", "Колегов(а)", "Семёнов(а)", "Карпов(а)", "Лучинов(а)", "Сидоров(а)"};
+
+    public PersonShablon() {
     }
 
-    public PersonShablon(Work _work, Temperament _temperament, Age _age, Sex _sex, Criminal _criminal = Criminal.None)
-    {
+    public PersonShablon(Work _work, Temperament _temperament, Age _age, Sex _sex, Criminal _criminal = Criminal.None) {
         this.Work = _work;
         this.Temperament = _temperament;
         this.Age = _age;
@@ -204,9 +195,7 @@ public class PersonShablon
         this.Criminal = _criminal;
     }
 
-
-    public static PersonShablon GenerateEmptyShablon()
-    {
+    public static PersonShablon GenerateEmptyShablon() {
         PersonShablon shablon = new PersonShablon();
         shablon.roomNumber = -1;
         shablon.Name = "";
@@ -218,17 +207,12 @@ public class PersonShablon
         shablon.Criminal = Criminal.Any;
         return shablon;
     }
-
-
-
 }
 
-
 [System.Serializable]
-public class LineAnswer
-{
+public class LineAnswer {
     public string line, answer;
-    public Tags newTag = Tags.none;
-    public Tags requireTag = Tags.none;
+    public string newTag = String.Empty;
+    public string requireTag = String.Empty;
 }
 //добавить известность - чем более известен персонаж, тем чаще о нём говорят другие в диалогах

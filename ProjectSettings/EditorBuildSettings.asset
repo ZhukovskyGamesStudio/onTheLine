@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Loading.unity
     guid: 0df0f26ec5bd4f846b19fb1dfd6be435
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: fa28ade60de7dcf48812534b342b6b7d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Levitan/LevitanScene.unity
+    guid: 32825d3e040b11a49b97ff0e36d5d789
   m_configObjects: {}
