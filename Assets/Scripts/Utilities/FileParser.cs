@@ -138,12 +138,12 @@ public class FileParser : MonoBehaviour {
                     if (unparsed[i] == "")
                         continue;
 
-                    if (unparsed[i][0] == '!') {
+                   /* if (unparsed[i][0] == '!') {
                         string inverted = unparsed[i].Substring(1);
                         dialog.forbiddenTags.Add((string) (Enum.Parse(typeof(Tags), inverted)));
                     } else {
                         dialog.requireTags.Add((string) (Enum.Parse(typeof(Tags), unparsed[i])));
-                    }
+                    }*/
                 }
             }
 
