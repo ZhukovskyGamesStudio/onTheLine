@@ -7,6 +7,7 @@ public class Commutator : MonoBehaviour
 
     [Header("Interactive Parts")]
     public Hole[] holes;
+    public Hole virtualHole;
     public Shteker[] Shtekers1, Shtekers2;
     public Lever[] Levers;
     public Tumbler[] Tumblers;
@@ -29,6 +30,10 @@ public class Commutator : MonoBehaviour
             holes[i].endOfCallWrongNumber.AddListener(EndOfCallWrongNumber);
             holes[i].turnMyBulb.AddListener(TurnBulb);
         }
+        virtualHole.number = -1;
+        virtualHole.mistakeEvent.AddListener(OnPlayerMistake);
+        virtualHole.endOfCall.AddListener(EndOfCall);
+        
         for (int i = 0; i < Shtekers1.Length; i++)
         {
             Shtekers1[i].connectedTo = Shtekers2[i];
@@ -45,15 +50,16 @@ public class Commutator : MonoBehaviour
         }
     }
 
-    public Call NewCall()
-    {
-        Call newCall =  DayManager.DialogsQueue.GetCall();
-        if (newCall.dialog == null)
-            return null;
-        //Building.instance.GetNewCall
-        DoorNumbers[newCall.from].Open();
-        //bulbs[newCall.from].ChangeState(1);
-        holes[newCall.from].NewCall(newCall);
+    public Call NewCall(Call newCall) {
+        if (newCall.from == -1) {
+            virtualHole.NewCall(newCall);
+        } else {
+            //Building.instance.GetNewCall
+            DoorNumbers[newCall.from].Open();
+            //bulbs[newCall.from].ChangeState(1);   
+            holes[newCall.from].NewCall(newCall);
+        }
+
         Calls.Add(newCall);
         return newCall;
     }
@@ -69,15 +75,17 @@ public class Commutator : MonoBehaviour
 
     public void EndOfCallWrongNumber(Call call, int wrongHoleNumber)
     {
-        Calls.Remove(call);         
-        DoorNumbers[call.from].Close();
+        Calls.Remove(call);
+        if (call.from > 0)
+            DoorNumbers[call.from].Close();
         DoorNumbers[wrongHoleNumber].Close();
     }
 
     public void EndOfCall(Call call)
     {
-        Calls.Remove(call);          
-        DoorNumbers[call.from].Close();
+        Calls.Remove(call);
+        if (call.from > 0)
+            DoorNumbers[call.from].Close();
         if (call.to > 0 && call.state > CallState.WaitingforConnection)
             DoorNumbers[call.to].Close();
     }
@@ -88,7 +96,7 @@ public class Commutator : MonoBehaviour
         {
             holes[i].StopAllCoroutines();
         }
-
+        virtualHole.StopAllCoroutines();
         for (int i = 0; i < Calls.Count; i++)
         {
             EndOfCall(Calls[i]);
@@ -104,7 +112,7 @@ public class Commutator : MonoBehaviour
             {
                 holes[i].Hear(sound);
             }
-
+            virtualHole.Hear(sound);
         }
     }
     public void PassSoundFromOperator(Dialog dialog, int lineIndex)

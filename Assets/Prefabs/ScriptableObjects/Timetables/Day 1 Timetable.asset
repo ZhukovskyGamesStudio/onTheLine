@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ff9350234c07b42810e9bcb6708a57, type: 3}
   m_Name: Day 1 Timetable
   m_EditorClassIdentifier: 
+  timeBetweenCalls: 30
+  randomTimeBetweenCalls: 10
   additionalCallsAmount: 0
   callsTimeTable: []
   randomDialogs: []

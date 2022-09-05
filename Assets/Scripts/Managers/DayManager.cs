@@ -11,6 +11,7 @@ public class DayManager : MonoBehaviour {
 
     public static Day Day;
     public TrainingManager TrainingManager;
+
     [Header("Other")]
     public Commutator Commutator;
 
@@ -25,12 +26,12 @@ public class DayManager : MonoBehaviour {
 
         if (!SaveManager.sv.isTrainingComplete || forceTraining)
             Instantiate(TrainingManager);
-        DialogsQueue = new DialogsQueue(Day.CallsTimeTable);  
+        DialogsQueue = new DialogsQueue(Day.CallsTimeTable);
     }
 
     private void Start() {
         Init();
-        
+
         Clock = Clock.instance;
         DayShedule = new DayShedule(Day.eventsList, Clock);
         Clock.onStartDay += StartDay;
@@ -51,9 +52,11 @@ public class DayManager : MonoBehaviour {
         Clock.EndDay();
     }
 
-
     public void NewCall() {
-        Commutator.NewCall();
+        Call newCall =  DialogsQueue.GetCall();
+        if (newCall == null) return;
+        if (newCall.dialog == null) return;
+        Commutator.NewCall(newCall);
     }
 
     IEnumerator CallsCoroutine() {
@@ -63,12 +66,10 @@ public class DayManager : MonoBehaviour {
             if (Clock.IsWorkTime())
                 NewCall();
 
-            float waitTime = Settings.config.minTimeBetweenCalls +
-                             Random.Range(0, Settings.config.randomTimeBetweenCalls);
+            float waitTime = Day.CallsTimeTable.timeBetweenCalls + Day.CallsTimeTable.randomTimeBetweenCalls;
             yield return new WaitForSeconds(waitTime);
         }
     }
-
 
     private void OnDestroy() {
         Clock.onStartDay -= StartDay;

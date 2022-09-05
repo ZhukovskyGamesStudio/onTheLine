@@ -7,7 +7,10 @@ public class TalkingBubble : MonoBehaviour
 {
     public GameObject BubbleRight, BubbleLeft;
     public Text curText, RightText, LeftText;
+    public string emptyTextSymbols = " . . . ";
 
+    public UnityEvent onTalkEnds;
+    
     Coroutine printingCoroutine;
     UnityEvent callback;
     UnityEvent listenedImportantCallback;
@@ -22,8 +25,8 @@ public class TalkingBubble : MonoBehaviour
         listenedImportantCallback = new UnityEvent();
         curText = RightText;
         isTalkingNow = false;
-        RightText.text = " . . . ";
-        LeftText.text = " . . . ";
+        RightText.text = emptyTextSymbols;
+        LeftText.text = emptyTextSymbols;
     }
 
     public void Say(string toSay, UnityAction callbackAction)
@@ -46,7 +49,7 @@ public class TalkingBubble : MonoBehaviour
         if (printingCoroutine != null)
             StopCoroutine(printingCoroutine);
         Headphones.PlayStopTalking(gameObject, false);
-        curText.text = " . . . ";
+        curText.text = emptyTextSymbols;
     }
 
     public void ChangeSide(bool isRight)
@@ -78,7 +81,8 @@ public class TalkingBubble : MonoBehaviour
         if (curText.text.Contains("<b><color=#") && !curText.text.Contains("></color></b>"))
             curText.text = "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) + ">. . .</color></b>";
         else
-            curText.text = " . . . ";
+            curText.text = emptyTextSymbols;
+        
     }
 
 
@@ -128,10 +132,11 @@ public class TalkingBubble : MonoBehaviour
         }
         isTalkingNow = false;
         Headphones.PlayStopTalking(gameObject, false);
+        onTalkEnds?.Invoke();
         yield return new WaitForSeconds(settings.timeBetweenTwoPeople);
         callback?.Invoke();
         yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);
-        curText.text = " . . . ";
+        curText.text = emptyTextSymbols;
         yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);
     }
 }

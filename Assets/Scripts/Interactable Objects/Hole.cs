@@ -64,7 +64,7 @@ public class Hole : MonoBehaviour
         }
     }
 
-    public void NewCall(Call call)
+    public virtual void NewCall(Call call)
     {
         personBehindHole.StartNewCall(call);
     }
@@ -105,7 +105,7 @@ public class Hole : MonoBehaviour
             curShteker.connectedTo.curHole.Hear(line);
     }
 
-    public void SetDoorNumber(bool isOn)
+    public virtual void SetDoorNumber(bool isOn)
     {
         if (isOn)
             DoorNumber.Open();
