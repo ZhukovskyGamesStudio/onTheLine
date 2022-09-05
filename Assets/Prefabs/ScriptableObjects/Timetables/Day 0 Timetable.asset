@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ff9350234c07b42810e9bcb6708a57, type: 3}
+  m_Name: Day 0 Timetable
+  m_EditorClassIdentifier: 
+  additionalCallsAmount: 0
+  callsTimeTable:
+  - name: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435"
+    dialog: {fileID: 0}
+    fromTime: 8
+    toTime: 9
+    priority: 1
+  randomDialogs:
+  - {fileID: 11400000, guid: dbf7b44a3c48b7045b52436fb3885022, type: 2}
+  - {fileID: 11400000, guid: 9d7aeaef1cbc89e4a87e23c119eadb55, type: 2}
+  - {fileID: 11400000, guid: e24663f4f79c6944dafc911150e72dc4, type: 2}
+  - {fileID: 11400000, guid: 4d91e61331cf4374987940dd1ba7b50c, type: 2}
+  - {fileID: 11400000, guid: c44d06d1b4316bf4daadb0b93f5a47e9, type: 2}
+  - {fileID: 11400000, guid: c1b350bdc91ddad4aabbae1070b8acf2, type: 2}
+  - {fileID: 11400000, guid: 8af37aae11edc16468ea10fa734c8d4e, type: 2}
+  - {fileID: 11400000, guid: 3ae27ede183adc543b8140674d248310, type: 2}
+  - {fileID: 11400000, guid: 775a2b441fc85a04baf5f83512ee4a99, type: 2}
+  - {fileID: 11400000, guid: 24d4ce6362166654d87259d6383a29b0, type: 2}
+  - {fileID: 11400000, guid: c56cab7532c9c6d479be6870afc3b2ce, type: 2}
+  - {fileID: 11400000, guid: 14f3951b4ab62124eb9d21ff13b82697, type: 2}
+  - {fileID: 11400000, guid: 12a862bad7645984e909e614228f9504, type: 2}
+  - {fileID: 11400000, guid: bf5f75ed96fc4d34d9233a2d202af683, type: 2}
+  - {fileID: 11400000, guid: adef217ca5879c644842bc14b6285a37, type: 2}
+  - {fileID: 11400000, guid: 371671f3899cf7141bb5c8e3d82cf6c1, type: 2}
+  - {fileID: 11400000, guid: 4ded250985e27404b85e84a514feedd2, type: 2}
+  - {fileID: 11400000, guid: f38bcf2c49f789440998332786e10489, type: 2}
+  - {fileID: 11400000, guid: 548fdd526d898f141beb4e11839037e4, type: 2}
+  - {fileID: 11400000, guid: 03052067498e7c54fbf185b6a08a653e, type: 2}

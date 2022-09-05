@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
+  m_Name: Bandits, Police
+  m_EditorClassIdentifier: 
+  Id: a56f0a19-a3dd-4ad4-93ae-73179d9ee27a
+  requirementFrom:
+    Name: 
+    Surname: 
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 0
+  requirementTo:
+    Name: 
+    Surname: 
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 2
+  SayToOperator: "\u041C\u0438\u043B\u0438\u0446\u0438\u044F \u0441\u043B\u0443\u0448\u0430\u0435\u0442."
+  lines: []
+  bubbleLines: []
+  requireTags: []
+  produceTags: []
+  forbiddenTags: []
+  Transitions:
+  - thought: "\u0412 \u043F\u044F\u0442\u043E\u0439 \u043A\u0432\u0430\u0440\u0442\u0438\u0440\u0435
+      \u0433\u043E\u0442\u043E\u0432\u0438\u0442\u0441\u044F \u043E\u0433\u0440\u0430\u0431\u043B\u0435\u043D\u0438\u0435"
+    dialog: 79ac611d-0849-4d7f-acd8-cfc22b955dec
+  Informations: []
+  priority: 0

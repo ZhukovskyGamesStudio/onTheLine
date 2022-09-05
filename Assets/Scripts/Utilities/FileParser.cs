@@ -29,12 +29,11 @@ public class FileParser : MonoBehaviour {
         Dialog dialog = ScriptableObject.CreateInstance<Dialog>();
         JsonUtility.FromJsonOverwrite(text, dialog);
 
-        string name = "Assets/Dialogs/" + data.name + ".asset";
-        Dialog asset;
-        if (!File.Exists(name))
-            AssetDatabase.CreateAsset(dialog, name);
+        string path = "Assets/Dialogs/" + data.name.Substring(0, data.name.IndexOf('_')) + "/" + data.name + ".asset";
+        if (!File.Exists(path))
+            AssetDatabase.CreateAsset(dialog, path);
         else {
-            Dialog old = (Dialog) AssetDatabase.LoadAssetAtPath(name, typeof(Dialog));
+            Dialog old = (Dialog) AssetDatabase.LoadAssetAtPath(path, typeof(Dialog));
             old.Copy(dialog);
             EditorUtility.SetDirty(old);
         }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using SimpleFileBrowser;
 
@@ -124,16 +125,18 @@ namespace Levitan {
             if (FileBrowser.Success) {
                 _workspaceManager.CollectExportData();
                 _projectData._draggableDatas = _workspaceManager.CollectWorkspace();
-                foreach (var draggable in _projectData._draggableDatas) {
-                    if (draggable.Type == DraggableType.Dialog) {
-                        Dialog asset = RuntimeParser.ParseDialogData(draggable._dialogData);
-                        string json = JsonUtility.ToJson(asset);
-                        File.WriteAllTextAsync(
-                            FileBrowser.Result[0] + Path.DirectorySeparatorChar +
-                            (string.IsNullOrEmpty(_projectData.projectName) ? "" : (_projectData.projectName + "_")) +
-                            draggable._dialogData.name + ".json",
-                            json);
+                foreach (DraggableData draggable in _projectData._draggableDatas.Where(d => d.Type == DraggableType.Dialog)) {
+                    Dialog asset = RuntimeParser.ParseDialogData(draggable._dialogData);
+                    if(draggable._dialogData.name.StartsWith('/')) {
+                        continue;
                     }
+                    string name = asset.SayToOperator;
+                    string json = JsonUtility.ToJson(asset);
+                    File.WriteAllTextAsync(
+                        FileBrowser.Result[0] + Path.DirectorySeparatorChar +
+                        (string.IsNullOrEmpty(_projectData.projectName) ? "" : (_projectData.projectName + "_")) +
+                        draggable._dialogData.name + ".json",
+                        json);
                 }
             } else {
                 Debug.Log("You dont select folder");

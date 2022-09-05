@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
+  m_Name: gM, Police Default
+  m_EditorClassIdentifier: 
+  Id: b6c0bde9-e37e-4061-a69e-b0836e148a5e
+  requirementFrom:
+    Name: 
+    Surname: 
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 0
+  requirementTo:
+    Name: 
+    Surname: 
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 2
+  SayToOperator: "\u041C\u0438\u043B\u0438\u0446\u0438\u044F \u0441\u043B\u0443\u0448\u0430\u0435\u0442."
+  lines: []
+  bubbleLines: []
+  requireTags: []
+  produceTags: []
+  forbiddenTags: []
+  Transitions:
+  - thought: "\u041F\u043E\u0442\u0435\u0440\u044F\u043B\u0430\u0441\u044C \u0434\u0435\u0432\u043E\u0447\u043A\u0430
+      \u0438\u0437 4 \u043A\u0432\u0430\u0440\u0442\u0438\u0440\u044B"
+    dialog: a5048bad-2e70-4a03-b64c-7d2ee05d5f9a
+  - thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
+      \u043A \u041A\u0443\u0437\u043D\u0435\u0446\u043E\u0432\u044B\u043C"
+    dialog: e3253b23-ca34-4975-ba20-d4c71e8e6406
+  - thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
+      \u043A \u0417\u0430\u0445\u0430\u0440\u043E\u0432\u044B\u043C"
+    dialog: e3253b23-ca34-4975-ba20-d4c71e8e6406
+  - thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
+      \u043A \u041C\u0438\u0448\u0435"
+    dialog: 159024f0-821d-4a08-9be7-dafdf8e85b30
+  - thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
+      \u043A \u0417\u0430\u0439\u0446\u0435\u0432\u044B\u043C"
+    dialog: e3253b23-ca34-4975-ba20-d4c71e8e6406
+  Informations: []
+  priority: 0
