@@ -74,17 +74,7 @@ public class PersonBehindHole : MonoBehaviour {
             });
         } else {
             curState = PersonState.DialogStarted;
-            string lineToSay = _dialog.lines[lineIndex];
-            foreach (var informationData in dialog.Informations) {
-                if (lineToSay.Contains(informationData.line)) {
-                    lineToSay = lineToSay.Replace(informationData.line, "$" + informationData.line + "$");
-                    TalkingBubble.AddListenedCallback(delegate {
-                        CharacterTalking.instance.AddBubble(informationData.thought);
-                    });
-                }
-            }
-
-            TalkingBubble.Say(lineToSay, delegate { curHole.PassSound(_dialog, lineIndex); });
+            TalkingBubble.Say(AddInformationsToPhraze(_dialog.lines[lineIndex]), delegate { curHole.PassSound(_dialog, lineIndex); });
         }
     }
 
@@ -123,7 +113,7 @@ public class PersonBehindHole : MonoBehaviour {
                         //добавить реплику повтора для оператора
                     } else {
                         curState = PersonState.WaitingForConnection;
-                        TalkingBubble.Say(Call.dialog.SayToOperator, delegate { StartStopWaiting(true); });
+                        TalkingBubble.Say(AddInformationsToPhraze(Call.dialog.SayToOperator), delegate { StartStopWaiting(true); });
                     }
                 } else {
                     //Диалог со случайным номером
@@ -137,14 +127,14 @@ public class PersonBehindHole : MonoBehaviour {
                     Call == null)
                     return;
                 curState = PersonState.WaitingForConnection;
-                TalkingBubble.Say(Call.dialog.SayToOperator, delegate { StartStopWaiting(true); });
+                TalkingBubble.Say(AddInformationsToPhraze(Call.dialog.SayToOperator), delegate { StartStopWaiting(true); });
                 return;
 
             case "/repeat/":
                 if (_dialog != null && curState == PersonState.WaitingForConnection)
                     return;
                 curState = PersonState.WaitingForConnection;
-                TalkingBubble.Say(Call.dialog.SayToOperator, delegate { StartStopWaiting(true); });
+                TalkingBubble.Say(AddInformationsToPhraze(Call.dialog.SayToOperator), delegate { StartStopWaiting(true); });
                 return;
 
             case "/disconnectSound/":
@@ -174,6 +164,19 @@ public class PersonBehindHole : MonoBehaviour {
                     delegate { curHole.PassSound("Что? Ничего не понятно."); });
                 break;
         }
+    }
+
+    private string AddInformationsToPhraze(string lineToSay) {
+        foreach (var informationData in Call.dialog.Informations) {
+            if (lineToSay.Contains(informationData.line)) {
+                lineToSay = lineToSay.Replace(informationData.line, "$" + informationData.line + "$");
+                TalkingBubble.AddListenedCallback(delegate {
+                    CharacterTalking.instance.AddBubble(informationData.thought);
+                });
+            }
+        }
+
+        return lineToSay;
     }
 
     //Запускает или останавливает корутин ожидания
