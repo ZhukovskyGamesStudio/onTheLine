@@ -15,5 +15,60 @@ MonoBehaviour:
   timeBetweenCalls: 30
   randomTimeBetweenCalls: 10
   additionalCallsAmount: 0
-  callsTimeTable: []
-  randomDialogs: []
+  callsTimeTable:
+  - name: 
+    dialog: {fileID: 11400000, guid: 5a5777a3a47831e49a753887893866ac, type: 2}
+    fromTime: 9
+    toTime: 10
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: 09921540a079c054fabd5da14ba63e24, type: 2}
+    fromTime: 10
+    toTime: 11
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: 31930485bad443d438eee8388b8665a0, type: 2}
+    fromTime: 11
+    toTime: 12
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: 42be33112b3800b439e8c73a976b6eac, type: 2}
+    fromTime: 13
+    toTime: 14
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: 66234a25d2d904c4f971b875aff75409, type: 2}
+    fromTime: 14
+    toTime: 15
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: bb65ea5448e4a3d40906357254b3ec96, type: 2}
+    fromTime: 12
+    toTime: 13
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: 31ffb5de4de4e1f45b9d69707331b7e7, type: 2}
+    fromTime: 16
+    toTime: 17
+    priority: 0
+  - name: 
+    dialog: {fileID: 11400000, guid: 31ffb5de4de4e1f45b9d69707331b7e7, type: 2}
+    fromTime: 16
+    toTime: 17
+    priority: 0
+  randomDialogs:
+  - {fileID: 11400000, guid: d492fb707e7b8c94689425334fd5aa29, type: 2}
+  - {fileID: 11400000, guid: d0499d9c19ccef94291d52e4770fca47, type: 2}
+  - {fileID: 11400000, guid: e195646a6bcfd2948969135b1d3a5535, type: 2}
+  - {fileID: 11400000, guid: 95b44ffe7c2442d42934dce01cef302e, type: 2}
+  - {fileID: 11400000, guid: 010149ad9cb613142a8880ac605b2af7, type: 2}
+  - {fileID: 11400000, guid: 23b0c35c5916f4a4a99c0eb8424f0640, type: 2}
+  - {fileID: 11400000, guid: e47f976fd7b5e5f4fb9d960dbf596c58, type: 2}
+  - {fileID: 11400000, guid: 37eaa3adba2cb74448946868c0d5b595, type: 2}
+  - {fileID: 11400000, guid: 28a8dc06f80118c488914ec314213c30, type: 2}
+  - {fileID: 11400000, guid: 69ba03ecb41db01429fc49762d8fb411, type: 2}
+  - {fileID: 11400000, guid: 466db388cad35bc47bcd80a68e9e5086, type: 2}
+  - {fileID: 11400000, guid: 8486b3a8af5951743b13d5ac7d108b5f, type: 2}
+  - {fileID: 11400000, guid: 48a5c84048a81cc4aacc11cd8e0c0fd1, type: 2}
+  - {fileID: 11400000, guid: f35a4fb6e248d1f459fe64db7988dbb1, type: 2}
+  - {fileID: 11400000, guid: a249a6b4666bf7c43b1022417e2140a2, type: 2}

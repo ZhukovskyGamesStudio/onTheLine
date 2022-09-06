@@ -4,53 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Over phone 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Over phone 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits.lvtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, Police answer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, Police.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, toysRobbery.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, toysSaved.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Chapter 1, Day 1.lvtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY.lvtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Algebra.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Hospital.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_KPK.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Kids.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Kiselevs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Magnitophone.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_MissingBag.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Prank.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_StudyRant.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_ToZaitsevs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog.lvtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog_Elders.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog_Warehouse.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog_Watermelon.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM.lvtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_ Police Default.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_ Police answer, wrong.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Alina.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Kuznitsovs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Police 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Police answer 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Police answer, right.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Titovs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Zaharovs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Zaitseva.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_annoyingPolice.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levitan/LevitanScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/LevitanScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/DialogsCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/DialogsCollection.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="Parsed dialogs &amp; fixed people" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,21 +43,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/DialogsManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Managers/DayManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.visualeffectgraph/Editor/Models/Contexts/Implementations/VFXLineOutput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/LogManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ColorManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Commutator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/AppManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/5f/c9dd7b1f/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/83/ef6f48de/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Log.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6073cf49ed704e958b8a66d540dea94846a800/9c/a5e40348/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Headphones.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Dialogs/Testing/mansTalk.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Editor/ShaderGenerator/CSharpToHLSL.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a017e354f3154926a5617fbac3a64fcc80f800/2e/eee8c2d2/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable Objects/SpeechFromBack.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,7 +66,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/d8/e96b9d1d/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A017E354-F315-4926-A561-7FBAC3A64FCC/2d/39d9abd5/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogsCollection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Interactable Objects/TableItemBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/HDRaytracingManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -170,6 +117,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DayManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Commutator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UIPrefabs/PhoneBookElement.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -274,6 +222,7 @@
       <workItem from="1661501083135" duration="1206000" />
       <workItem from="1662401527415" duration="7331000" />
       <workItem from="1662466572127" duration="8641000" />
+      <workItem from="1662483300096" duration="464000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.">
       <created>1646778182587</created>
@@ -569,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662474083321</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Parsed dialogs &amp; fixed people">
+      <created>1662483746525</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1662483746525</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +548,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Rich text support" />
     <MESSAGE value="Saving transitions" />
     <MESSAGE value="informations add &amp; save &amp; export" />
     <MESSAGE value="Fixes before build" />
@@ -617,7 +572,8 @@
     <MESSAGE value="Dialog can add/remove tags on end" />
     <MESSAGE value="SayToOperator can add Thoughts" />
     <MESSAGE value="Headphones working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Headphones working" />
+    <MESSAGE value="Parsed dialogs &amp; fixed people" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parsed dialogs &amp; fixed people" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

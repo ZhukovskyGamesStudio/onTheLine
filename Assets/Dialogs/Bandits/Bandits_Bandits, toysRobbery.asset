@@ -96,6 +96,7 @@ MonoBehaviour:
   bubbleLines: []
   requireTags:
   - toysRobbery
+  - '!toysSaved'
   produceTags: []
   forbiddenTags:
   - toysSaved
