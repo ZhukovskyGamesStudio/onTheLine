@@ -54,7 +54,8 @@ MonoBehaviour:
   bubbleLines: []
   requireTags:
   - Headphone on
-  produceTags: []
+  produceTags:
+  - Number seen
   forbiddenTags: []
   Transitions: []
   Informations: []

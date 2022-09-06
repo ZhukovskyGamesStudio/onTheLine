@@ -11,7 +11,7 @@ public class SceneLoadManager : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-
+        
         instance = this;
         DontDestroyOnLoad(instance.gameObject);
     }

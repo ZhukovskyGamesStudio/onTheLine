@@ -45,7 +45,7 @@ MonoBehaviour:
   lines: []
   bubbleLines: []
   requireTags:
-  - Button pressed
+  - Headphone on
   produceTags: []
   forbiddenTags: []
   Transitions:

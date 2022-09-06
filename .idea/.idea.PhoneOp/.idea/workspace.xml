@@ -6,137 +6,49 @@
   <component name="ChangeListManager">
     <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 1.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Bandits/Bandits 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY, Algebra.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY, Algebra.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY, Algebra.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY, Algebra.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 6.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 6.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 7.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 7.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 8.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 8.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 9.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/DialogsY/DialogsY 9.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/HateBars.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/HateBars.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/HateBars.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/HateBars.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/ZhukovskyDialogs/ZhukovskyDialogs 0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/ZhukovskyDialogs/ZhukovskyDialogs 0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/ZhukovskyDialogs/ZhukovskyDialogs 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/ZhukovskyDialogs/ZhukovskyDialogs 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/ZhukovskyDialogs/ZhukovskyDialogs 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/ZhukovskyDialogs/ZhukovskyDialogs 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/Bandits.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/Bandits.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/DialogsY.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/DialogsY.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/ZhukovskyDialogs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/ZhukovskyDialogs.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/betweenRandom.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/betweenRandom.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/gM.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/gM.TXT.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits, Police answer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits, Police.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits, toysRobbery.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits, toysSaved.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0.lvtn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Over phone 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Over phone 2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Over phone 3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Over phone 4 Not heard.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Over phone Heard.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Too long 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Too long 2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Too long 3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Too long 4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Day0_Too long 5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, Algebra.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, Hospital.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, KPK.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, Kids.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, Kiselevs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, Magnitophone.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, MissingBag.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, Prank.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, StudyRant.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/DialogsY, ToZaitsevs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/ZhukovskyDialog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/ZhukovskyDialog, Elders.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/ZhukovskyDialog, Warehouse.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/ZhukovskyDialog, Watermelon.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/betweenRandom" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/betweenRandom.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Alina.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Kuznitsovs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Police 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Police Default.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Police answer 1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Police answer, right.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Police answer, wrong.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Titovs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Zaharovs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, Zaitseva.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/gM, annoyingPolice.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/testDialogs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/testDialogs.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/betweenRandom/betweenRandom 0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/betweenRandom/betweenRandom 0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 6.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/gM/gM 6.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/mansTalk.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/mansTalk.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/mansTalk.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/mansTalk.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Over phone 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Over phone 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits.lvtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits 1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, Police answer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, Police.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, toysRobbery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Bandits_Bandits, toysSaved.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/Chapter 1, Day 1.lvtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY.lvtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Algebra.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Hospital.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_KPK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Kids.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Kiselevs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Magnitophone.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_MissingBag.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_Prank.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_StudyRant.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/DialogsY_ToZaitsevs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog.lvtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog_Elders.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog_Warehouse.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/ZhukovskyDialog_Watermelon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM.lvtn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_ Police Default.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_ Police answer, wrong.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Alina.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Kuznitsovs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Police 1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Police answer 1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Police answer, right.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Titovs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Zaharovs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_Zaitseva.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/TMP/gM_annoyingPolice.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Levitan/LevitanScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/LevitanScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/DialogsCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/DialogsCollection.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 1 Timetable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 1 Timetable.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/FileParser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/FileParser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,31 +88,39 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/DialogsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Managers/DayManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.visualeffectgraph/Editor/Models/Contexts/Implementations/VFXLineOutput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/LogManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/ColorManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Commutator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/AppManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/5f/c9dd7b1f/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/83/ef6f48de/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Log.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6073cf49ed704e958b8a66d540dea94846a800/9c/a5e40348/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Headphones.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Dialogs/Testing/mansTalk.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Editor/ShaderGenerator/CSharpToHLSL.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a017e354f3154926a5617fbac3a64fcc80f800/2e/eee8c2d2/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable Objects/SpeechFromBack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.13/Rider/Editor/Discovery.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.shadergraph/Editor/Drawing/Views/MaterialNodeView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A017E354-F315-4926-A561-7FBAC3A64FCC/29/1ed6085c/ReorderableList.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/TestRunner/Callbacks/EditModeRunnerCallback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.13/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205BB2-CB25-478A-9CB0-F5E54CF11441/37/78ed65ac/TextAsset.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/d8/e96b9d1d/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A017E354-F315-4926-A561-7FBAC3A64FCC/2d/39d9abd5/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogsCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Scripts/Interactable Objects/TableItemBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/Raytracing/HDRaytracingManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventTrigger.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/PhoneOp/ProjectSettings/RiderScriptEditorPersistedState.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -218,7 +138,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogsCollection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/UI/DialogEditPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/WorkspaceManager.cs" />
@@ -239,7 +158,18 @@
       <option value="$PROJECT_DIR$/Assets/Dialogs/_NotParsed/json/Bandits 1.json" />
       <option value="$USER_HOME$/Desktop/Day0.json" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/SaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CallsTimeTable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/SpeechFromBack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/Hole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/FileParser.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/TableItemBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Headphones.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DayManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Commutator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -252,12 +182,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34973046" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.4703504" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.37159255" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -296,10 +227,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="30484">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="30484" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -341,6 +272,8 @@
       <workItem from="1661208754985" duration="4552000" />
       <workItem from="1661452792834" duration="4269000" />
       <workItem from="1661501083135" duration="1206000" />
+      <workItem from="1662401527415" duration="7331000" />
+      <workItem from="1662466572127" duration="8641000" />
     </task>
     <task id="LOCAL-00001" summary="Добавил загрузку, первую меняющиеся бъекты в меню и trainingManager.">
       <created>1646778182587</created>
@@ -601,7 +534,42 @@
       <option name="project" value="LOCAL" />
       <updated>1661457046620</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Changed file structure">
+      <created>1662401588781</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1662401588781</updated>
+    </task>
+    <task id="LOCAL-00039" summary="SpeechFromBack">
+      <created>1662406059865</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662406059865</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Dialog can add/remove tags on end">
+      <created>1662407334710</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1662407334710</updated>
+    </task>
+    <task id="LOCAL-00041" summary="SayToOperator can add Thoughts">
+      <created>1662408162005</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1662408162005</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Headphones working">
+      <created>1662474083321</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1662474083321</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -624,11 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Connections &amp; ui fixes" />
-    <MESSAGE value="SaveLoad of connections" />
-    <MESSAGE value="Saving cameraPos &amp; fixed multiconnections" />
-    <MESSAGE value="Imported simpleFileBrowser &amp; visual fixes" />
-    <MESSAGE value="Bugfixes" />
     <MESSAGE value="Rich text support" />
     <MESSAGE value="Saving transitions" />
     <MESSAGE value="informations add &amp; save &amp; export" />
@@ -649,7 +612,12 @@
     <MESSAGE value="Clamped dialogName length" />
     <MESSAGE value="tag size limit" />
     <MESSAGE value="fileNames" />
-    <option name="LAST_COMMIT_MESSAGE" value="fileNames" />
+    <MESSAGE value="Changed file structure &amp; PressT" />
+    <MESSAGE value="SpeechFromBack" />
+    <MESSAGE value="Dialog can add/remove tags on end" />
+    <MESSAGE value="SayToOperator can add Thoughts" />
+    <MESSAGE value="Headphones working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Headphones working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,6 +634,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Commutator.cs</url>
+          <line>85</line>
+          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Commutator.cs" initialLine="85" containingFunctionPresentation="method 'EndOfCall'">
+            <startOffsets>
+              <option value="2488" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2507" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs</url>
+          <line>115</line>
+          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\PersonBehindHole.cs" initialLine="134" containingFunctionPresentation="method 'ChooseAnswer'">
+            <startOffsets>
+              <option value="3677" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3785" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
