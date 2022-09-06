@@ -62,13 +62,18 @@ public class DayManager : MonoBehaviour {
     IEnumerator CallsCoroutine() {
         yield return new WaitForSeconds(Random.Range(3, 5));
         int callsAmount = DialogsQueue.GetCallsAmount();
+        while (Clock.IsWorkTime()) {
+            NewCall();
+            yield return new WaitForSeconds(1);
+        }
+        /*
         for (int i = 0; i < callsAmount; i++) {
             if (Clock.IsWorkTime())
                 NewCall();
 
             float waitTime = Day.CallsTimeTable.timeBetweenCalls + Day.CallsTimeTable.randomTimeBetweenCalls;
             yield return new WaitForSeconds(waitTime);
-        }
+        }*/
     }
 
     private void OnDestroy() {

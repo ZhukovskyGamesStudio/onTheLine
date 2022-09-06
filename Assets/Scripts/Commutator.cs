@@ -55,7 +55,7 @@ public class Commutator : MonoBehaviour
             virtualHole.NewCall(newCall);
         } else {
             //Building.instance.GetNewCall
-            DoorNumbers[newCall.from].Open();
+            TurnBulb(newCall.from - 1, true);
             //bulbs[newCall.from].ChangeState(1);   
             holes[newCall.from].NewCall(newCall);
         }
@@ -77,17 +77,17 @@ public class Commutator : MonoBehaviour
     {
         Calls.Remove(call);
         if (call.from > 0)
-            DoorNumbers[call.from].Close();
-        DoorNumbers[wrongHoleNumber].Close();
+            TurnBulb(call.from - 1, false);
+        TurnBulb(wrongHoleNumber - 1, false);
     }
 
     public void EndOfCall(Call call)
     {
         Calls.Remove(call);
         if (call.from > 0)
-            DoorNumbers[call.from].Close();
+            TurnBulb(call.from - 1, false);
         if (call.to > 0 && call.state > CallState.WaitingforConnection)
-            DoorNumbers[call.to].Close();
+            TurnBulb(call.to - 1, false);
     }
 
     public void EndAllCalls()

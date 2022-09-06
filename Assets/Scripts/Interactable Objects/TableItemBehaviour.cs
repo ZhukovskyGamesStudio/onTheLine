@@ -1,44 +1,34 @@
 using UnityEngine;
 
-public class TableItemBehaviour : InteractableObject
-{
+public class TableItemBehaviour : InteractableObject {
     public float moveSpeed = 10;
     public Transform ItemTakenPos;
 
     Vector3 startPos;
     Quaternion startRot;
-    Vector3 targetPos;
-    Quaternion targetRot;
+    Vector3 targetPos => isTaken ? ItemTakenPos.position : startPos;
+    Quaternion targetRot => isTaken ? ItemTakenPos.rotation : startRot;
     protected bool isTaken;
 
-    private void Awake()
-    {
+    protected virtual void Awake() {
         startPos = transform.position;
         startRot = transform.rotation;
-        targetPos = startPos;
     }
 
-    protected override void Update()
-    {
+    protected override void Update() {
         base.Update();
-        if (Vector3.Distance(transform.position, targetPos) > 0.05f)
-        {
+        if (Vector3.Distance(transform.position, targetPos) > 0.05f) {
             transform.position = Vector3.Slerp(transform.position, targetPos, 0.01f * moveSpeed);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 0.01f * moveSpeed);
         }
     }
 
     [HideInInspector]
-    public override void OnmouseDown()
-    {
+    public override void OnmouseDown() {
         TakeDrop();
     }
 
-
-    public void TakeDrop()
-    {
+    private void TakeDrop() {
         isTaken = !isTaken;
-        targetPos = isTaken ? ItemTakenPos.position : startPos;
-        targetRot = isTaken ? ItemTakenPos.rotation : startRot;
     }
 }
