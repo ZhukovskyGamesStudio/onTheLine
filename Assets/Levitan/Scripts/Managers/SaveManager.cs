@@ -39,14 +39,18 @@ namespace Levitan {
                 "Select file to load", "Load");
             AppManager.Instance._cameraController.IsEditing = false;
             if (FileBrowser.Success) {
-                string json = File.ReadAllText(FileBrowser.Result[0]);
-                _projectData = JsonUtility.FromJson<ProjectData>(json);
-                _workspaceManager.LoadWorkspace(_projectData._draggableDatas);
-                PlaceCamera();
-                _savePath = FileBrowser.Result[0];
+                LoadProject(FileBrowser.Result[0]);
             } else {
                 Debug.Log("You dont select file");
             }
+        }
+
+        public void LoadProject(string path) {
+            string json = File.ReadAllText(path);
+            _projectData = JsonUtility.FromJson<ProjectData>(json);
+            _workspaceManager.LoadWorkspace(_projectData._draggableDatas);
+            PlaceCamera();
+            _savePath = path;
         }
 
         private void PlaceCamera() {
