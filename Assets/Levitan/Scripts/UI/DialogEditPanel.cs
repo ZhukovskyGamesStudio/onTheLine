@@ -160,6 +160,12 @@ namespace Levitan {
             RedrawOperatorText();
         }
 
+        private void Update() {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                Close();
+            }
+        }
+
         public void Close() {
             gameObject.SetActive(false);
             curDraggableDialog.ChangeFromToText(curData.from,curData.to);

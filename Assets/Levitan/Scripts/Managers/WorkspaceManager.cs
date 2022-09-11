@@ -57,31 +57,41 @@ namespace Levitan {
         public void LoadWorkspace(List<DraggableData> draggables) {
             ClearField();
             foreach (DraggableData draggableData in draggables) {
-                switch (draggableData.Type) {
-                    case DraggableType.Dialog:
-                        InstantiateDialog(draggableData);
-                        break;
+                try {
+                    switch (draggableData.Type) {
+                        case DraggableType.Dialog:
+                            InstantiateDialog(draggableData);
+                            break;
 
-                    case DraggableType.Tag:
-                        InstantiateTag(draggableData);
-                        break;
+                        case DraggableType.Tag:
+                            InstantiateTag(draggableData);
+                            break;
 
-                    case DraggableType.Thought:
-                        InstantiateThought(draggableData);
-                        break;
+                        case DraggableType.Thought:
+                            InstantiateThought(draggableData);
+                            break;
 
-                    case DraggableType.Transition:
-                        InstantiateTransition(draggableData);
-                        break;
+                        case DraggableType.Transition:
+                            InstantiateTransition(draggableData);
+                            break;
 
-                    case DraggableType.Information:
-                        InstantiateInformation(draggableData);
-                        break;
+                        case DraggableType.Information:
+                            InstantiateInformation(draggableData);
+                            break;
+                    }
+                }
+                catch {
+                    AppManager.Instance._LogManager.Log(draggableData._dialogData.name +" couldnt spawn it.");
                 }
             }
 
-            foreach (var idraggable in _draggables.Values) {
-                idraggable.SpawnConnections();
+            foreach (IDraggable idraggable in _draggables.Values) {
+                try {
+                    idraggable.SpawnConnections();
+                }
+                catch {
+                    AppManager.Instance._LogManager.Log(idraggable.Name + "has no connection");
+                }
             }
         }
 
