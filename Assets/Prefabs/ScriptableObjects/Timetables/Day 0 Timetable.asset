@@ -17,17 +17,22 @@ MonoBehaviour:
   additionalCallsAmount: 3
   callsTimeTable:
   - name: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435"
-    dialog: {fileID: 11400000, guid: 4d019498c4a6f4c41ad5f4e35ce65d28, type: 2}
+    dialog: {fileID: 11400000, guid: 39b9bd9967d0cf14d9bc96f2a5cc7aae, type: 2}
     fromTime: 8
     toTime: 9
     priority: 1
   randomDialogs:
-  - {fileID: 11400000, guid: dbf7b44a3c48b7045b52436fb3885022, type: 2}
-  - {fileID: 11400000, guid: 9d7aeaef1cbc89e4a87e23c119eadb55, type: 2}
-  - {fileID: 11400000, guid: e24663f4f79c6944dafc911150e72dc4, type: 2}
-  - {fileID: 11400000, guid: 8af37aae11edc16468ea10fa734c8d4e, type: 2}
-  - {fileID: 11400000, guid: 371671f3899cf7141bb5c8e3d82cf6c1, type: 2}
-  - {fileID: 11400000, guid: 4ded250985e27404b85e84a514feedd2, type: 2}
-  - {fileID: 11400000, guid: f38bcf2c49f789440998332786e10489, type: 2}
-  - {fileID: 11400000, guid: 548fdd526d898f141beb4e11839037e4, type: 2}
-  - {fileID: 11400000, guid: 03052067498e7c54fbf185b6a08a653e, type: 2}
+  - {fileID: 11400000, guid: 2c0e4c2c53151df4eb0c8befc7eccfca, type: 2}
+  - {fileID: 11400000, guid: 7d8f938f74054014b902feef60909ef7, type: 2}
+  - {fileID: 11400000, guid: 6b83078a960033a469c30e7929783631, type: 2}
+  - {fileID: 11400000, guid: 48a13203fab50274aaf8ce98660e82d4, type: 2}
+  - {fileID: 11400000, guid: cda1d21ec1666774d87e80e8d7c8428c, type: 2}
+  - {fileID: 11400000, guid: 8112bda654d5715449eb27a5c0222b2b, type: 2}
+  - {fileID: 11400000, guid: 8fb3ac1d33a2f3f4389807ac28956cde, type: 2}
+  - {fileID: 11400000, guid: 8168a8838464cc74aa1b14e72c6934e0, type: 2}
+  - {fileID: 11400000, guid: e805c6b2f09e2b148b3c9699666c4311, type: 2}
+  - {fileID: 11400000, guid: 83c44aaf6e980ca4ab412c4c6297425b, type: 2}
+  - {fileID: 11400000, guid: 08e25cc9622b226489d133733f789578, type: 2}
+  - {fileID: 11400000, guid: f6db91119217aec4e8bd9d6e9f30bc17, type: 2}
+  - {fileID: 11400000, guid: b7233410a5ef13b468b03a7cf8fd0f41, type: 2}
+  - {fileID: 11400000, guid: 44bf492b328b913458a8b47b4687e064, type: 2}
