@@ -8,13 +8,6 @@ public class DialogsParserWindow : EditorWindow {
     [SerializeField]
     private TextAsset[] jsonDialogs;
 
-    // Add menu item named "My Window" to the Window menu
-    [MenuItem("Window/Dialogs Parser")]
-    public static void ShowWindow() {
-        //Show existing window instance. If one doesn't exist, make one.
-        GetWindow(typeof(DialogsParserWindow));
-    }
-
     void OnGUI() {
         ScriptableObject target = this;
         SerializedObject so = new SerializedObject(target);
