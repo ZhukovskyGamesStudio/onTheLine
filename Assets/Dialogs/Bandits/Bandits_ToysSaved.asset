@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
-  m_Name: Bandits_Bandits, toysSaved
+  m_Name: Bandits_ToysSaved
   m_EditorClassIdentifier: 
   Id: a12a466c-6cae-44d6-b883-079d314bde3d
   requirementFrom:

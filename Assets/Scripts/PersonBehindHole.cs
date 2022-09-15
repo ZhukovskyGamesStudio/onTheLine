@@ -8,33 +8,33 @@ public class PersonBehindHole : MonoBehaviour {
     public TalkingBubble TalkingBubble;
     public Hole curHole;
     public Person person;
-    Call Call;
-    Dialog _dialog;
-    PersonState curState;
-    SettingsConfig settings;
-    Coroutine coroutine;
+    private Call _call;
+    private Dialog _dialog;
+    PersonState _curState;
+    SettingsConfig _settings;
+    Coroutine _coroutine;
 
     void Start() {
-        settings = Settings.config;
-        curState = PersonState.Out;
+        _settings = Settings.config;
+        _curState = PersonState.Out;
     }
 
     public void StartNewCall(Call call) {
-        Call = call;
+        _call = call;
         _dialog = call.dialog;
         Pick();
     }
 
     //Поднимает телефонную трубку. 
     public void Pick() {
-        if (curState != PersonState.Out)
+        if (_curState != PersonState.Out)
             return;
 
         curHole.SetDoorNumber(true);
 
-        curState = PersonState.Picked;
+        _curState = PersonState.Picked;
 
-        if (!Settings.config.isWaitingForOperatorHello && curHole.isOpros && Call != null)
+        if (!Settings.config.isWaitingForOperatorHello && curHole.isOpros && _call != null)
             Hear("/hello1/");
         else
             TalkingBubble.Say("Ало", delegate { curHole.PassSound("/picked/"); });
@@ -44,7 +44,7 @@ public class PersonBehindHole : MonoBehaviour {
 
     //Слышит фразу не из диалога
     public void Hear(string line) {
-        if (curState == PersonState.Out)
+        if (_curState == PersonState.Out)
             return;
         StartStopWaiting(false);
 
@@ -53,7 +53,7 @@ public class PersonBehindHole : MonoBehaviour {
 
     //Слышит фразу из диалога
     public void Hear(Dialog dialog, int lineIndex) {
-        if (curState == PersonState.Out)
+        if (_curState == PersonState.Out)
             return;
         lineIndex++;
         _dialog = dialog;
@@ -73,7 +73,7 @@ public class PersonBehindHole : MonoBehaviour {
                 Drop(true);
             });
         } else {
-            curState = PersonState.DialogStarted;
+            _curState = PersonState.DialogStarted;
             TalkingBubble.Say(AddInformationsToPhraze(_dialog.lines[lineIndex]), delegate { curHole.PassSound(_dialog, lineIndex); });
         }
     }
@@ -102,18 +102,18 @@ public class PersonBehindHole : MonoBehaviour {
         switch (line) {
             case "/hello/":
                 if (_dialog != null) {
-                    if (curState == PersonState.DialogStarted) {
-                        if (Call != null) {
+                    if (_curState == PersonState.DialogStarted) {
+                        if (_call != null) {
                             curHole.mistakeEvent.Invoke("Абоненты доложили что разговор подслушан!");
                             Drop();
                             curHole.PassSound("/dialogEnd/");
                             return;
                         }
-                    } else if (curState == PersonState.WaitingForConnection) {
+                    } else if (_curState == PersonState.WaitingForConnection) {
                         //добавить реплику повтора для оператора
                     } else {
-                        curState = PersonState.WaitingForConnection;
-                        TalkingBubble.Say(AddInformationsToPhraze(Call.dialog.SayToOperator), delegate { StartStopWaiting(true); });
+                        _curState = PersonState.WaitingForConnection;
+                        TalkingBubble.Say(AddInformationsToPhraze(_dialog.SayToOperator), delegate { StartStopWaiting(true); });
                     }
                 } else {
                     //Диалог со случайным номером
@@ -123,22 +123,22 @@ public class PersonBehindHole : MonoBehaviour {
                 return;
 
             case "/hello1/":
-                if (curState == PersonState.DialogStarted || curState == PersonState.WaitingForConnection ||
-                    Call == null)
+                if (_curState == PersonState.DialogStarted || _curState == PersonState.WaitingForConnection ||
+                    _call == null)
                     return;
-                curState = PersonState.WaitingForConnection;
-                TalkingBubble.Say(AddInformationsToPhraze(Call.dialog.SayToOperator), delegate { StartStopWaiting(true); });
+                _curState = PersonState.WaitingForConnection;
+                TalkingBubble.Say(AddInformationsToPhraze(_dialog.SayToOperator), delegate { StartStopWaiting(true); });
                 return;
 
             case "/repeat/":
-                if (_dialog != null && curState == PersonState.WaitingForConnection)
+                if (_dialog != null && _curState == PersonState.WaitingForConnection)
                     return;
-                curState = PersonState.WaitingForConnection;
-                TalkingBubble.Say(AddInformationsToPhraze(Call.dialog.SayToOperator), delegate { StartStopWaiting(true); });
+                _curState = PersonState.WaitingForConnection;
+                TalkingBubble.Say(AddInformationsToPhraze(_dialog.SayToOperator), delegate { StartStopWaiting(true); });
                 return;
 
             case "/disconnectSound/":
-                if (curState == PersonState.DialogStarted) {
+                if (_curState == PersonState.DialogStarted) {
                     curHole.mistakeEvent.Invoke("Абонент отключён от звонка во время разговора!");
                     Drop();
                 }
@@ -150,9 +150,9 @@ public class PersonBehindHole : MonoBehaviour {
                 return;
 
             case "/picked/":
-                curState = PersonState.DialogStarted;
-                if (Call != null)
-                    TalkingBubble.Say(Call.dialog.lines[0], delegate { curHole.PassSound(Call.dialog, 0); });
+                _curState = PersonState.DialogStarted;
+                if (_call != null)
+                    TalkingBubble.Say(_dialog.lines[0], delegate { curHole.PassSound(_dialog, 0); });
                 else
                     // Здесь должен подставляться диалог между незнакомцами
                     TalkingBubble.Say(betweenRandomDialog.lines[0],
@@ -167,7 +167,11 @@ public class PersonBehindHole : MonoBehaviour {
     }
 
     private string AddInformationsToPhraze(string lineToSay) {
-        foreach (var informationData in Call.dialog.Informations) {
+        if (_dialog == null)
+            return lineToSay;
+        if (_dialog.Informations == null)
+            return lineToSay;
+        foreach (var informationData in _dialog.Informations) {
             if (lineToSay.Contains(informationData.line)) {
                 lineToSay = lineToSay.Replace(informationData.line, "$" + informationData.line + "$");
                 TalkingBubble.AddListenedCallback(delegate {
@@ -181,17 +185,17 @@ public class PersonBehindHole : MonoBehaviour {
 
     //Запускает или останавливает корутин ожидания
     void StartStopWaiting(bool isOn) {
-        if (coroutine != null)
-            StopCoroutine(coroutine);
+        if (_coroutine != null)
+            StopCoroutine(_coroutine);
 
         if (isOn)
-            coroutine = StartCoroutine(Waiting());
+            _coroutine = StartCoroutine(Waiting());
     }
 
     //Ожидает столько времени, сколько указано в настройках. Если не дожидается - кладёт трубку и отправляется "ошибка оператора"
     IEnumerator Waiting() {
         float timePass = 0;
-        while (timePass < settings.waitForAbonentPick) {
+        while (timePass < _settings.waitForAbonentPick) {
             timePass += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
@@ -214,9 +218,9 @@ public class PersonBehindHole : MonoBehaviour {
             }
         }
 
-        Call = null;
+        _call = null;
         _dialog = null;
-        curState = PersonState.Out;
+        _curState = PersonState.Out;
         TalkingBubble.StopSaying();
         curHole.SetDoorNumber(false);
     }

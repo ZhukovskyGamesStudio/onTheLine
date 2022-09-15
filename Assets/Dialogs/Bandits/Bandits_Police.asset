@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
-  m_Name: Bandits_Bandits, Police
+  m_Name: Bandits_Police
   m_EditorClassIdentifier: 
   Id: a56f0a19-a3dd-4ad4-93ae-73179d9ee27a
   requirementFrom:

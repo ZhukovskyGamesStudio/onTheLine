@@ -54,7 +54,7 @@ public class CharacterTalking : MonoBehaviour
         }
         else
         {
-            if (selectedButton)
+            if (selectedButton != null)
                 SayBubble(selectedButton);
         }
 

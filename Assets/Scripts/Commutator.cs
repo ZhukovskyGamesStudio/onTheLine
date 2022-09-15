@@ -55,9 +55,8 @@ public class Commutator : MonoBehaviour
             virtualHole.NewCall(newCall);
         } else {
             //Building.instance.GetNewCall
-            TurnBulb(newCall.from - 1, true);
             //bulbs[newCall.from].ChangeState(1);   
-            holes[newCall.from].NewCall(newCall);
+            holes[newCall.from-1].NewCall(newCall);
         }
 
         Calls.Add(newCall);

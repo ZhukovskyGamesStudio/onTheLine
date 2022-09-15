@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
-  m_Name: Bandits_Bandits, toysRobbery
+  m_Name: Bandits_ToysRobbery
   m_EditorClassIdentifier: 
   Id: 937e2e1f-6f1c-472c-b589-a2338cb8fc00
   requirementFrom:
@@ -96,7 +96,6 @@ MonoBehaviour:
   bubbleLines: []
   requireTags:
   - toysRobbery
-  - '!toysSaved'
   produceTags: []
   forbiddenTags:
   - toysSaved
