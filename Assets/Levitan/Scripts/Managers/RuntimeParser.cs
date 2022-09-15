@@ -6,7 +6,7 @@ namespace Levitan {
         public static Dialog ParseDialogData(DialogData dialogData) {
             string text = dialogData.allText;
             string[] lines = text.Split('\n');
-            Dialog res = ParseDialogNew(lines);
+            Dialog res = ParseDialogLines(lines);
             res.Id = dialogData.ID;
             res.requireTags = dialogData.requireTags;
             res.forbiddenTags = dialogData.forbiddenTags;
@@ -19,7 +19,7 @@ namespace Levitan {
             return res;
         }
 
-        public static Dialog ParseDialogNew(string[] lines) {
+        private static Dialog ParseDialogLines(string[] lines) {
             Dialog dialog = ScriptableObject.CreateInstance<Dialog>();
 
             dialog.lines = new List<string>();
