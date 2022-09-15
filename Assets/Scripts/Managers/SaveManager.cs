@@ -34,9 +34,7 @@ public class SaveManager : MonoBehaviour {
         sv.dayResult = new DayResult();
     }
 
-    public static Day GetDay() {
-        return instance.days[sv.currentDay];
-    }
+    public static Day GetDay() => instance.days[Mathf.Min(sv.currentDay, instance.days.Length-1)];
 
     public static void ChangeMoney(int delta) {
         sv.money += delta;

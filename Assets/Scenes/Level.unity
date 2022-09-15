@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2.6314888, g: 3.2189827, b: 4.3127213, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11912,7 +11912,8 @@ PrefabInstance:
         type: 3}
       propertyPath: forceThisDay
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 74db79623a877c74aa0da1c5406905c8,
+        type: 2}
     - target: {fileID: 5665078225179107173, guid: ad101e03e738e2544acc47a71ac7acfc,
         type: 3}
       propertyPath: Clock

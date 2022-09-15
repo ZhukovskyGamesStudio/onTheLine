@@ -168,14 +168,15 @@ public enum Criminal {
 
 [System.Serializable]
 public class PersonShablon {
-    public string Name, Surname;
-    public Work Work;
-    public Temperament Temperament;
-    public Age Age;
-    public Sex Sex;
-    public Criminal Criminal;
-    public bool isDead;
+   
+    [HideInInspector]public Work Work;
+    [HideInInspector]public Temperament Temperament;
+    [HideInInspector]public Age Age;
+    [HideInInspector]public Sex Sex;
+    [HideInInspector]public Criminal Criminal;
+    [HideInInspector]public bool isDead;
     public int roomNumber;
+    
     readonly static string[] womanNames = {"Наташа", "Диана", "Саша", "Лиза", "София", "Ксения", "Зухра", "Анна"};
 
     readonly static string[] manNames =
@@ -198,8 +199,6 @@ public class PersonShablon {
     public static PersonShablon GenerateEmptyShablon() {
         PersonShablon shablon = new PersonShablon();
         shablon.roomNumber = -1;
-        shablon.Name = "";
-        shablon.Surname = "";
         shablon.Work = Work.Any;
         shablon.Temperament = Temperament.Any;
         shablon.Age = Age.Any;

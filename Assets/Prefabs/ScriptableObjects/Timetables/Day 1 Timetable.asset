@@ -16,24 +16,24 @@ MonoBehaviour:
   randomTimeBetweenCalls: 10
   additionalCallsAmount: 9
   callsTimeTable:
-  - dialog: {fileID: 11400000, guid: 5a5777a3a47831e49a753887893866ac, type: 2}
+  - dialog: {fileID: 11400000, guid: f42b7a1b494137b42a85ec81af2916d1, type: 2}
     fromTime: 8.5
     toTime: 10
-  - dialog: {fileID: 11400000, guid: 09921540a079c054fabd5da14ba63e24, type: 2}
+  - dialog: {fileID: 11400000, guid: b7da0e97057bad64bb89219f490d6fd0, type: 2}
     fromTime: 10
     toTime: 14
   - dialog: {fileID: 11400000, guid: 42be33112b3800b439e8c73a976b6eac, type: 2}
     fromTime: 11
-    toTime: 15
+    toTime: 12
+  - dialog: {fileID: 11400000, guid: 66234a25d2d904c4f971b875aff75409, type: 2}
+    fromTime: 12
+    toTime: 13
   - dialog: {fileID: 11400000, guid: 31930485bad443d438eee8388b8665a0, type: 2}
-    fromTime: 11
+    fromTime: 13
     toTime: 15
   - dialog: {fileID: 11400000, guid: bb65ea5448e4a3d40906357254b3ec96, type: 2}
-    fromTime: 11
+    fromTime: 13
     toTime: 15
-  - dialog: {fileID: 11400000, guid: 66234a25d2d904c4f971b875aff75409, type: 2}
-    fromTime: 15
-    toTime: 16
   - dialog: {fileID: 11400000, guid: 31ffb5de4de4e1f45b9d69707331b7e7, type: 2}
     fromTime: 17
     toTime: 18
@@ -54,6 +54,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 466db388cad35bc47bcd80a68e9e5086, type: 2}
   - {fileID: 11400000, guid: 8486b3a8af5951743b13d5ac7d108b5f, type: 2}
   - {fileID: 11400000, guid: 48a5c84048a81cc4aacc11cd8e0c0fd1, type: 2}
-  - {fileID: 11400000, guid: 09921540a079c054fabd5da14ba63e24, type: 2}
-  - {fileID: 11400000, guid: f35a4fb6e248d1f459fe64db7988dbb1, type: 2}
-  - {fileID: 11400000, guid: a249a6b4666bf7c43b1022417e2140a2, type: 2}
+  - {fileID: 11400000, guid: ac1ac12827d7e394a8d8b09af0536d2e, type: 2}
+  - {fileID: 11400000, guid: 6211328829da6564b9e0ef32938ede72, type: 2}

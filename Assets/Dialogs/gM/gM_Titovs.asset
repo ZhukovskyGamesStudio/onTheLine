@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 77b0f5c5-d9c1-41b9-831b-d867b3de2185
   requirementFrom:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -24,8 +22,6 @@ MonoBehaviour:
     isDead: 0
     roomNumber: 10
   requirementTo:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1

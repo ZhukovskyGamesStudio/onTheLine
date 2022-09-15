@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
-  m_Name: gM_ Police answer, wrong
+  m_Name: gM_PoliceAnswerWeKnow
   m_EditorClassIdentifier: 
-  Id: e3253b23-ca34-4975-ba20-d4c71e8e6406
+  Id: a5048bad-2e70-4a03-b64c-7d2ee05d5f9a
   requirementFrom:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -24,8 +22,6 @@ MonoBehaviour:
     isDead: 0
     roomNumber: 0
   requirementTo:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -33,12 +29,12 @@ MonoBehaviour:
     Criminal: -1
     isDead: 0
     roomNumber: 2
-  SayToOperator: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E \u0437\u0430 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E!"
+  SayToOperator: "\u0414\u0430, \u043C\u044B \u0432 \u043A\u0443\u0440\u0441\u0435,
+    \u0440\u0430\u0431\u043E\u0442\u0430\u0435\u043C."
   lines: []
   bubbleLines: []
   requireTags: []
-  produceTags:
-  - Wrong
+  produceTags: []
   forbiddenTags: []
   Transitions: []
   Informations: []

@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: ac7d3cd2-16e3-4b87-ab72-4852b244ce43
   requirementFrom:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -24,8 +22,6 @@ MonoBehaviour:
     isDead: 0
     roomNumber: 11
   requirementTo:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -66,7 +62,8 @@ MonoBehaviour:
     \u043E\u043D\u0438 \u0441\u043A\u043E\u0440\u043E \u043F\u043E\u043C\u0438\u0440\u044F\u0442\u0441\u044F."
   - "\u0414\u0430..."
   bubbleLines: []
-  requireTags: []
+  requireTags:
+  - AlinaWorried
   produceTags: []
   forbiddenTags: []
   Transitions: []

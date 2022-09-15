@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
-  m_Name: gM_Police 1
+  m_Name: gM_MomCallsPolice
   m_EditorClassIdentifier: 
   Id: 5eb766f8-eee1-4fc3-b68c-750ed207a83a
   requirementFrom:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -24,8 +22,6 @@ MonoBehaviour:
     isDead: 0
     roomNumber: 14
   requirementTo:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -107,15 +103,14 @@ MonoBehaviour:
   - line: "\u041C\u043E\u0433\u043B\u0430 \u043F\u043E\u0439\u0442\u0438 \u043A \u041A\u0443\u0437\u043D\u0435\u0446\u043E\u0432\u044B\u043C."
     thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
       \u043A \u041A\u0443\u0437\u043D\u0435\u0446\u043E\u0432\u044B\u043C."
-  - line: "<color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#6399DCFF>\u041A
-      \u0417\u0430\u0445\u0430\u0440\u043E\u0432\u044B\u043C."
-    thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
-      \u043A \u0417\u0430\u0445\u0430\u0440\u043E\u0432\u044B\u043C."
   - line: "\u041A \u041C\u0438\u0448\u0435"
     thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
       \u043A \u041C\u0438\u0448\u0435."
-  - line: "\u041C<color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#8D3114FF><color=#6399DCFF>\u043E\u0433\u043B\u0430
-      \u043A \u0417\u0430\u0439\u0446\u0435\u0432\u044B\u043C \u043F\u043E\u0439\u0442\u0438."
+  - line: "\u043A \u0417\u0430\u0445\u0430\u0440\u043E\u0432\u044B\u043C"
+    thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
+      \u043A \u0417\u0430\u0445\u0430\u0440\u043E\u0432\u044B\u043C."
+  - line: "\u041C\u043E\u0433\u043B\u0430 \u043A \u0417\u0430\u0439\u0446\u0435\u0432\u044B\u043C
+      \u043F\u043E\u0439\u0442\u0438."
     thought: "\u0414\u0435\u0432\u043E\u0447\u043A\u0430 \u043F\u043E\u0448\u043B\u0430
       \u043A \u0417\u0430\u0439\u0446\u0435\u0432\u044B\u043C."
   priority: 0
