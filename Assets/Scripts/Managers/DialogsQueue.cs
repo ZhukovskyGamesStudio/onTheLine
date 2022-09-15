@@ -43,9 +43,9 @@ public class DialogsQueue
 
         if (dialog == null)
             dialog = GetRandomDialog();
-        if (dialog == null)
-            Debug.Log("Нет диалога! Время: " + time);
-
+        if (dialog == null) {
+            //Debug.Log("Нет диалога! Время: " + time);
+        }
         return dialog;
     }
 

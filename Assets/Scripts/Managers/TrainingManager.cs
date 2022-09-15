@@ -7,12 +7,7 @@ public class TrainingManager : MonoBehaviour {
     
     void Start() {
         SaveManager.sv.isTrainingStarted = true;
-        ShowIncompleteWarning();
-    }
-
-    private void ShowIncompleteWarning() {
         TrainingWarning.SetActive(true);
-        Debug.Log("This is training Day. It is not complete! Press F to instantly finish it!");  
     }
 
     private void Update() {
