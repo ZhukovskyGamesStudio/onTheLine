@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
+    <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="New Unity &amp; quarter of first day">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Managers.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/DialogsCollection.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/DialogsCollection.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" afterDir="false" />
     </list>
     <list id="6f358e5d-4cfe-4fd4-8a21-d5f28186f63a" name="Do not push" comment="">
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
@@ -19,11 +21,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -99,7 +96,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Dialogs/DialogsY, Algebra.json" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LoadingScreenManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/DialogsCollection.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsManager.cs" />
@@ -141,15 +137,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DayManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsQueue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Commutator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/PersonFromBack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/SpeechFromBack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/EyeSightDetector.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/PlugDetector.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/Hole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AdminPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -207,10 +204,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18696">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="18696" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -260,14 +257,7 @@
       <workItem from="1664311156819" duration="1190000" />
       <workItem from="1664648385808" duration="1192000" />
       <workItem from="1664883163320" duration="8719000" />
-      <workItem from="1664901562270" duration="596000" />
-    </task>
-    <task id="LOCAL-00008" summary="Levitan Camera base">
-      <created>1657240075767</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1657240075767</updated>
+      <workItem from="1664901562270" duration="5342000" />
     </task>
     <task id="LOCAL-00009" summary="Finally working zoom &amp; drag">
       <created>1657466418001</created>
@@ -605,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664893583597</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="New Unity &amp; quarter of first day">
+      <created>1664908616587</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1664908616588</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +625,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="FileParser with JSON" />
     <MESSAGE value="FileparserWindow" />
     <MESSAGE value="New button" />
     <MESSAGE value="doubleClick editing" />
@@ -653,7 +649,8 @@
     <MESSAGE value="Fixed gm" />
     <MESSAGE value="Fixed saytoOperators" />
     <MESSAGE value="SpeechFromBack pt1" />
-    <option name="LAST_COMMIT_MESSAGE" value="SpeechFromBack pt1" />
+    <MESSAGE value="New Unity &amp; quarter of first day" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Unity &amp; quarter of first day" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,32 +667,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs</url>
-          <line>88</line>
-          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\PersonBehindHole.cs" initialLine="88" containingFunctionPresentation="method 'ChooseAnswer'">
-            <startOffsets>
-              <option value="2694" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2741" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs</url>
-          <line>90</line>
-          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\PersonBehindHole.cs" initialLine="90" containingFunctionPresentation="method 'ChooseAnswer'">
-            <startOffsets>
-              <option value="2785" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2866" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/DialogsQueue.cs</url>

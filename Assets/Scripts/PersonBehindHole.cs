@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Linq;
 using Levitan;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PersonBehindHole : MonoBehaviour {
     public Dialog betweenRandomDialog;
@@ -62,19 +64,12 @@ public class PersonBehindHole : MonoBehaviour {
         TalkingBubble.StopSaying();
 
         if (!_dialog.IsCorrectNumber(curHole.number))
-            TalkingBubble.Say("Вы не туда попали", delegate {
-                curHole.PassSound("/dialogEnd/");
-                Drop();
-            });
-
+            Say("Вы не туда попали", delegate { curHole.PassSound("/dialogEnd/"); Drop(); });
         if (_dialog.lines.Count == lineIndex) {
-            TalkingBubble.Say(". . .", delegate {
-                curHole.PassSound("/dialogEnd/");
-                Drop(true);
-            });
+            Say(". . .",delegate { curHole.PassSound("/dialogEnd/"); Drop(true); });
         } else {
             _curState = PersonState.DialogStarted;
-            TalkingBubble.Say(AddInformationsToPhraze(_dialog.lines[lineIndex]), delegate { curHole.PassSound(_dialog, lineIndex); });
+            Say(_dialog.lines[lineIndex], delegate { curHole.PassSound(_dialog, lineIndex); });
         }
     }
 
@@ -84,11 +79,11 @@ public class PersonBehindHole : MonoBehaviour {
             _dialog.Transitions.FirstOrDefault(transition => transition.thought == line);
         if (changeDialogTransition != null) {
             _dialog = DialogsManager.instance.GetDialogById(changeDialogTransition.dialog);
-            if (_dialog.requirementFrom.roomNumber == curHole.number) {
+            if (_dialog.requirementFrom.roomNumber -1 == curHole.number) {
                 if (!string.IsNullOrEmpty(_dialog.SayToOperator)) {
-                    TalkingBubble.Say(_dialog.SayToOperator, null);
+                    Say(_dialog.SayToOperator, null);
                 } else
-                    TalkingBubble.Say(_dialog.lines[0], delegate { curHole.PassSound(_dialog, 0); });
+                    Say(_dialog.lines[0], delegate { curHole.PassSound(_dialog, 0); });
             }
 
             return;
@@ -97,7 +92,7 @@ public class PersonBehindHole : MonoBehaviour {
         if (person != null) {
             if (person.HasAnswer(line)) {
                 string answer = person.Hear(line);
-                TalkingBubble.Say(answer, delegate { StartStopWaiting(true); });
+                Say(answer, delegate { StartStopWaiting(true); });
                 return;
             }
         }
@@ -116,11 +111,11 @@ public class PersonBehindHole : MonoBehaviour {
                         //добавить реплику повтора для оператора
                     } else {
                         _curState = PersonState.WaitingForConnection;
-                        TalkingBubble.Say(AddInformationsToPhraze(_dialog.SayToOperator), delegate { StartStopWaiting(true); });
+                        Say(_dialog.SayToOperator,delegate { StartStopWaiting(true); } );
                     }
                 } else {
                     //Диалог со случайным номером
-                    TalkingBubble.Say("Я вас не вызывала.", delegate { Drop(); });
+                    Say("Я вас не вызывала.",delegate { Drop(); } );
                 }
 
                 return;
@@ -130,14 +125,12 @@ public class PersonBehindHole : MonoBehaviour {
                     _call == null)
                     return;
                 _curState = PersonState.WaitingForConnection;
-                TalkingBubble.Say(AddInformationsToPhraze(_dialog.SayToOperator), delegate { StartStopWaiting(true); });
+                Say(_dialog.SayToOperator, delegate { StartStopWaiting(true); });
                 return;
 
             case "/repeat/":
                 if (_dialog != null && _curState == PersonState.WaitingForConnection)
-                    return;
-                _curState = PersonState.WaitingForConnection;
-                TalkingBubble.Say(AddInformationsToPhraze(_dialog.SayToOperator), delegate { StartStopWaiting(true); });
+                    Say(_dialog.SayToOperator, delegate { StartStopWaiting(true); });
                 return;
 
             case "/disconnectSound/":
@@ -155,18 +148,22 @@ public class PersonBehindHole : MonoBehaviour {
             case "/picked/":
                 _curState = PersonState.DialogStarted;
                 if (_call != null)
-                    TalkingBubble.Say(_dialog.lines[0], delegate { curHole.PassSound(_dialog, 0); });
+                    Say(_dialog.lines[0],delegate { curHole.PassSound(_dialog, 0); } );
                 else
                     // Здесь должен подставляться диалог между незнакомцами
-                    TalkingBubble.Say(betweenRandomDialog.lines[0],
-                        delegate { curHole.PassSound(betweenRandomDialog, 0); });
+                    Say(betweenRandomDialog.lines[0], delegate { curHole.PassSound(betweenRandomDialog, 0); });
                 break;
 
             default:
-                TalkingBubble.Say("Что? Ничего не понятно.",
-                    delegate { curHole.PassSound("Что? Ничего не понятно."); });
+                const string confusedLine = "Что? Ничего не понятно.";
+                Say(confusedLine, delegate { curHole.PassSound(confusedLine); });
                 break;
         }
+    }
+
+    private void Say(string line, UnityAction action) {
+        string informativeLine = AddInformationsToPhraze(line);
+        TalkingBubble.Say(informativeLine, action);
     }
 
     private string AddInformationsToPhraze(string lineToSay) {

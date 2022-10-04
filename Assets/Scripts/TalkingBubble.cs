@@ -32,7 +32,9 @@ public class TalkingBubble : MonoBehaviour
     public void Say(string toSay, UnityAction callbackAction)
     {
         callback.RemoveAllListeners();
-        callback.AddListener(callbackAction);
+        if (callbackAction != null) {
+            callback.AddListener(callbackAction);
+        }
         if (printingCoroutine != null)
             StopCoroutine(printingCoroutine);
         printingCoroutine = StartCoroutine(PrintNumerator(toSay));

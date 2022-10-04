@@ -26,4 +26,13 @@ public class TagManager : MonoBehaviour {
     public static bool CheckTag(string toCheck) {
         return instance.tags.Contains(toCheck);
     }
+
+
+    private void InvokeEventByTag(string tag) {
+        switch (tag) {
+            case "SoundStarted":
+                //если телефонистка подключена к линии - то 
+                break;
+        }
+    }
 }
