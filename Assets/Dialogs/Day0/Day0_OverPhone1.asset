@@ -40,7 +40,6 @@ MonoBehaviour:
   lines: []
   bubbleLines: []
   requireTags:
-  - Button pressed
   - StartCall
   produceTags: []
   forbiddenTags: []

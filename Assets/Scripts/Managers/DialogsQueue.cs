@@ -8,9 +8,11 @@ public class DialogsQueue
     List<QueuePos> timedCallsList;
     List<Dialog> randomCallsList;
     private CallsTimeTable callsTimeTable;
+    private Commutator _commutator;
 
-    public DialogsQueue(CallsTimeTable timeTable){
+    public DialogsQueue(CallsTimeTable timeTable,Commutator commutator ){
         callsTimeTable = timeTable;
+        _commutator = commutator;
         if (callsTimeTable != null) {
             timedCallsList = new List<QueuePos>(callsTimeTable.callsTimeTable);
             randomCallsList = new List<Dialog>(callsTimeTable.randomDialogs);
@@ -53,7 +55,7 @@ public class DialogsQueue
     Dialog GetRandomDialog()
     {
 
-        List<Dialog> available = new List<Dialog>();
+        List<Dialog> available = new();
         int topPriority = 0;
         for (int i = 0; i < randomCallsList.Count; i++)
         {
@@ -100,16 +102,15 @@ public class DialogsQueue
         return null;
     }
 
-    bool CheckRequirements(Dialog toCheck)
-    {
+    bool CheckRequirements(Dialog toCheck) {
+        if (_commutator.IsNumberCurrentlyInCall(toCheck.requirementFrom.roomNumber))
+            return false;
         if (toCheck.requireTags != null)
-            for (int i = 0; i < toCheck.requireTags.Count; i++)
-            {
-                if (!TagManager.CheckTag(toCheck.requireTags[i]))
+            foreach (string t in toCheck.requireTags) {
+                if (!TagManager.CheckTag(t))
                 {
                     return false;
                 }
-
             }
         if (toCheck.forbiddenTags != null)
             for (int i = 0; i < toCheck.forbiddenTags.Count; i++)

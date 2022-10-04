@@ -13,7 +13,8 @@ public class TagManager : MonoBehaviour {
     }
 
     public static void AddTag(string newTag) {
-        instance.tags.Add(newTag);
+        if (!instance.tags.Contains(newTag))
+            instance.tags.Add(newTag);
     }
 
     public static void RemoveTag(string removeTag) {

@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrainingWarning: {fileID: 1455560207056791564}
+  EyeSightDetector: {fileID: 5823130899858277335, guid: e3f84233209c90746b8c9748ecf9f7db,
+    type: 3}
 --- !u!1 &5707341635082414569
 GameObject:
   m_ObjectHideFlags: 0

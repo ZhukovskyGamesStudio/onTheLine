@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class Hole : MonoBehaviour
 {
@@ -16,8 +18,10 @@ public class Hole : MonoBehaviour
     public Shteker curShteker;
     [HideInInspector] public Hole connectedHole;
     [HideInInspector] public DoorNumber DoorNumber;
+    public Action OnShtekerIn;
 
     public bool isOpros;
+    public bool isOnLine = false;
     float ringingTime, timeout, timeOutTime;
     void Start()
     {
@@ -45,7 +49,7 @@ public class Hole : MonoBehaviour
             }
             ChangeOpros(shteker.isOpros);
         }
-
+        OnShtekerIn?.Invoke();
     }
     public void ShtekerOut(Shteker shteker)
     {
@@ -105,8 +109,8 @@ public class Hole : MonoBehaviour
             curShteker.connectedTo.curHole.Hear(line);
     }
 
-    public virtual void SetDoorNumber(bool isOn)
-    {
+    public virtual void SetDoorNumber(bool isOn) {
+        isOnLine = isOn;
         if (isOn)
             DoorNumber.Open();
         else

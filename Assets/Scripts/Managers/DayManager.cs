@@ -26,7 +26,7 @@ public class DayManager : MonoBehaviour {
 
         if (!SaveManager.sv.isTrainingComplete || forceTraining)
             Instantiate(TrainingManager);
-        DialogsQueue = new DialogsQueue(Day.CallsTimeTable);
+        DialogsQueue = new DialogsQueue(Day.CallsTimeTable, Commutator);
     }
 
     private void Start() {

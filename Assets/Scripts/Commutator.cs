@@ -80,6 +80,12 @@ public class Commutator : MonoBehaviour
         TurnBulb(wrongHoleNumber - 1, false);
     }
 
+    public bool IsNumberCurrentlyInCall(int number) {
+        if (number == -1)
+            return virtualHole.isOnLine;
+        return holes[number].isOnLine;
+    }
+
     public void EndOfCall(Call call)
     {
         Calls.Remove(call);

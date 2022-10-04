@@ -18,21 +18,21 @@ MonoBehaviour:
   callsTimeTable:
   - dialog: {fileID: 11400000, guid: f42b7a1b494137b42a85ec81af2916d1, type: 2}
     fromTime: 8.5
-    toTime: 10
+    toTime: 9.5
   - dialog: {fileID: 11400000, guid: b7da0e97057bad64bb89219f490d6fd0, type: 2}
     fromTime: 10
     toTime: 14
   - dialog: {fileID: 11400000, guid: 42be33112b3800b439e8c73a976b6eac, type: 2}
+    fromTime: 10
+    toTime: 11
+  - dialog: {fileID: 11400000, guid: 66234a25d2d904c4f971b875aff75409, type: 2}
     fromTime: 11
     toTime: 12
-  - dialog: {fileID: 11400000, guid: 66234a25d2d904c4f971b875aff75409, type: 2}
-    fromTime: 12
-    toTime: 13
   - dialog: {fileID: 11400000, guid: 31930485bad443d438eee8388b8665a0, type: 2}
     fromTime: 13
-    toTime: 15
+    toTime: 14
   - dialog: {fileID: 11400000, guid: bb65ea5448e4a3d40906357254b3ec96, type: 2}
-    fromTime: 13
+    fromTime: 14
     toTime: 15
   - dialog: {fileID: 11400000, guid: 31ffb5de4de4e1f45b9d69707331b7e7, type: 2}
     fromTime: 17

@@ -52,19 +52,27 @@ public class TalkingBubble : MonoBehaviour
         curText.text = emptyTextSymbols;
     }
 
-    public void ChangeSide(bool isRight)
-    {
-        if (isRight)
-        {
-            curText = RightText;
-            BubbleRight.SetActive(isOn);
-            BubbleLeft.SetActive(false);
-        }
-        else
-        {
-            curText = LeftText;
+    public void ChangeSide(bool isRight) {
+        if (BubbleRight == null) {
             BubbleLeft.SetActive(isOn);
+            curText = LeftText;
+            return;
+        }
+
+        if (BubbleLeft == null) {
+            BubbleRight.SetActive(isOn);
+            curText = RightText;
+            return;
+        }
+
+        if (isRight) {
+            curText = RightText;
+            BubbleLeft.SetActive(false);
+            BubbleRight.SetActive(isOn);
+        } else {
+            curText = LeftText;
             BubbleRight.SetActive(false);
+            BubbleLeft.SetActive(isOn);
         }
     }
 

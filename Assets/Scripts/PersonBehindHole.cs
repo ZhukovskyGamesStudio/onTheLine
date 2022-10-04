@@ -10,7 +10,7 @@ public class PersonBehindHole : MonoBehaviour {
     public Person person;
     private Call _call;
     private Dialog _dialog;
-    PersonState _curState;
+    protected PersonState _curState;
     SettingsConfig _settings;
     Coroutine _coroutine;
 
@@ -36,10 +36,10 @@ public class PersonBehindHole : MonoBehaviour {
 
         if (!Settings.config.isWaitingForOperatorHello && curHole.isOpros && _call != null)
             Hear("/hello1/");
-        else
+        else {
             TalkingBubble.Say("Ало", delegate { curHole.PassSound("/picked/"); });
-
-        StartStopWaiting(true);
+            StartStopWaiting(true);
+        }
     }
 
     //Слышит фразу не из диалога
@@ -85,7 +85,10 @@ public class PersonBehindHole : MonoBehaviour {
         if (changeDialogTransition != null) {
             _dialog = DialogsManager.instance.GetDialogById(changeDialogTransition.dialog);
             if (_dialog.requirementFrom.roomNumber == curHole.number) {
-                TalkingBubble.Say(_dialog.lines[0], delegate { curHole.PassSound(_dialog, 0); });
+                if (!string.IsNullOrEmpty(_dialog.SayToOperator)) {
+                    TalkingBubble.Say(_dialog.SayToOperator, null);
+                } else
+                    TalkingBubble.Say(_dialog.lines[0], delegate { curHole.PassSound(_dialog, 0); });
             }
 
             return;
@@ -184,11 +187,11 @@ public class PersonBehindHole : MonoBehaviour {
     }
 
     //Запускает или останавливает корутин ожидания
-    void StartStopWaiting(bool isOn) {
+    protected virtual void StartStopWaiting(bool isStart) {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
-        if (isOn)
+        if (isStart)
             _coroutine = StartCoroutine(Waiting());
     }
 
@@ -206,7 +209,7 @@ public class PersonBehindHole : MonoBehaviour {
 
     //Кладёт трубку. Если разговор закончен корректно - сохраняет обслуженный звонок
     //Обнуляет все значения
-    void Drop(bool isEndedProperly = false) {
+    protected void Drop(bool isEndedProperly = false) {
         if (isEndedProperly) {
             SaveManager.AddServedCall();
             foreach (string tag in _dialog.produceTags) {
@@ -220,13 +223,14 @@ public class PersonBehindHole : MonoBehaviour {
 
         _call = null;
         _dialog = null;
+        StartStopWaiting(false);
         _curState = PersonState.Out;
         TalkingBubble.StopSaying();
         curHole.SetDoorNumber(false);
     }
 }
 
-enum PersonState {
+public enum PersonState {
     Out = 0,
     Picked,
     DialogStarted,
