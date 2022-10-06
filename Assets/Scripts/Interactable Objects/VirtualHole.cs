@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SpeechFromBack : Hole {
+public class VirtualHole : Hole {
 
     public float timeBeforeBubbleClears = 5f;
     private Coroutine _clearBubble;
@@ -18,6 +18,7 @@ public class SpeechFromBack : Hole {
     public override void SetDoorNumber(bool isOn) {
         isOnLine = isOn;
     }
+    
 
     public void ClearBubble() {
         if (_clearBubble != null) {

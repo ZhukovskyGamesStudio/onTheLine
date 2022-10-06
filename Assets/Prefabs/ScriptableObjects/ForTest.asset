@@ -29,9 +29,9 @@ MonoBehaviour:
   foodPrice: 25
   isWaitingForOperatorHello: 0
   ringingTimeUntilMistake: 2
-  timeBetweenLetters: 0.001
+  timeBetweenLetters: 0
   timePauseDoubleDash: 1
-  timeBetweenTwoPeople: 1
+  timeBetweenTwoPeople: 0
   timeBeforeBubbleDissappears: 5
   timeRingingBeforePick: 3
   timeRingingBeforePickDelta: 1

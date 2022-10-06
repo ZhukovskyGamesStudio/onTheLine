@@ -51,6 +51,7 @@ public class TalkingBubble : MonoBehaviour
         if (printingCoroutine != null)
             StopCoroutine(printingCoroutine);
         Headphones.PlayStopTalking(gameObject, false);
+        callback.RemoveAllListeners();
         curText.text = emptyTextSymbols;
     }
 
@@ -133,6 +134,19 @@ public class TalkingBubble : MonoBehaviour
 
                 continue;
             }
+
+            if (toSay[i] == '{') {
+                string tagToAdd = "";
+                i++;
+                do {
+                    tagToAdd += toSay[i];
+                    i++;
+                } while (toSay[i] != '}');
+
+                TagManager.AddTag(tagToAdd);
+                continue;
+            }
+            
 
             if (isImportant)
                 curText.text = curText.text.Insert(curText.text.Length - 12, toSay[i].ToString());

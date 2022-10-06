@@ -13,8 +13,10 @@ public class TagManager : MonoBehaviour {
     }
 
     public static void AddTag(string newTag) {
-        if (!instance.tags.Contains(newTag))
+        if (!instance.tags.Contains(newTag)) {
+            TryInvokeEventByTag(newTag);
             instance.tags.Add(newTag);
+        }
     }
 
     public static void RemoveTag(string removeTag) {
@@ -28,10 +30,14 @@ public class TagManager : MonoBehaviour {
     }
 
 
-    private void InvokeEventByTag(string tag) {
+    private static void TryInvokeEventByTag(string tag) {
         switch (tag) {
             case "SoundStarted":
-                //если телефонистка подключена к линии - то 
+                Hole hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
+                Hole hole15 = GameObject.Find("Hole 15").GetComponent<Hole>();
+                string isOnline = hole4.isOpros ? "Online" : "Offline";
+                hole4.Hear(isOnline);
+                hole15.Hear(isOnline);
                 break;
         }
     }

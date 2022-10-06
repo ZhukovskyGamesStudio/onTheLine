@@ -16,11 +16,9 @@ MonoBehaviour:
   randomTimeBetweenCalls: 0
   additionalCallsAmount: 3
   callsTimeTable:
-  - name: "\u041F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435"
-    dialog: {fileID: 11400000, guid: 39b9bd9967d0cf14d9bc96f2a5cc7aae, type: 2}
+  - dialog: {fileID: 11400000, guid: 39b9bd9967d0cf14d9bc96f2a5cc7aae, type: 2}
     fromTime: 8
     toTime: 9
-    priority: 1
   randomDialogs:
   - {fileID: 11400000, guid: 2c0e4c2c53151df4eb0c8befc7eccfca, type: 2}
   - {fileID: 11400000, guid: 7d8f938f74054014b902feef60909ef7, type: 2}
@@ -29,8 +27,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cda1d21ec1666774d87e80e8d7c8428c, type: 2}
   - {fileID: 11400000, guid: 8112bda654d5715449eb27a5c0222b2b, type: 2}
   - {fileID: 11400000, guid: 8fb3ac1d33a2f3f4389807ac28956cde, type: 2}
-  - {fileID: 11400000, guid: 8168a8838464cc74aa1b14e72c6934e0, type: 2}
-  - {fileID: 11400000, guid: e805c6b2f09e2b148b3c9699666c4311, type: 2}
   - {fileID: 11400000, guid: 83c44aaf6e980ca4ab412c4c6297425b, type: 2}
   - {fileID: 11400000, guid: 08e25cc9622b226489d133733f789578, type: 2}
   - {fileID: 11400000, guid: f6db91119217aec4e8bd9d6e9f30bc17, type: 2}

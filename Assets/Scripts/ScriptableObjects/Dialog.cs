@@ -27,6 +27,8 @@ public class Dialog : ScriptableObject {
         bubbleLines = dialog.bubbleLines;
         requireTags = dialog.requireTags;
         forbiddenTags = dialog.forbiddenTags;
+        Transitions = dialog.Transitions;
+        Informations = dialog.Informations;
     }
 
     public void FillGaps(int number, string Name) {

@@ -50,7 +50,7 @@ MonoBehaviour:
   bubbleLines: []
   requireTags: []
   produceTags:
-  - Attacked
+  - '!Attacked'
   - Police called
   forbiddenTags: []
   Transitions: []

@@ -45,11 +45,12 @@ public class PersonBehindHole : MonoBehaviour {
     }
 
     //Слышит фразу не из диалога
-    public void Hear(string line) {
+    public virtual void Hear(string line) {
         if (_curState == PersonState.Out)
             return;
         StartStopWaiting(false);
-
+        TalkingBubble.StopSaying();
+        
         ChooseAnswer(line);
     }
 
@@ -63,10 +64,29 @@ public class PersonBehindHole : MonoBehaviour {
         StartStopWaiting(false);
         TalkingBubble.StopSaying();
 
-        if (!_dialog.IsCorrectNumber(curHole.number))
-            Say("Вы не туда попали", delegate { curHole.PassSound("/dialogEnd/"); Drop(); });
-        if (_dialog.lines.Count == lineIndex) {
-            Say(". . .",delegate { curHole.PassSound("/dialogEnd/"); Drop(true); });
+        if (!_dialog.IsCorrectNumber(curHole.number + 1)) {
+            Say("Вы не туда попали", delegate {
+                curHole.PassSound("/dialogEnd/");
+                Drop();
+            });
+        } else if (_dialog.lines.Count == lineIndex) {
+            TransitionData autoNext = _dialog.Transitions.FirstOrDefault(t => t.thought == "/dialogEnd/");
+            if (autoNext != null) {
+                //авто смена диалога на следующий, если есть тег dialogEnd
+                Dialog newxtDialog = DialogsManager.instance.GetDialogById(autoNext.dialog);
+                AddEndDialogTags(_dialog);
+                if (newxtDialog.requirementFrom.roomNumber == curHole.number + 1) {
+                    ChooseAnswer("/dialogEnd/");
+                } else {
+                    curHole.PassSound("/dialogEnd/");
+                }
+            } else {
+                //окончание диалога, т.к. сказана последняя реплика
+                Say(". . .", delegate {
+                    curHole.PassSound("/dialogEnd/");
+                    Drop(true);
+                });
+            }
         } else {
             _curState = PersonState.DialogStarted;
             Say(_dialog.lines[lineIndex], delegate { curHole.PassSound(_dialog, lineIndex); });
@@ -78,8 +98,8 @@ public class PersonBehindHole : MonoBehaviour {
         TransitionData changeDialogTransition =
             _dialog.Transitions.FirstOrDefault(transition => transition.thought == line);
         if (changeDialogTransition != null) {
-            _dialog = DialogsManager.instance.GetDialogById(changeDialogTransition.dialog);
             if (_dialog.requirementFrom.roomNumber -1 == curHole.number) {
+                _dialog = DialogsManager.instance.GetDialogById(changeDialogTransition.dialog);
                 if (!string.IsNullOrEmpty(_dialog.SayToOperator)) {
                     Say(_dialog.SayToOperator, null);
                 } else
@@ -209,13 +229,7 @@ public class PersonBehindHole : MonoBehaviour {
     protected void Drop(bool isEndedProperly = false) {
         if (isEndedProperly) {
             SaveManager.AddServedCall();
-            foreach (string tag in _dialog.produceTags) {
-                if (tag.StartsWith("!")) {
-                    TagManager.RemoveTag(tag);
-                } else {
-                    TagManager.AddTag(tag);
-                }
-            }
+            AddEndDialogTags(_dialog);
         }
 
         _call = null;
@@ -224,6 +238,16 @@ public class PersonBehindHole : MonoBehaviour {
         _curState = PersonState.Out;
         TalkingBubble.StopSaying();
         curHole.SetDoorNumber(false);
+    }
+
+    private void AddEndDialogTags(Dialog dialog) {
+        foreach (string tag in dialog.produceTags) {
+            if (tag.StartsWith("!")) {
+                TagManager.RemoveTag(tag);
+            } else {
+                TagManager.AddTag(tag);
+            }
+        }
     }
 }
 
