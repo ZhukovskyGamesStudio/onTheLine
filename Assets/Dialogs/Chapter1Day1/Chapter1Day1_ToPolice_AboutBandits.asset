@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 7d4dc7ab-c87d-4f67-9930-682321d5e342
   requirementFrom:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
@@ -24,16 +22,15 @@ MonoBehaviour:
     isDead: 0
     roomNumber: 0
   requirementTo:
-    Name: 
-    Surname: 
     Work: -1
     Temperament: -1
     Age: -1
     Sex: -1
     Criminal: -1
     isDead: 0
-    roomNumber: 0
-  SayToOperator: 
+    roomNumber: 2
+  SayToOperator: "...\u042D\u043C. \u0425-\u0445\u043E\u0440\u043E\u0448\u043E...
+    \n-\u041B\u0430\u0434\u043D\u043E, \u043C\u044B \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u043C."
   lines: []
   bubbleLines: []
   requireTags: []
