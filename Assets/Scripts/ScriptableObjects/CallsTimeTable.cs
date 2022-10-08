@@ -7,8 +7,8 @@ public class CallsTimeTable : ScriptableObject {
     public float timeBetweenCalls;
     [Min(0)]
     public float randomTimeBetweenCalls;
-    [Min(0)]
-    public int additionalCallsAmount;
     public QueuePos[] callsTimeTable;
     public Dialog[] randomDialogs;
+
+    public Dialog PoliceGeneral;
 }

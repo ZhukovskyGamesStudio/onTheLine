@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenCalls: 0
   randomTimeBetweenCalls: 0
-  additionalCallsAmount: 3
   callsTimeTable:
   - dialog: {fileID: 11400000, guid: 39b9bd9967d0cf14d9bc96f2a5cc7aae, type: 2}
     fromTime: 8
@@ -32,3 +31,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f6db91119217aec4e8bd9d6e9f30bc17, type: 2}
   - {fileID: 11400000, guid: b7233410a5ef13b468b03a7cf8fd0f41, type: 2}
   - {fileID: 11400000, guid: 44bf492b328b913458a8b47b4687e064, type: 2}
+  PoliceGeneral: {fileID: 11400000, guid: d1aea3d5de51bdf41b5d9f0c36214093, type: 2}

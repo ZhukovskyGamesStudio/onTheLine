@@ -22,10 +22,7 @@ public class DialogsQueue
         }
     }
 
-    public int GetCallsAmount()
-    {
-        return DayManager.Day.CallsTimeTable.additionalCallsAmount + DayManager.Day.CallsTimeTable.callsTimeTable.Length;
-    }
+    public Dialog PoliceGeneral => callsTimeTable.PoliceGeneral;
 
     public Call GetCall()
     {
@@ -47,7 +44,7 @@ public class DialogsQueue
         if (dialog == null)
             dialog = GetRandomDialog();
         if (dialog == null) {
-            //Debug.Log("Нет диалога! Время: " + time);
+            //Debug.Log("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅ: " + time);
         }
         return dialog;
     }

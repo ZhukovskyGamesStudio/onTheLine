@@ -20,7 +20,7 @@ MonoBehaviour:
     Sex: -1
     Criminal: -1
     isDead: 0
-    roomNumber: 0
+    roomNumber: 2
   requirementTo:
     Work: -1
     Temperament: -1

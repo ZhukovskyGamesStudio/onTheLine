@@ -72,7 +72,8 @@ MonoBehaviour:
   bubbleLines: []
   requireTags: []
   produceTags: []
-  forbiddenTags: []
+  forbiddenTags:
+  - 15 broken
   Transitions: []
   Informations: []
   priority: 0

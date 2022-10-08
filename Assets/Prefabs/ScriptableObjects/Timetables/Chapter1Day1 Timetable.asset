@@ -12,8 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ff9350234c07b42810e9bcb6708a57, type: 3}
   m_Name: Chapter1Day1 Timetable
   m_EditorClassIdentifier: 
-  timeBetweenCalls: 0
-  randomTimeBetweenCalls: 0
-  additionalCallsAmount: 0
-  callsTimeTable: []
-  randomDialogs: []
+  timeBetweenCalls: 30
+  randomTimeBetweenCalls: 10
+  callsTimeTable:
+  - dialog: {fileID: 11400000, guid: 24be24b1481247d48b7644760b0a0de6, type: 2}
+    fromTime: 8
+    toTime: 9
+  - dialog: {fileID: 11400000, guid: 0afe7fa752420a54ba310f3347119879, type: 2}
+    fromTime: 8
+    toTime: 9
+  - dialog: {fileID: 11400000, guid: 190adf06a6f7ef54d87f0fae25c19db0, type: 2}
+    fromTime: 8
+    toTime: 9
+  - dialog: {fileID: 11400000, guid: ded6f76645c9cee4a960016586b2841b, type: 2}
+    fromTime: 8
+    toTime: 9
+  - dialog: {fileID: 11400000, guid: c0de80182379b2e4686767b3a9855a02, type: 2}
+    fromTime: 9
+    toTime: 10
+  - dialog: {fileID: 11400000, guid: 425fe98d997fdda43ae11f068ec1107f, type: 2}
+    fromTime: 9
+    toTime: 10
+  - dialog: {fileID: 11400000, guid: e14d44df5ffa4f545b15b4b11eae752a, type: 2}
+    fromTime: 10.5
+    toTime: 11
+  - dialog: {fileID: 11400000, guid: d6dc4a92e1711004fb3e3f33cedac205, type: 2}
+    fromTime: 17
+    toTime: 18
+  - dialog: {fileID: 11400000, guid: 9bdefdd3e743e214f8d283d09fe6b022, type: 2}
+    fromTime: 17
+    toTime: 18
+  - dialog: {fileID: 11400000, guid: b4d805433bcd4f943ab8f410fada7f27, type: 2}
+    fromTime: 18
+    toTime: 20
+  - dialog: {fileID: 11400000, guid: fcb6711292a63c54b86f1acf385c3487, type: 2}
+    fromTime: 18
+    toTime: 20
+  randomDialogs:
+  - {fileID: 11400000, guid: 3c6367e1341f50149875f89a10256274, type: 2}
+  - {fileID: 11400000, guid: 3e728b8d3262f5046858b38feba3bf7f, type: 2}
+  - {fileID: 11400000, guid: e803170ca4485334abf94db0c0b09e6d, type: 2}
+  - {fileID: 11400000, guid: 52a09e2db9b52c045aaaecfd44ba3d6f, type: 2}
+  - {fileID: 11400000, guid: dccbf464c10dc3f4ebbe4b2b2e8a90ae, type: 2}
+  - {fileID: 11400000, guid: 3483e83268b5ea949a82c123ea81b02e, type: 2}
+  - {fileID: 11400000, guid: fdf698f15f930914d97abb7939d8d999, type: 2}
+  PoliceGeneral: {fileID: 11400000, guid: 9ed551d3141f5f349a0e24cd7e98aeb2, type: 2}

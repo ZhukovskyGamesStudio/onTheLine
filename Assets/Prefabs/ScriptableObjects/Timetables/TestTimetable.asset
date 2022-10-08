@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93ff9350234c07b42810e9bcb6708a57, type: 3}
   m_Name: TestTimetable
   m_EditorClassIdentifier: 
-  additionalCallsAmount: 0
+  timeBetweenCalls: 0
+  randomTimeBetweenCalls: 0
   callsTimeTable:
-  - name: mansTalk
-    dialog: {fileID: 11400000, guid: 3a9a553b07ec539449be746b1b6ed8ae, type: 2}
+  - dialog: {fileID: 11400000, guid: e14d44df5ffa4f545b15b4b11eae752a, type: 2}
     fromTime: 0
     toTime: 100
-    priority: 1
   randomDialogs: []
+  PoliceGeneral: {fileID: 11400000, guid: 9ed551d3141f5f349a0e24cd7e98aeb2, type: 2}
