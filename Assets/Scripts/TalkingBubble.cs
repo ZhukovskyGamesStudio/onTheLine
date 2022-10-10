@@ -3,14 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class TalkingBubble : MonoBehaviour
-{
+public class TalkingBubble : MonoBehaviour {
     public GameObject BubbleRight, BubbleLeft;
     public Text curText, RightText, LeftText;
     public string emptyTextSymbols = " . . . ";
 
     public UnityEvent onTalkEnds;
-    
+
     Coroutine printingCoroutine;
     UnityEvent callback;
     UnityEvent listenedImportantCallback;
@@ -18,8 +17,7 @@ public class TalkingBubble : MonoBehaviour
     bool isTalkingNow;
     bool isOn;
 
-    void Start()
-    {
+    void Start() {
         settings = Settings.config;
         callback = new UnityEvent();
         listenedImportantCallback = new UnityEvent();
@@ -29,25 +27,23 @@ public class TalkingBubble : MonoBehaviour
         LeftText.text = emptyTextSymbols;
     }
 
-    public void Say(string toSay, UnityAction callbackAction)
-    {
+    public void Say(string toSay, UnityAction callbackAction) {
         callback.RemoveAllListeners();
         if (callbackAction != null) {
             callback.AddListener(callbackAction);
         }
+
         if (printingCoroutine != null)
             StopCoroutine(printingCoroutine);
         printingCoroutine = StartCoroutine(PrintNumerator(toSay));
     }
 
-    public void AddListenedCallback(UnityAction callbackAction)
-    {
+    public void AddListenedCallback(UnityAction callbackAction) {
         listenedImportantCallback.RemoveAllListeners();
         listenedImportantCallback.AddListener(callbackAction);
     }
 
-    public void StopSaying()
-    {
+    public void StopSaying() {
         if (printingCoroutine != null)
             StopCoroutine(printingCoroutine);
         Headphones.PlayStopTalking(gameObject, false);
@@ -79,9 +75,7 @@ public class TalkingBubble : MonoBehaviour
         }
     }
 
-    public void TurnOn(bool _isOn, bool isRight = false)
-    {
-
+    public void TurnOn(bool _isOn, bool isRight = false) {
         isOn = _isOn;
         ChangeSide(isRight);
         if (_isOn && isTalkingNow)
@@ -90,16 +84,13 @@ public class TalkingBubble : MonoBehaviour
             Headphones.PlayStopTalking(gameObject, false);
 
         if (curText.text.Contains("<b><color=#") && !curText.text.Contains("></color></b>"))
-            curText.text = "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) + ">. . .</color></b>";
+            curText.text = "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) +
+                           ">. . .</color></b>";
         else
             curText.text = emptyTextSymbols;
-        
     }
 
-
-    IEnumerator PrintNumerator(string toSay)
-    {
-
+    IEnumerator PrintNumerator(string toSay) {
         curText.text = "";
         isTalkingNow = true;
         if (isOn)
@@ -108,24 +99,19 @@ public class TalkingBubble : MonoBehaviour
         bool isImportant = false;
         bool isListeningImportant = false;
 
-        for (int i = 0; i < toSay.Length; i++)
-        {
-            if (toSay[i] == '~')
-            {
-                yield return new WaitForSeconds(settings.timePauseDoubleDash);
+        for (int i = 0; i < toSay.Length; i++) {
+            if (toSay[i] == '~') {
+                yield return new WaitForSeconds(settings.TimePauseDoubleDash);
                 continue;
             }
 
-            if (toSay[i] == '$')
-            {
+            if (toSay[i] == '$') {
                 isImportant = !isImportant;
-                if (isImportant)
-                {
+                if (isImportant) {
                     isListeningImportant = isOn;
-                    curText.text += "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) + "></color></b>";
-                }
-                else
-                {
+                    curText.text += "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) +
+                                    "></color></b>";
+                } else {
                     if (isListeningImportant)
                         listenedImportantCallback?.Invoke();
                     isListeningImportant = false;
@@ -144,16 +130,17 @@ public class TalkingBubble : MonoBehaviour
                 } while (toSay[i] != '}');
 
                 TagManager.AddTag(tagToAdd);
+
                 continue;
             }
-            
 
             if (isImportant)
                 curText.text = curText.text.Insert(curText.text.Length - 12, toSay[i].ToString());
             else
                 curText.text += toSay[i];
-            yield return new WaitForSeconds(settings.timeBetweenLetters);
+            yield return new WaitForSeconds(settings.TimeBetweenLetters);
         }
+
         isTalkingNow = false;
         Headphones.PlayStopTalking(gameObject, false);
         onTalkEnds?.Invoke();
@@ -161,6 +148,5 @@ public class TalkingBubble : MonoBehaviour
         callback?.Invoke();
         yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);
         curText.text = emptyTextSymbols;
-        yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);
     }
 }

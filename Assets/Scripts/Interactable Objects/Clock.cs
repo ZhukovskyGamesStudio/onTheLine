@@ -40,6 +40,10 @@ public class Clock : InteractableObject
         isGoing = true;
         SetTime(Mathf.FloorToInt(time), Mathf.FloorToInt((time - Mathf.FloorToInt(time)) * 60));
     }
+
+    public void RingClock() {
+        audioSource.PlayOneShot(ring);
+    }
     void StopClock()
     {
         isGoing = false;

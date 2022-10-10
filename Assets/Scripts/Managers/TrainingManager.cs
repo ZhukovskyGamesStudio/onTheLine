@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class TrainingManager : MonoBehaviour {
 
@@ -28,7 +30,16 @@ public class TrainingManager : MonoBehaviour {
         }
     }
 
-    void FinishTraining() {
+    public void Finish() {
+        StartCoroutine(FinishTrainingCoroutine());
+    }
+
+    private IEnumerator FinishTrainingCoroutine() {
+        yield return new WaitForSeconds(3);
+        FinishTraining();
+    }
+
+    private void FinishTraining() {
         SaveManager.sv.isTrainingComplete = true;
         SaveManager.sv.currentDay++;
         SaveManager.Save();

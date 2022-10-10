@@ -38,6 +38,13 @@ public class CharacterTalking : MonoBehaviour
     void Update()
     {
         OpenClose(Input.GetKey(KeyCode.T));
+
+        if (Input.GetKeyDown(KeyCode.L)) {
+            if(Settings.config.timeScale == 0)
+                Settings.config.timeScale = 1;
+            else
+                Settings.config.timeScale = 0;
+        }
     }
 
     void OpenClose(bool isOpen)

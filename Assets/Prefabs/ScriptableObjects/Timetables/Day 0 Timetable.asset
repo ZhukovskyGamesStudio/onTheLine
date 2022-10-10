@@ -16,7 +16,7 @@ MonoBehaviour:
   randomTimeBetweenCalls: 0
   callsTimeTable:
   - dialog: {fileID: 11400000, guid: 39b9bd9967d0cf14d9bc96f2a5cc7aae, type: 2}
-    fromTime: 8
+    fromTime: 7.5
     toTime: 9
   randomDialogs:
   - {fileID: 11400000, guid: 2c0e4c2c53151df4eb0c8befc7eccfca, type: 2}

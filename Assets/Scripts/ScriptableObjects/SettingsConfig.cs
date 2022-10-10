@@ -27,8 +27,10 @@ public class SettingsConfig : ScriptableObject
     [Header("Talking")]
     public bool isWaitingForOperatorHello = true;
     public float ringingTimeUntilMistake = 2f;
-    public float timeBetweenLetters = 0.033f;
-    public float timePauseDoubleDash = 1f;
+    private float timeBetweenLetters = 0.033f;
+    public float TimeBetweenLetters => timeBetweenLetters * timeScale;
+    private float timePauseDoubleDash = 1f;
+    public float TimePauseDoubleDash => timePauseDoubleDash * (timeScale + 1) / 2 ;
     public float timeBetweenTwoPeople = 1f;
     public float timeBeforeBubbleDissappears = 5f;
     public float timeRingingBeforePick = 3f;
@@ -36,6 +38,8 @@ public class SettingsConfig : ScriptableObject
     public float waitForOperatorAnswer = 10f;
     public float waitForOperatorRing = 10f;
     public float waitForAbonentPick = 7f;
+
+    public float timeScale = 1;
 
     [Header("Physics")]
     [Min(0)] public float dragDistance;

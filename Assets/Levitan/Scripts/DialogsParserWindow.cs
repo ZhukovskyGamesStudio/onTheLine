@@ -47,6 +47,7 @@ public class DialogsParserWindow : EditorWindow {
 
         if (isFocusingWindow)
             EditorUtility.FocusProjectWindow();
+        MenuTools.RecollectDialogsDatabase();
     }
 }
 #endif

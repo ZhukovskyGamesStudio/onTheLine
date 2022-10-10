@@ -20,7 +20,7 @@ public class TagManager : MonoBehaviour {
     }
 
     public static void RemoveTag(string removeTag) {
-        string tag = (string) Enum.Parse(typeof(string), removeTag.Substring(1));
+        string tag = removeTag.Substring(1);
         if (CheckTag(removeTag))
             instance.tags.Remove(tag);
     }
@@ -28,7 +28,6 @@ public class TagManager : MonoBehaviour {
     public static bool CheckTag(string toCheck) {
         return instance.tags.Contains(toCheck);
     }
-
 
     private static void TryInvokeEventByTag(string tag) {
         switch (tag) {
@@ -38,6 +37,11 @@ public class TagManager : MonoBehaviour {
                 string isOnline = hole4.isOpros ? "Online" : "Offline";
                 hole4.Hear(isOnline);
                 hole15.Hear(isOnline);
+                Clock.instance.RingClock();
+                break;
+
+            case "EndTraining":
+                FindObjectOfType<TrainingManager>().Finish();
                 break;
         }
     }

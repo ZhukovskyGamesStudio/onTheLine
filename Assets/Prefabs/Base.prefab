@@ -8898,6 +8898,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 32
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637594183348 stripped
@@ -8985,6 +8990,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 26
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637550285593 stripped
@@ -9071,6 +9081,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -9246,6 +9261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 33
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637717270982 stripped
@@ -9332,6 +9352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -9715,6 +9740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 28
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637396382301 stripped
@@ -9801,6 +9831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -9889,6 +9924,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 39
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386638143256841 stripped
@@ -9975,6 +10015,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -10063,6 +10108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 34
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386638081545300 stripped
@@ -10149,6 +10199,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -10420,6 +10475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -11277,6 +11337,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 27
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637984791512 stripped
@@ -11363,6 +11428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -11832,6 +11902,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386636702516176 stripped
@@ -12010,6 +12085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -12190,6 +12270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 45
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386636381135316 stripped
@@ -12276,6 +12361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -12455,6 +12545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -12700,6 +12795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637000784116 stripped
@@ -12786,6 +12886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -12874,6 +12979,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 38
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637189365544 stripped
@@ -12961,6 +13071,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hole 42
       objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
 --- !u!4 &2285386637254522669 stripped
@@ -13047,6 +13162,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -13226,6 +13346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hole 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
@@ -14261,6 +14386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shteker b1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
       propertyPath: m_RootOrder
@@ -14582,6 +14712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6529674366319507767, guid: 86885cecd52b0134ba9fb0a147e780ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86885cecd52b0134ba9fb0a147e780ef, type: 3}
 --- !u!114 &806511870074760928 stripped
@@ -14699,6 +14834,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -15426,6 +15565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 37
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -15559,6 +15702,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -15832,6 +15979,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -16401,6 +16552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tumbler 8
       objectReference: {fileID: 0}
+    - target: {fileID: 3748011546389480392, guid: 7908923d2ac39e54284a309d7eaad0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
       propertyPath: alphaNumber
@@ -16584,6 +16740,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shteker o1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
@@ -16819,6 +16980,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6529674366319507767, guid: 86885cecd52b0134ba9fb0a147e780ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86885cecd52b0134ba9fb0a147e780ef, type: 3}
 --- !u!114 &1454271222979624683 stripped
@@ -16850,6 +17016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tumbler 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748011546389480392, guid: 7908923d2ac39e54284a309d7eaad0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
@@ -17131,6 +17302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 27
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -17275,6 +17450,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shteker b0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
@@ -17638,6 +17818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 47
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -17912,6 +18096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shteker o3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
       propertyPath: m_RootOrder
@@ -18171,6 +18360,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -18468,6 +18661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 26
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -18606,6 +18803,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -18746,6 +18947,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tumbler 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748011546389480392, guid: 7908923d2ac39e54284a309d7eaad0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
@@ -18930,6 +19136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 43
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19064,6 +19274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 36
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -19197,6 +19411,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -19425,6 +19643,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tumbler 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3748011546389480392, guid: 7908923d2ac39e54284a309d7eaad0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
       propertyPath: alphaNumber
@@ -19515,6 +19738,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -20039,6 +20266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6529674366319507767, guid: 86885cecd52b0134ba9fb0a147e780ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86885cecd52b0134ba9fb0a147e780ef, type: 3}
 --- !u!4 &943815992043868614 stripped
@@ -20156,6 +20388,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -20382,6 +20618,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -20674,6 +20914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 48
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20808,6 +21052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 39
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20941,6 +21189,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -22583,6 +22835,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shteker o3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
       propertyPath: m_RootOrder
@@ -22668,6 +22925,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -22807,6 +23068,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -23028,6 +23293,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -23853,6 +24122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6529674366319507767, guid: 86885cecd52b0134ba9fb0a147e780ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86885cecd52b0134ba9fb0a147e780ef, type: 3}
 --- !u!4 &6100771593441490236 stripped
@@ -24074,6 +24348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shteker o0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
       propertyPath: m_RootOrder
@@ -24166,6 +24445,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shteker b3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
       propertyPath: m_RootOrder
@@ -24257,6 +24541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shteker b2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
@@ -24404,6 +24693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lever 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529674366319507767, guid: 86885cecd52b0134ba9fb0a147e780ef,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86885cecd52b0134ba9fb0a147e780ef, type: 3}
@@ -24612,6 +24906,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -24973,6 +25271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 28
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25112,6 +25414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tumbler 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748011546389480392, guid: 7908923d2ac39e54284a309d7eaad0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
@@ -25386,6 +25693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorNumber 38
       objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25519,6 +25830,10 @@ PrefabInstance:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
       value: DoorNumber 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -25746,6 +26061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shteker o2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}
@@ -26027,6 +26347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shteker b3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5729996658941047266, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6507780492285274233, guid: 6e2deafdbced4d04ebf882a9c5fbe765,
         type: 3}

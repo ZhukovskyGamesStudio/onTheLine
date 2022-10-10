@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SettingsConfig
   m_EditorClassIdentifier: 
   SecondsInOneMinute: 2
-  arriveHour: 7.75
+  arriveHour: 7.9
   leaveHour: 18.15
   startDayHour: 8
   endDayHour: 18
@@ -27,7 +27,7 @@ MonoBehaviour:
   penaltyIncrease: 5
   freePenalties: 2
   foodPrice: 25
-  isWaitingForOperatorHello: 1
+  isWaitingForOperatorHello: 0
   ringingTimeUntilMistake: 2
   timeBetweenLetters: 0.05
   timePauseDoubleDash: 1
@@ -39,4 +39,4 @@ MonoBehaviour:
   waitForOperatorRing: 60
   waitForAbonentPick: 30
   dragDistance: 1
-  ImportantTextColor: {r: 0.9150943, g: 0.5947502, b: 0.082013145, a: 1}
+  ImportantTextColor: {r: 0.4056604, g: 0, b: 0, a: 1}
