@@ -6,55 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorRelieved.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorRelieved.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorRelieved.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorRelieved.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorWorried.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorWorried.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorWorried.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorWorried.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Detected.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Detected.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Detected.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Detected.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Undetected.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Undetected.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Undetected.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Undetected.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone5Bandits.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone5Bandits.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone5Bandits.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone5Bandits.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone6BanditsHeard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone6BanditsHeard.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone6BanditsHeard.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone6BanditsHeard.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0.lvtn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0.lvtn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction3.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction4.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_InstructorRelieved.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_InstructorRelieved.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_InstructorWorried.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_InstructorWorried.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone1.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone3.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone4Detected.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone4Detected.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone4Undetected.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone4Undetected.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone5Bandits.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone5Bandits.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone6BanditsHeard.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_OverPhone6BanditsHeard.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainScene/Clock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainScene/Clock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/SettingsConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/SettingsConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Timetables/Day 0 Timetable.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Admin Panel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Admin Panel.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/Clock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/Clock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsQueue.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SettingsConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SettingsConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <list id="6f358e5d-4cfe-4fd4-8a21-d5f28186f63a" name="Do not push" comment="">
@@ -106,7 +62,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable Objects/EyeSightDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Editor/Utilities/CustomTrackDrawerAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/5f/c9dd7b1f/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.31/UnityEditor.TestRunner/TestLaunchers/PlayerLauncherContextSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/83/ef6f48de/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6073cf49ed704e958b8a66d540dea94846a800/9c/a5e40348/List`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -184,15 +139,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CallsTimeTable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsQueue.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/EditorTools/QueuePosDrawer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SettingsConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/Clock.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DayManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -251,10 +206,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18724">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18724" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -306,14 +261,8 @@
       <workItem from="1664883163320" duration="8719000" />
       <workItem from="1664901562270" duration="26606000" />
       <workItem from="1665139889855" duration="8262000" />
-      <workItem from="1665315146045" duration="16805000" />
-    </task>
-    <task id="LOCAL-00014" summary="SaveLoad of connections">
-      <created>1658516839224</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1658516839224</updated>
+      <workItem from="1665315146045" duration="16853000" />
+      <workItem from="1665520520689" duration="2052000" />
     </task>
     <task id="LOCAL-00015" summary="Saving cameraPos &amp; fixed multiconnections">
       <created>1658519843282</created>
@@ -651,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665228865377</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Training 3/4 wip">
+      <created>1665389627898</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1665389627898</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +630,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fileNames" />
     <MESSAGE value="Changed file structure &amp; PressT" />
     <MESSAGE value="SpeechFromBack" />
     <MESSAGE value="Dialog can add/remove tags on end" />
@@ -699,7 +654,8 @@
     <MESSAGE value="day1 dialogs" />
     <MESSAGE value="copied timetable" />
     <MESSAGE value="PoliceGeneral working" />
-    <option name="LAST_COMMIT_MESSAGE" value="PoliceGeneral working" />
+    <MESSAGE value="Training 3/4 wip" />
+    <option name="LAST_COMMIT_MESSAGE" value="Training 3/4 wip" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -719,26 +675,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs</url>
-          <line>44</line>
+          <line>47</line>
           <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Managers\TagManager.cs" initialLine="44" containingFunctionPresentation="method 'TryInvokeEventByTag'">
             <startOffsets>
-              <option value="1374" />
+              <option value="1440" />
             </startOffsets>
             <endOffsets>
-              <option value="1380" />
+              <option value="1446" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs</url>
-          <line>43</line>
+          <line>46</line>
           <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Managers\TagManager.cs" initialLine="43" containingFunctionPresentation="method 'TryInvokeEventByTag'">
             <startOffsets>
-              <option value="1312" />
+              <option value="1378" />
             </startOffsets>
             <endOffsets>
-              <option value="1357" />
+              <option value="1423" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="68" />

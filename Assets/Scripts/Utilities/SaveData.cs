@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 [System.Serializable]
 public class SaveProfile {
     public int currentDay = 0;
@@ -7,6 +9,7 @@ public class SaveProfile {
     public bool isTrainingStarted = false;
     public bool isTrainingComplete = false;
     public DayResult dayResult;
+    public List<string> tags;
 }
 
 [System.Serializable]

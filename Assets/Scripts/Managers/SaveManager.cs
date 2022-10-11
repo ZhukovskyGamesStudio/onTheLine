@@ -27,6 +27,7 @@ public class SaveManager : MonoBehaviour {
     private int _profile = 1;
 
     public static void Save() {
+        sv.tags = TagManager.instance.tags;
         JsonUtil.Save(sv, instance._profile);
     }
 
@@ -45,6 +46,7 @@ public class SaveManager : MonoBehaviour {
     public static SaveProfile LoadSave(int profile) {
         instance._profile = profile;
         sv = JsonUtil.Load(profile);
+        TagManager.instance.tags = sv.tags;
         return sv;
     }
 

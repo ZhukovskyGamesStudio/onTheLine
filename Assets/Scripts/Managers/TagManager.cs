@@ -7,9 +7,12 @@ public class TagManager : MonoBehaviour {
     public List<string> tags;
 
     private void Awake() {
-        instance = this;
-        if (tags == null)
+        if (instance == null) {
+            instance = this;
             tags = new List<string>();
+        } else {
+            Destroy(gameObject);
+        }
     }
 
     public static void AddTag(string newTag) {

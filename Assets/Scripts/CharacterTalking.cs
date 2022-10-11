@@ -14,6 +14,8 @@ public class CharacterTalking : MonoBehaviour
     Dictionary<GameObject, string> bubblesD;
     List<string> phrazes;
     GameObject selectedButton;
+    [SerializeField]
+    private LayoutGroup _mainBubblesLayout;
 
 
     private void Awake()
@@ -29,7 +31,6 @@ public class CharacterTalking : MonoBehaviour
         //if (Settings.instance.isWaitingForOperatorHello)
         //AddBubble("Повторите пожалуйста.", "/hello/");
         AddBubble("Повторите пожалуйста.", "/repeat/");
-        //AddBubble("� ����� �������� ��������� ����������");
 
         OpenClose(false);
     }
@@ -72,13 +73,11 @@ public class CharacterTalking : MonoBehaviour
     {
         if (specialText == "")
             specialText = text;
-
+      
+        
         if (phrazes.Contains(specialText))
             return;
         GameObject bubl = Instantiate(bubblePrefab, GreyPanel.transform);
-        Vector3 rndV = new Vector3(Random.Range(-200, 200), Random.Range(-200, 200), 0);
-
-        bubl.transform.position = transform.position + rndV + rndV.normalized * 100;
         bubl.transform.GetChild(0).GetComponent<Text>().text = text;
 
         AddTriggersToButton(bubl);
@@ -86,6 +85,10 @@ public class CharacterTalking : MonoBehaviour
 
         phrazes.Add(specialText);
         bubblesD.Add(bubl, specialText);
+        if(text.Length <= 40) {
+            bubl.GetComponent<ContentSizeFitter>().horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
+        }
+        _mainBubblesLayout.CalculateLayoutInputVertical();
     }
 
     void AddTriggersToButton(GameObject bubl)
