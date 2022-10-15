@@ -20,5 +20,6 @@ public class SceneLoadManager : MonoBehaviour {
 
     public static void LoadScene(string SceneName) {
         SceneManager.LoadSceneAsync(SceneName);
+        TagManager.instance.Clear();
     }
 }

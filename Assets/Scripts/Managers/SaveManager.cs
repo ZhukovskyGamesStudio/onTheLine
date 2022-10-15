@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,11 +13,14 @@ public class SaveManager : MonoBehaviour {
         } else {
             instance = this;
             DontDestroyOnLoad(instance);
-            sv = JsonUtil.Load(_profile);
         }
     }
 
     #endregion
+
+    private void Start() {
+        LoadSave(_profile);
+    }
 
     [SerializeField]
     private Day[] days;

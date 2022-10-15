@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Admin Panel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Admin Panel.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0.lvtn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0.lvtn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Days/Day1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Days/Day1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -97,7 +103,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/UIManager.cs" />
       <option value="$USER_HOME$/Desktop/New Dialog.json" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/IDraggable.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Transition.cs" />
@@ -114,7 +119,6 @@
       <option value="$USER_HOME$/Desktop/Day0.json" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/TableItemBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Headphones.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UIPrefabs/PhoneBookElement.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/SaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/WindowsFileOpener.cs" />
@@ -124,7 +128,6 @@
       <option value="$PROJECT_DIR$/Assets/Dialogs/Day1/json/Chapter1Day1.json" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/UI/DialogEditPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Person.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/FileParser.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/RuntimeParser.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Commutator.cs" />
@@ -142,11 +145,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SettingsConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TrainingManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/Clock.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DayManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TalkingBubble.cs" />
       <option value="$PROJECT_DIR$/Assets/Levitan/Scripts/DialogsParserWindow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/CharacterTalking.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/SaveData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
     </changedPaths>
   </component>
@@ -206,10 +212,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1388">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="1388" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -262,14 +268,9 @@
       <workItem from="1664901562270" duration="26606000" />
       <workItem from="1665139889855" duration="8262000" />
       <workItem from="1665315146045" duration="16853000" />
-      <workItem from="1665520520689" duration="2052000" />
-    </task>
-    <task id="LOCAL-00015" summary="Saving cameraPos &amp; fixed multiconnections">
-      <created>1658519843282</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1658519843282</updated>
+      <workItem from="1665520520689" duration="3275000" />
+      <workItem from="1665708274556" duration="265000" />
+      <workItem from="1665790629384" duration="3658000" />
     </task>
     <task id="LOCAL-00016" summary="Imported simpleFileBrowser &amp; visual fixes">
       <created>1658671737203</created>
@@ -607,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665389627898</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Some Fixes">
+      <created>1665522896012</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1665522896012</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,7 +638,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Changed file structure &amp; PressT" />
     <MESSAGE value="SpeechFromBack" />
     <MESSAGE value="Dialog can add/remove tags on end" />
     <MESSAGE value="SayToOperator can add Thoughts" />
@@ -655,7 +662,8 @@
     <MESSAGE value="copied timetable" />
     <MESSAGE value="PoliceGeneral working" />
     <MESSAGE value="Training 3/4 wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="Training 3/4 wip" />
+    <MESSAGE value="Some Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some Fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -675,29 +683,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs</url>
-          <line>47</line>
+          <line>58</line>
           <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Managers\TagManager.cs" initialLine="44" containingFunctionPresentation="method 'TryInvokeEventByTag'">
             <startOffsets>
-              <option value="1440" />
+              <option value="1800" />
             </startOffsets>
             <endOffsets>
-              <option value="1446" />
+              <option value="1806" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs</url>
-          <line>46</line>
+          <line>57</line>
           <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Managers\TagManager.cs" initialLine="43" containingFunctionPresentation="method 'TryInvokeEventByTag'">
             <startOffsets>
-              <option value="1378" />
+              <option value="1738" />
             </startOffsets>
             <endOffsets>
-              <option value="1423" />
+              <option value="1783" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs</url>
+          <line>236</line>
+          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\PersonBehindHole.cs" initialLine="234" containingFunctionPresentation="method 'Waiting'">
+            <startOffsets>
+              <option value="8549" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8556" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

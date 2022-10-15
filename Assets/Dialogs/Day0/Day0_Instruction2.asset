@@ -51,7 +51,7 @@ MonoBehaviour:
   requireTags:
   - Headphone on
   produceTags:
-  - StartCall
+  - OpenDoor
   forbiddenTags: []
   Transitions: []
   Informations: []

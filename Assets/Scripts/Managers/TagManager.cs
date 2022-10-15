@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TagManager : MonoBehaviour {
@@ -10,6 +11,8 @@ public class TagManager : MonoBehaviour {
         if (instance == null) {
             instance = this;
             tags = new List<string>();
+
+            DontDestroyOnLoad(this);
         } else {
             Destroy(gameObject);
         }
@@ -32,8 +35,17 @@ public class TagManager : MonoBehaviour {
         return instance.tags.Contains(toCheck);
     }
 
+    public void Clear() {
+        tags = tags.Where(tag => overdayTags.Contains(tag)).ToList();
+    }
+
     private static void TryInvokeEventByTag(string tag) {
         switch (tag) {
+            case "OpenDoor":
+                DoorNumber door4 = GameObject.Find("DoorNumber 4").GetComponent<DoorNumber>();
+                door4.isOpen = true;
+                break;
+
             case "SoundStarted":
                 Hole hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
                 Hole hole15 = GameObject.Find("Hole 15").GetComponent<Hole>();
@@ -48,4 +60,9 @@ public class TagManager : MonoBehaviour {
                 break;
         }
     }
+
+    private readonly List<string> overdayTags = new() {
+        "Attacked",
+        "Police called"
+    };
 }

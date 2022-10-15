@@ -219,8 +219,10 @@ public class PersonBehindHole : MonoBehaviour {
         if (_coroutine != null)
             StopCoroutine(_coroutine);
 
-        if (isStart)
-            _coroutine = StartCoroutine(Waiting());
+        if (isStart) {
+            //For now people can wait forever
+            //_coroutine = StartCoroutine(Waiting());
+        }
     }
 
     //Ожидает столько времени, сколько указано в настройках. Если не дожидается - кладёт трубку и отправляется "ошибка оператора"

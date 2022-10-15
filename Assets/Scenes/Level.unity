@@ -30432,7 +30432,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
-      value: DoorNumber 4
+      value: DoorNumber 4323
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -36688,7 +36688,7 @@ PrefabInstance:
     - target: {fileID: 3966353852945755264, guid: f9a9fcbd40179414395b826f9e15f560,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 750.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3966353852945755264, guid: f9a9fcbd40179414395b826f9e15f560,
         type: 3}
@@ -60898,7 +60898,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
-      value: DoorNumber 4
+      value: DoorNumber 423
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
@@ -66939,7 +66939,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4757673071330938, guid: 252aae4557540f54291cadaf4703c973, type: 3}
       propertyPath: m_Name
-      value: DoorNumber 4
+      value: DoorNumber 4324
       objectReference: {fileID: 0}
     - target: {fileID: 688047222938260359, guid: 252aae4557540f54291cadaf4703c973,
         type: 3}
