@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f813d02f4a7a9648bf2241cfacd1eb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagToWait: StartCall
+  tagToWait: OpenDoor
   tagToAdd: Number seen
 --- !u!4 &5267045758045695301 stripped
 Transform:

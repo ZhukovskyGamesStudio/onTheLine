@@ -21947,6 +21947,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tumbler special 2 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3748011546389480392, guid: 7908923d2ac39e54284a309d7eaad0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6573450045082500972, guid: 7908923d2ac39e54284a309d7eaad0d3,
         type: 3}
       propertyPath: m_Enabled

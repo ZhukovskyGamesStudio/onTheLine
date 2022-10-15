@@ -7,17 +7,22 @@
     <list default="true" id="254b888f-264e-4a75-a998-ca6c4f833ff0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PhoneOp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction3.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_Instruction4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorRelieved.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_InstructorRelieved.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Detected.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Detected.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Undetected.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone4Undetected.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone5Bandits.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone5Bandits.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone6BanditsHeard.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/Day0_OverPhone6BanditsHeard.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0.lvtn" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0.lvtn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Days/Day1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObjects/Days/Day1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Loading.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction4.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogs/Day0/json/Day0_Instruction4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Base.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Base.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/EyeSightDetector.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/EyeSightDetector.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/PersonFromBack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/PersonFromBack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <list id="6f358e5d-4cfe-4fd4-8a21-d5f28186f63a" name="Do not push" comment="">
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
@@ -31,6 +36,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Anastasiya Paziy &lt;paziy_anastasiya@mail.ru&gt;" />
         <option value="ZatoSvojo &lt;yarik.grinevich@yandex.ru&gt;" />
         <option value="GrafEnters &lt;43163351+grafenters@users.noreply.github.com&gt;" />
       </list>
@@ -65,6 +71,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Models/Log.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Editor/Volume/VolumeProfileFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.high-definition/Tests/Editor/FurnaceTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Dialogs/Day0/Day0_Instruction2.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Dialogs/Day0/Day0_Instruction4.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable Objects/EyeSightDetector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.timeline@1.6.4/Editor/Utilities/CustomTrackDrawerAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/40205bb2cb25478a9cb0f5e54cf11441157400/5f/c9dd7b1f/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
@@ -79,8 +87,10 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerIndirectToggle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Dialogs/Day0/Day0_Instruction2.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Levitan/Scripts/Managers/WindowsFileOpener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interactable Objects/VirtualHole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/PhoneOp/Assets/Dialogs/Day0/Day0_Instruction4.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Unity/2021.3.2f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.shadergraph/Editor/Drawing/Views/MaterialNodeView.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A017E354-F315-4926-A561-7FBAC3A64FCC/29/1ed6085c/ReorderableList.cs" root0="SKIP_HIGHLIGHTING" />
@@ -137,7 +147,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AdminPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Dialog.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/SpeechFromBack.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/PersonFromBack.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/VirtualHole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CallsTimeTable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/DialogsQueue.cs" />
@@ -154,6 +163,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SceneLoadManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interactable Objects/PersonFromBack.cs" />
     </changedPaths>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -270,21 +280,7 @@
       <workItem from="1665315146045" duration="16853000" />
       <workItem from="1665520520689" duration="3275000" />
       <workItem from="1665708274556" duration="265000" />
-      <workItem from="1665790629384" duration="3658000" />
-    </task>
-    <task id="LOCAL-00016" summary="Imported simpleFileBrowser &amp; visual fixes">
-      <created>1658671737203</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1658671737203</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Bugfixes">
-      <created>1658698134529</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1658698134529</updated>
+      <workItem from="1665790629384" duration="6173000" />
     </task>
     <task id="LOCAL-00018" summary="Rich text support">
       <created>1658709642052</created>
@@ -615,7 +611,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665522896012</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Endless waiting">
+      <created>1665850316958</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1665850316958</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Day0 and Day1 dialog fixes">
+      <created>1665850679716</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1665850679716</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,8 +648,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="SpeechFromBack" />
-    <MESSAGE value="Dialog can add/remove tags on end" />
     <MESSAGE value="SayToOperator can add Thoughts" />
     <MESSAGE value="Headphones working" />
     <MESSAGE value="Parsed dialogs &amp; fixed people" />
@@ -663,7 +671,9 @@
     <MESSAGE value="PoliceGeneral working" />
     <MESSAGE value="Training 3/4 wip" />
     <MESSAGE value="Some Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Fixes" />
+    <MESSAGE value="Endless waiting" />
+    <MESSAGE value="Day0 and Day1 dialog fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day0 and Day1 dialog fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -680,32 +690,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs</url>
-          <line>58</line>
-          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Managers\TagManager.cs" initialLine="44" containingFunctionPresentation="method 'TryInvokeEventByTag'">
-            <startOffsets>
-              <option value="1800" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1806" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs</url>
-          <line>57</line>
-          <properties documentPath="D:\Unity Projects\PhoneOp\Assets\Scripts\Managers\TagManager.cs" initialLine="43" containingFunctionPresentation="method 'TryInvokeEventByTag'">
-            <startOffsets>
-              <option value="1738" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1783" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PersonBehindHole.cs</url>
