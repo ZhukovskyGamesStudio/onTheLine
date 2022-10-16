@@ -4,13 +4,11 @@ using UnityEngine;
 
 namespace Levitan {
     public class Connection : MonoBehaviour {
-        public IConnectable _startPoint;
-        public IConnectable _endPoint;
         public bool isForbidden;
 
         [SerializeField]
         private SpriteRenderer _typeIcon;
-        
+
         [SerializeField]
         private SpriteRenderer _lineEnd, _lineEndIcon;
 
@@ -21,55 +19,11 @@ namespace Levitan {
         private LineRenderer _line;
 
         public float EndCollisionRadius;
-        private IDraggable _tempTarget;
-        private bool _isDragging;
         public Color FalseColor;
-
-        public void Init(IDraggable start) {
-            _startPoint = start;
-            _line.positionCount = 2;
-            _lineStart.color = AppManager.Instance._ColorManager.GetColorByDraggable(start._data.Type);
-            DraggableType endType = GetEndForStart(start._data.Type);
-            _lineEndIcon.color = AppManager.Instance._ColorManager.GetColorByDraggable(endType);
-            
-            
-            // A simple 2 color gradient with a fixed alpha of 1.0f.
-            float alpha = 1.0f;
-            Gradient gradient = new();
-            gradient.SetKeys(
-                new[] { new GradientColorKey(_lineStart.color, 0.0f), new GradientColorKey(_lineEndIcon.color, 1.0f) },
-                new[] { new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f) }
-            );
-            if (start._data.Type == DraggableType.Tag|| start._data.Type == DraggableType.Dialog) {
-                _typeIcon.gameObject.SetActive(true);
-                _typeIcon.color = _lineEndIcon.color;
-            }
-            _line.colorGradient = gradient;
-        }
-        
-        
-
-        private DraggableType GetEndForStart(DraggableType startType) {
-            return startType switch {
-                DraggableType.Dialog => DraggableType.Tag,
-                DraggableType.Tag => DraggableType.Dialog,
-                DraggableType.Thought => DraggableType.Transition,
-                DraggableType.Transition => DraggableType.Dialog,
-                DraggableType.Information => DraggableType.Thought,
-                _ => throw new ArgumentOutOfRangeException()
-            };
-        }
-        
-        public void Init(IConnectable start) {
-            _startPoint = start;
-            _line.positionCount = 2;
-        }
-
-        public void StartDrag() {
-            if (AppManager.Instance._cameraController.IsEditing)
-                return;
-            _isDragging = true;
-        }
+        public IConnectable _endPoint;
+        private bool _isDragging;
+        public IConnectable _startPoint;
+        private IDraggable _tempTarget;
 
         private void Update() {
             if (!_isDragging)
@@ -89,6 +43,54 @@ namespace Levitan {
             CheckOtherDraggable();
         }
 
+        private void OnCollisionEnter(Collision collision) {
+            Debug.Log("Collide to draggable");
+        }
+
+        public void Init(IDraggable start) {
+            _startPoint = start;
+            _line.positionCount = 2;
+            _lineStart.color = AppManager.Instance._ColorManager.GetColorByDraggable(start._data.Type);
+            DraggableType endType = GetEndForStart(start._data.Type);
+            _lineEndIcon.color = AppManager.Instance._ColorManager.GetColorByDraggable(endType);
+
+            // A simple 2 color gradient with a fixed alpha of 1.0f.
+            float alpha = 1.0f;
+            Gradient gradient = new();
+            gradient.SetKeys(
+                new[] {new GradientColorKey(_lineStart.color, 0.0f), new GradientColorKey(_lineEndIcon.color, 1.0f)},
+                new[] {new GradientAlphaKey(alpha, 0.0f), new GradientAlphaKey(alpha, 1.0f)}
+            );
+            if (start._data.Type == DraggableType.Tag || start._data.Type == DraggableType.Dialog) {
+                _typeIcon.gameObject.SetActive(true);
+                _typeIcon.color = _lineEndIcon.color;
+            }
+
+            _line.colorGradient = gradient;
+        }
+
+        private DraggableType GetEndForStart(DraggableType startType) {
+            return startType switch {
+                DraggableType.Dialog => DraggableType.Tag,
+                DraggableType.Tag => DraggableType.Dialog,
+                DraggableType.Thought => DraggableType.Transition,
+                DraggableType.Transition => DraggableType.Dialog,
+                DraggableType.Information => DraggableType.Thought,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+        }
+
+        public void Init(IConnectable start) {
+            _startPoint = start;
+            _line.positionCount = 2;
+        }
+
+        public void StartDrag() {
+            if (AppManager.Instance._cameraController.IsEditing)
+                return;
+            _isDragging = true;
+        }
+
         public void SetData(ConnectionData data) {
             WorkspaceManager workspaceManager = AppManager.Instance._workspaceManager;
             _startPoint = workspaceManager.GetDraggableById(data.start);
@@ -100,10 +102,10 @@ namespace Levitan {
         }
 
         public ConnectionData CollectData() {
-            return new ConnectionData() {
+            return new() {
                 start = _startPoint.ID,
                 end = _endPoint.ID,
-                type = isForbidden? ConnectionTypes.RequireFalse : ConnectionTypes.Require
+                type = isForbidden ? ConnectionTypes.RequireFalse : ConnectionTypes.Require
             };
         }
 
@@ -152,11 +154,10 @@ namespace Levitan {
         private void Move() {
             _line.SetPosition(0, _startPoint.GetRectEdgeForPosition(CameraController.GetDialogPosition()));
 
-            if (_tempTarget != null) {
+            if (_tempTarget != null)
                 _line.SetPosition(1, _tempTarget.GetRectEdgeForPosition(_line.GetPosition(0)));
-            } else {
+            else
                 _line.SetPosition(1, CameraController.GetDialogPosition());
-            }
 
             _lineStart.transform.position = _line.GetPosition(0);
             _lineEnd.transform.position = _line.GetPosition(1);
@@ -176,10 +177,6 @@ namespace Levitan {
             } else {
                 _tempTarget = null;
             }
-        }
-
-        private void OnCollisionEnter(Collision collision) {
-            Debug.Log("Collide to draggable");
         }
 
         public void DisconnectEnd() {

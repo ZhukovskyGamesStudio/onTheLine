@@ -3,7 +3,7 @@ using Levitan;
 using UnityEngine;
 
 public class WindowsFileOpener : MonoBehaviour {
-    void Start() {
+    private void Start() {
 #if UNITY_STANDALONE_WIN
         string[] args = Environment.GetCommandLineArgs();
         LogManager logManager = AppManager.Instance._LogManager;

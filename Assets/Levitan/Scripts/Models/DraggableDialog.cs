@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -45,11 +46,11 @@ namespace Levitan {
         public void InstantiateInformation(string text) {
             DraggableData data = new() {
                 _connectionsList = new List<ConnectionData>(),
-                _dialogData = new DialogData() {
+                _dialogData = new DialogData {
                     ID = _data.ID,
-                    allText = text,
+                    allText = text
                 },
-                ID = System.Guid.NewGuid().ToString()
+                ID = Guid.NewGuid().ToString()
             };
             AppManager.Instance._workspaceManager.InstantiateInformation(data);
         }
@@ -67,22 +68,20 @@ namespace Levitan {
             data.requireTags = new List<string>();
             data.forbiddenTags = new List<string>();
             data.produceTags = new List<string>();
-            foreach (var connectionData in _data._connectionsList) {
+            foreach (ConnectionData connectionData in _data._connectionsList) {
                 if (connectionData.start == _data.ID) {
                     IDraggable draggable = WorkspaceManager.GetDraggableStatic(connectionData.end);
-                    if (draggable._data.Type == DraggableType.Tag) {
+                    if (draggable._data.Type == DraggableType.Tag)
                         data.produceTags.Add(draggable._data._dialogData.name);
-                    }
                 }
 
                 if (connectionData.end == _data.ID) {
                     IDraggable draggable = WorkspaceManager.GetDraggableStatic(connectionData.start);
                     if (draggable._data.Type == DraggableType.Tag) {
-                        if (connectionData.type == ConnectionTypes.RequireFalse) {
+                        if (connectionData.type == ConnectionTypes.RequireFalse)
                             data.forbiddenTags.Add(draggable._data._dialogData.name);
-                        } else {
+                        else
                             data.requireTags.Add(draggable._data._dialogData.name);
-                        }
                     }
                 }
             }
@@ -101,9 +100,7 @@ namespace Levitan {
 
         public override bool CanAddConnection(IConnectable start) {
             IDraggable draggable = start as IDraggable;
-            if (draggable != null) {
-                return draggable._data.Type is DraggableType.Tag or DraggableType.Transition;
-            }
+            if (draggable != null) return draggable._data.Type is DraggableType.Tag or DraggableType.Transition;
 
             return false;
         }
@@ -113,7 +110,7 @@ namespace Levitan {
         }
     }
 
-    [System.Serializable]
+    [Serializable]
     public class DialogData {
         public string ID;
         public string SayToOperator;
@@ -134,13 +131,13 @@ namespace Levitan {
         };
     }
 
-    [System.Serializable]
+    [Serializable]
     public class NewInformationData {
         public string line;
         public string thought;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class TransitionData {
         public string thought;
         public string dialog;

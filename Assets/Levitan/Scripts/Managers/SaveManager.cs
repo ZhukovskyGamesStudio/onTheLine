@@ -3,22 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEngine;
 using SimpleFileBrowser;
+using UnityEngine;
 
 namespace Levitan {
     public class SaveManager : MonoBehaviour {
+        private const string LEVITAN_FILE_TYPE = ".lvtn";
         public bool IsRememberCameraPosition; //MoveToSettings
 
         public string ProjectSavePath;
 
         private ProjectData _projectData = new();
 
-        private WorkspaceManager _workspaceManager;
-
         private string _savePath;
 
-        private const string LEVITAN_FILE_TYPE = ".lvtn";
+        private WorkspaceManager _workspaceManager;
 
         public void Init(WorkspaceManager workspaceManager) {
             _workspaceManager = workspaceManager;
@@ -38,11 +37,10 @@ namespace Levitan {
             yield return FileBrowser.WaitForLoadDialog(FileBrowser.PickMode.Files, false, null, null,
                 "Select file to load", "Load");
             AppManager.Instance._cameraController.IsEditing = false;
-            if (FileBrowser.Success) {
+            if (FileBrowser.Success)
                 LoadProject(FileBrowser.Result[0]);
-            } else {
+            else
                 Debug.Log("You dont select file");
-            }
         }
 
         public void LoadProject(string path) {
@@ -58,31 +56,21 @@ namespace Levitan {
                 Camera.main.transform.position = _projectData.cameraPosition;
                 Camera.main.orthographicSize = _projectData.cameraSize;
             } else {
-                if (_projectData._draggableDatas.Count == 0) {
-                    return;
-                }
+                if (_projectData._draggableDatas.Count == 0) return;
 
                 float low = 10000, top = -100000, right = -100000, left = 100000;
-                foreach (var VARIABLE in _projectData._draggableDatas) {
+                foreach (DraggableData VARIABLE in _projectData._draggableDatas) {
                     Vector3 dPos = VARIABLE.position;
-                    if (dPos.y < low) {
-                        low = dPos.y;
-                    }
+                    if (dPos.y < low) low = dPos.y;
 
-                    if (dPos.y > top) {
-                        top = dPos.y;
-                    }
+                    if (dPos.y > top) top = dPos.y;
 
-                    if (dPos.x < left) {
-                        left = dPos.x;
-                    }
+                    if (dPos.x < left) left = dPos.x;
 
-                    if (dPos.x > right) {
-                        right = dPos.x;
-                    }
+                    if (dPos.x > right) right = dPos.x;
                 }
 
-                Vector3 position = new Vector3((right + left) / 2, (low + top) / 2);
+                Vector3 position = new((right + left) / 2, (low + top) / 2);
                 float maxDelta = Mathf.Max(Mathf.Abs(right - left), Mathf.Abs(top - low));
                 float coefficient = 1 / 3f;
                 AppManager.Instance._cameraController.SetSize(maxDelta * coefficient);
@@ -93,7 +81,7 @@ namespace Levitan {
         public IEnumerator SaveProject() {
             AppManager.Instance._cameraController.IsEditing = true;
             yield return FileBrowser.WaitForSaveDialog(FileBrowser.PickMode.Files, false, null, null,
-                "Select place to save project", "Save");
+                "Select place to save project");
             AppManager.Instance._cameraController.IsEditing = false;
             if (FileBrowser.Success) {
                 string projectName =
@@ -129,16 +117,15 @@ namespace Levitan {
             if (FileBrowser.Success) {
                 _workspaceManager.CollectExportData();
                 _projectData._draggableDatas = _workspaceManager.CollectWorkspace();
-                foreach (DraggableData draggable in _projectData._draggableDatas.Where(d => d.Type == DraggableType.Dialog)) {
+                foreach (DraggableData draggable in _projectData._draggableDatas.Where(d =>
+                    d.Type == DraggableType.Dialog)) {
                     Dialog asset = RuntimeParser.ParseDialogData(draggable._dialogData);
-                    if(draggable._dialogData.name.StartsWith('/')) {
-                        continue;
-                    }
+                    if (draggable._dialogData.name.StartsWith('/')) continue;
                     string name = asset.SayToOperator;
                     string json = JsonUtility.ToJson(asset);
                     File.WriteAllTextAsync(
                         FileBrowser.Result[0] + Path.DirectorySeparatorChar +
-                        (string.IsNullOrEmpty(_projectData.projectName) ? "" : (_projectData.projectName + "_")) +
+                        (string.IsNullOrEmpty(_projectData.projectName) ? "" : _projectData.projectName + "_") +
                         draggable._dialogData.name + ".json",
                         json);
                 }
@@ -155,7 +142,7 @@ namespace Levitan {
          }*/
     }
 
-    [System.Serializable]
+    [Serializable]
     public class ProjectData {
         public string projectName;
         public Vector3 cameraPosition;
@@ -163,7 +150,7 @@ namespace Levitan {
         public List<DraggableData> _draggableDatas;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class DraggableData {
         public string ID;
         public DraggableType Type;
@@ -172,7 +159,7 @@ namespace Levitan {
         public List<ConnectionData> _connectionsList = new();
     }
 
-    [System.Serializable]
+    [Serializable]
     public class ConnectionData {
         public ConnectionTypes type;
         public string start;

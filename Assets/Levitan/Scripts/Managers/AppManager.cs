@@ -15,13 +15,13 @@ namespace Levitan {
 
         [SerializeField]
         public SaveManager _saveManager;
-        
+
         [SerializeField]
         public ColorManager _ColorManager;
 
         [SerializeField]
         public LogManager _LogManager;
-        
+
         private void Awake() {
             Instance = this;
             _cameraController.Init(_uiManager, _workspaceManager);

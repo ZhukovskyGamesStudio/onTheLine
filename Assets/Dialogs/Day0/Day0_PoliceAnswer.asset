@@ -20,7 +20,7 @@ MonoBehaviour:
     Sex: -1
     Criminal: -1
     isDead: 0
-    roomNumber: 0
+    roomNumber: 2
   requirementTo:
     Work: -1
     Temperament: -1
@@ -28,7 +28,7 @@ MonoBehaviour:
     Sex: -1
     Criminal: -1
     isDead: 0
-    roomNumber: 2
+    roomNumber: 0
   SayToOperator: "\u0425\u043E\u0440\u043E\u0448\u043E, \u0441\u0435\u0439\u0447\u0430\u0441
     \u0432\u044B\u0448\u043B\u0435\u043C \u043D\u0430\u0440\u044F\u0434, \u0431\u0443\u0434\u0435\u0442
     \u0447\u0435\u0440\u0435\u0437 5 \u043C\u0438\u043D\u0443\u0442."

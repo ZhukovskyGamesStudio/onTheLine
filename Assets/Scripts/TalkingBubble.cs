@@ -10,56 +10,56 @@ public class TalkingBubble : MonoBehaviour {
 
     public UnityEvent onTalkEnds;
 
-    Coroutine printingCoroutine;
-    UnityEvent callback;
-    UnityEvent listenedImportantCallback;
-    SettingsConfig settings;
-    bool isTalkingNow;
-    bool isOn;
+    private Coroutine _printingCoroutine;
+    private UnityEvent _callback;
+    private UnityEvent _listenedImportantCallback;
+    private SettingsConfig _settings;
+    private bool _isTalkingNow;
+    private bool _isOn;
 
-    void Start() {
-        settings = Settings.config;
-        callback = new UnityEvent();
-        listenedImportantCallback = new UnityEvent();
+    private void Start() {
+        _settings = Settings.config;
+        _callback = new UnityEvent();
+        _listenedImportantCallback = new UnityEvent();
         curText = RightText;
-        isTalkingNow = false;
+        _isTalkingNow = false;
         RightText.text = emptyTextSymbols;
         LeftText.text = emptyTextSymbols;
     }
 
     public void Say(string toSay, UnityAction callbackAction) {
-        callback.RemoveAllListeners();
+        _callback.RemoveAllListeners();
         if (callbackAction != null) {
-            callback.AddListener(callbackAction);
+            _callback.AddListener(callbackAction);
         }
 
-        if (printingCoroutine != null)
-            StopCoroutine(printingCoroutine);
-        printingCoroutine = StartCoroutine(PrintNumerator(toSay));
+        if (_printingCoroutine != null)
+            StopCoroutine(_printingCoroutine);
+        _printingCoroutine = StartCoroutine(PrintNumerator(toSay));
     }
 
     public void AddListenedCallback(UnityAction callbackAction) {
-        listenedImportantCallback.RemoveAllListeners();
-        listenedImportantCallback.AddListener(callbackAction);
+        _listenedImportantCallback.RemoveAllListeners();
+        _listenedImportantCallback.AddListener(callbackAction);
     }
 
     public void StopSaying() {
-        if (printingCoroutine != null)
-            StopCoroutine(printingCoroutine);
+        if (_printingCoroutine != null)
+            StopCoroutine(_printingCoroutine);
         Headphones.PlayStopTalking(gameObject, false);
-        callback.RemoveAllListeners();
+        _callback.RemoveAllListeners();
         curText.text = emptyTextSymbols;
     }
 
     public void ChangeSide(bool isRight) {
         if (BubbleRight == null) {
-            BubbleLeft.SetActive(isOn);
+            BubbleLeft.SetActive(_isOn);
             curText = LeftText;
             return;
         }
 
         if (BubbleLeft == null) {
-            BubbleRight.SetActive(isOn);
+            BubbleRight.SetActive(_isOn);
             curText = RightText;
             return;
         }
@@ -67,18 +67,18 @@ public class TalkingBubble : MonoBehaviour {
         if (isRight) {
             curText = RightText;
             BubbleLeft.SetActive(false);
-            BubbleRight.SetActive(isOn);
+            BubbleRight.SetActive(_isOn);
         } else {
             curText = LeftText;
             BubbleRight.SetActive(false);
-            BubbleLeft.SetActive(isOn);
+            BubbleLeft.SetActive(_isOn);
         }
     }
 
-    public void TurnOn(bool _isOn, bool isRight = false) {
-        isOn = _isOn;
+    public void TurnOn(bool isOn, bool isRight = false) {
+        _isOn = isOn;
         ChangeSide(isRight);
-        if (_isOn && isTalkingNow)
+        if (isOn && _isTalkingNow)
             Headphones.PlayStopTalking(gameObject, true);
         else
             Headphones.PlayStopTalking(gameObject, false);
@@ -90,10 +90,10 @@ public class TalkingBubble : MonoBehaviour {
             curText.text = emptyTextSymbols;
     }
 
-    IEnumerator PrintNumerator(string toSay) {
+    private IEnumerator PrintNumerator(string toSay) {
         curText.text = "";
-        isTalkingNow = true;
-        if (isOn)
+        _isTalkingNow = true;
+        if (_isOn)
             Headphones.PlayStopTalking(gameObject, true);
 
         bool isImportant = false;
@@ -101,21 +101,21 @@ public class TalkingBubble : MonoBehaviour {
 
         for (int i = 0; i < toSay.Length; i++) {
             if (toSay[i] == '~') {
-                yield return new WaitForSeconds(settings.TimePauseDoubleDash);
+                yield return new WaitForSeconds(_settings.TimePauseDoubleDash);
                 continue;
             }
 
             if (toSay[i] == '$') {
                 isImportant = !isImportant;
                 if (isImportant) {
-                    isListeningImportant = isOn;
+                    isListeningImportant = _isOn;
                     curText.text += "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) +
                                     "></color></b>";
                 } else {
                     if (isListeningImportant)
-                        listenedImportantCallback?.Invoke();
+                        _listenedImportantCallback?.Invoke();
                     isListeningImportant = false;
-                    listenedImportantCallback.RemoveAllListeners();
+                    _listenedImportantCallback.RemoveAllListeners();
                 }
 
                 continue;
@@ -138,15 +138,15 @@ public class TalkingBubble : MonoBehaviour {
                 curText.text = curText.text.Insert(curText.text.Length - 12, toSay[i].ToString());
             else
                 curText.text += toSay[i];
-            yield return new WaitForSeconds(settings.TimeBetweenLetters);
+            yield return new WaitForSeconds(_settings.TimeBetweenLetters);
         }
 
-        isTalkingNow = false;
+        _isTalkingNow = false;
         Headphones.PlayStopTalking(gameObject, false);
         onTalkEnds?.Invoke();
-        yield return new WaitForSeconds(settings.timeBetweenTwoPeople);
-        callback?.Invoke();
-        yield return new WaitForSeconds(settings.timeBeforeBubbleDissappears);
+        yield return new WaitForSeconds(_settings.timeBetweenTwoPeople);
+        _callback?.Invoke();
+        yield return new WaitForSeconds(_settings.timeBeforeBubbleDissappears);
         curText.text = emptyTextSymbols;
     }
 }

@@ -1,19 +1,11 @@
-using System;
 using UnityEngine;
 
 namespace Levitan {
     public class CameraController : MonoBehaviour, IAppModule {
+        public static bool IsDrawingLine;
         public float moveMultiplier;
         public float minZoom, maxZoom;
         public float lerpSpeed = 0.3f;
-
-        private Transform _mainCamera;
-        private Vector3 _mouseStartPos;
-        private Vector3 _cameraStartPos;
-        private Vector3 _dialogOffset;
-
-        private bool _isDragging;
-        private bool _isFocused;
         public bool IsEditing;
 
         [SerializeField]
@@ -22,42 +14,36 @@ namespace Levitan {
         [SerializeField]
         private float minMoveDelta = 0.3f;
 
+        private Vector3 _cameraStartPos;
+        private Vector3 _dialogOffset;
+
+        private bool _isDragging;
+        private bool _isFocused;
+
+        private Transform _mainCamera;
+        private Vector3 _mouseStartPos;
+
         private UIManager _uiManager;
         private WorkspaceManager _workspaceManager;
-        public static bool IsDrawingLine;
 
-        public void Init(UIManager uiManager, WorkspaceManager workspaceManager) {
-            _mainCamera = Camera.main.transform;
-            _uiManager = uiManager;
-            _workspaceManager = workspaceManager;
-            _isFocused = true;
-        }
-
-        private void OnApplicationFocus(bool hasFocus) {
-            _isFocused = hasFocus;
-        }
+        public Vector3 MousePosition => (Input.mousePosition - new Vector3(Screen.width, Screen.height) / 2) / 100;
+        private float ZoomPercent => Camera.main.orthographicSize * 1f / minZoom;
 
         private void Update() {
-            if (_isDragging || IsEditing || !_isFocused) {
-                return;
-            }
+            if (_isDragging || IsEditing || !_isFocused) return;
             Collider2D info = Physics2D.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition).origin,
                 Vector2.zero).collider;
-            
+
             if (Input.GetKeyDown(KeyCode.S) && Input.GetKey(KeyCode.LeftControl)) {
                 AppManager.Instance._saveManager.QuickSave();
                 return;
             }
 
-            if (Input.GetKeyDown(KeyCode.Delete)&& !IsDrawingLine) {
-              
-                if (info!= null) {
-                    if (info.transform.TryGetComponent(out IDraggable draggable)) {
+            if (Input.GetKeyDown(KeyCode.Delete) && !IsDrawingLine)
+                if (info != null)
+                    if (info.transform.TryGetComponent(out IDraggable draggable))
                         draggable.DestroyDraggable();
-                    }
-                }
-            }
-            
+
             if (Input.GetMouseButtonDown(1) && !IsDrawingLine) {
                 _uiManager.ShowCursorMenu(MousePosition * 100);
             } else if (Input.mouseScrollDelta.y != 0) {
@@ -77,8 +63,16 @@ namespace Levitan {
             _isDragging = false;
         }
 
-        public Vector3 MousePosition => (Input.mousePosition - new Vector3(Screen.width, Screen.height) / 2) / 100;
-        private float ZoomPercent => Camera.main.orthographicSize * 1f / minZoom;
+        private void OnApplicationFocus(bool hasFocus) {
+            _isFocused = hasFocus;
+        }
+
+        public void Init(UIManager uiManager, WorkspaceManager workspaceManager) {
+            _mainCamera = Camera.main.transform;
+            _uiManager = uiManager;
+            _workspaceManager = workspaceManager;
+            _isFocused = true;
+        }
 
         public static Vector3 GetDialogPosition() {
             Vector3 screenPos = Input.mousePosition;

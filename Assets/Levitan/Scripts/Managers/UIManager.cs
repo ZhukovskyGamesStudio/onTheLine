@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Levitan {
@@ -36,7 +34,7 @@ namespace Levitan {
         public void NewProject() {
             _saveManager.CreateNewProject();
         }
-        
+
         public void LoadProject() {
             StartCoroutine(_saveManager.LoadProject());
         }

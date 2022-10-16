@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Levitan {
     public class ColorManager : MonoBehaviour {
-
         public Color DialogColor, TagColor, ThoughtColor, TransitionColor, InfoColor;
 
         public Color GetColorByDraggable(DraggableType type) {

@@ -4,37 +4,41 @@ using Random = UnityEngine.Random;
 
 public class DayManager : MonoBehaviour {
     public static DialogsQueue DialogsQueue;
-    DayShedule DayShedule;
 
-    public Day forceThisDay;
-    public bool forceTraining;
-
-    public static Day Day;
     public TrainingManager TrainingManager;
 
     [Header("Other")]
     public Commutator Commutator;
 
-    private Clock Clock;
+    private Clock _clock;
+    private Day _forceThisDay;
+    private Day _currentDay;
+    private bool _forceTraining;
+    private DayShedule _dayShedule;
+
+    public void SetAdminOverrideDay(Day forceThisDay, bool forceTraining) {
+        _forceThisDay = forceThisDay;
+        _forceTraining = forceTraining;
+    }
 
     void Init() {
-        if (forceThisDay != null) {
-            Day = forceThisDay;
+        if (_forceThisDay != null) {
+            _currentDay = _forceThisDay;
         } else {
-            Day = SaveManager.GetDay();
+            _currentDay = SaveManager.GetDay();
         }
 
-        if (!SaveManager.sv.isTrainingComplete || forceTraining)
+        if (!SaveManager.sv.isTrainingComplete || _forceTraining)
             Instantiate(TrainingManager);
-        DialogsQueue = new DialogsQueue(Day.CallsTimeTable, Commutator);
+        DialogsQueue = new DialogsQueue(_currentDay.CallsTimeTable, Commutator);
     }
 
     private void Start() {
         Init();
 
-        Clock = Clock.instance;
-        DayShedule = new DayShedule(Day.eventsList, Clock);
-        Clock.onStartDay += StartDay;
+        _clock = Clock.instance;
+        _dayShedule = new DayShedule(_currentDay.eventsList, _clock);
+        _clock.onStartDay += StartDay;
     }
 
     public void StartDay() {
@@ -43,13 +47,13 @@ public class DayManager : MonoBehaviour {
     }
 
     private void Update() {
-        DayShedule.CheckEvent();
+        _dayShedule.CheckEvent();
     }
 
     public void StopDayImmedeately() {
         StopAllCoroutines();
         Commutator.EndAllCalls();
-        Clock.EndDay();
+        _clock.EndDay();
     }
 
     public void NewCall() {
@@ -61,14 +65,15 @@ public class DayManager : MonoBehaviour {
 
     IEnumerator CallsCoroutine() {
         yield return new WaitForSeconds(Random.Range(3, 5));
-        while (Clock.IsWorkTime()) {
+        while (_clock.IsWorkTime()) {
             NewCall();
-            float waitTime = Day.CallsTimeTable.timeBetweenCalls + Day.CallsTimeTable.randomTimeBetweenCalls;
+            float waitTime = _currentDay.CallsTimeTable.timeBetweenCalls +
+                             _currentDay.CallsTimeTable.randomTimeBetweenCalls;
             yield return new WaitForSeconds(waitTime);
         }
     }
 
     private void OnDestroy() {
-        Clock.onStartDay -= StartDay;
+        _clock.onStartDay -= StartDay;
     }
 }

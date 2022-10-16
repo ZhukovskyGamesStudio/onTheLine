@@ -813,9 +813,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bce50d7876d5df40b16416b5b300bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DayManager: {fileID: 0}
-  AdminMenuPanel: {fileID: 7770905412315646181}
-  MouseSenseSlider: {fileID: 7770905411935333956}
+  forceThisDay: {fileID: 0}
+  forceTraining: 0
+  _dayManager: {fileID: 0}
+  _adminMenuPanel: {fileID: 7770905412315646181}
+  _mouseSenseSlider: {fileID: 7770905411935333956}
 --- !u!1 &7770905410961076550
 GameObject:
   m_ObjectHideFlags: 0

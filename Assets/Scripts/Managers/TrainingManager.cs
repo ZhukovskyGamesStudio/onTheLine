@@ -1,26 +1,22 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public class TrainingManager : MonoBehaviour {
-
     [SerializeField]
-    private GameObject TrainingWarning;
+    private GameObject _eyeSightDetector;
 
-    public GameObject EyeSightDetector;
+    private Hole _hole4;
 
-    private Hole hole4;
-    void Start() {
+    private void Start() {
         SaveManager.sv.isTrainingStarted = true;
-        Instantiate(EyeSightDetector, GameObject.Find("DoorNumber 4").transform);
+        Instantiate(_eyeSightDetector, GameObject.Find("DoorNumber 4").transform);
 
-        hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
-        hole4.OnShtekerIn += AddPlugInTag;
-        TrainingWarning.SetActive(true);
+        _hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
+        _hole4.OnShtekerIn += AddPlugInTag;
     }
 
     private void AddPlugInTag() {
-        hole4.OnShtekerIn -= AddPlugInTag;
+        _hole4.OnShtekerIn -= AddPlugInTag;
         TagManager.AddTag("Plug 1 in");
     }
 

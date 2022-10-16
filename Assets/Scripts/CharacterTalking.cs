@@ -17,6 +17,8 @@ public class CharacterTalking : MonoBehaviour
     [SerializeField]
     private LayoutGroup _mainBubblesLayout;
 
+    [SerializeField]
+    private List<string> alreadyBubbles;
 
     private void Awake()
     {
@@ -24,6 +26,8 @@ public class CharacterTalking : MonoBehaviour
         bubblesD = new Dictionary<GameObject, string>();
         phrazes = new List<string>();
     }
+    
+    private 
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +35,9 @@ public class CharacterTalking : MonoBehaviour
         //if (Settings.instance.isWaitingForOperatorHello)
         //AddBubble("Повторите пожалуйста.", "/hello/");
         AddBubble("Повторите пожалуйста.", "/repeat/");
+        foreach (var VARIABLE in alreadyBubbles) {
+            AddBubble(VARIABLE);
+        }
 
         OpenClose(false);
     }

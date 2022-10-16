@@ -3,20 +3,35 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class AdminPanel : MonoBehaviour {
-    public DayManager DayManager;
     [SerializeField]
-    private GameObject AdminMenuPanel;
+    private Day forceThisDay;
+
+    [SerializeField]
+    private bool forceTraining;
+
+    [Header("Other")]
+    [SerializeField]
+    private DayManager _dayManager;
+
+    [SerializeField]
+    private GameObject _adminMenuPanel;
+
+    [SerializeField]
+    private Slider _mouseSenseSlider;
+
     private MouseLook _mouseLook;
-    public Slider MouseSenseSlider;
 
     private void Awake() {
         _mouseLook = Camera.main?.GetComponent<MouseLook>();
+        if(_dayManager!= null) {
+            _dayManager.SetAdminOverrideDay(forceThisDay, forceTraining);
+        }
     }
 
     private void Start() {
         float value = PlayerPrefs.GetFloat("mouseSense", 1);
-       
-        MouseSenseSlider.SetValueWithoutNotify(value);
+
+        _mouseSenseSlider.SetValueWithoutNotify(value);
         OnMouseSenseChange(value);
     }
 
@@ -26,12 +41,14 @@ public class AdminPanel : MonoBehaviour {
 
     public void EraseSavedData() {
         SaveManager.sv = new SaveProfile();
+
         SaveManager.Save();
         SceneManager.LoadScene("Menu");
+        TagManager.ClearAll();
     }
 
     public void StopCalls() {
-        DayManager.StopDayImmedeately();
+        _dayManager.StopDayImmedeately();
     }
 
     public void StopTime() {
@@ -44,11 +61,11 @@ public class AdminPanel : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.BackQuote))
-            OpenMenu(!AdminMenuPanel.activeSelf);
+            OpenMenu(!_adminMenuPanel.activeSelf);
     }
 
     private void OpenMenu(bool isOn) {
-        AdminMenuPanel.SetActive(isOn);
+        _adminMenuPanel.SetActive(isOn);
         if (isOn)
             CursorManager.ChangeState(true);
         else

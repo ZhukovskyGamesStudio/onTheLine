@@ -4,22 +4,22 @@ using UnityEngine.SceneManagement;
 public class SceneLoadManager : MonoBehaviour {
     #region Singleton
 
-    public static SceneLoadManager instance;
+    private static SceneLoadManager _instance;
 
     private void Awake() {
-        if (instance != null) {
+        if (_instance != null) {
             Destroy(gameObject);
             return;
         }
-        
-        instance = this;
-        DontDestroyOnLoad(instance.gameObject);
+
+        _instance = this;
+        DontDestroyOnLoad(_instance.gameObject);
     }
 
     #endregion
 
-    public static void LoadScene(string SceneName) {
-        SceneManager.LoadSceneAsync(SceneName);
-        TagManager.instance.Clear();
+    public static void LoadScene(string sceneName) {
+        SceneManager.LoadSceneAsync(sceneName);
+        TagManager.Clear();
     }
 }

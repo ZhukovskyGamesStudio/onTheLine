@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Levitan {
     public class WorkspaceManager : MonoBehaviour, IAppModule {
-        
         [SerializeField]
         private Transform _draggableHolder;
 
@@ -27,7 +26,7 @@ namespace Levitan {
 
         private CameraController _cameraController;
 
-        private Dictionary<string, IDraggable> _draggables = new();
+        private readonly Dictionary<string, IDraggable> _draggables = new();
 
         public void Init(CameraController cameraController) {
             _cameraController = cameraController;
@@ -37,9 +36,7 @@ namespace Levitan {
             IDraggable draggable = Instantiate(prefab, CameraController.GetDialogPosition(), Quaternion.identity,
                 _draggableHolder);
             draggable.Init();
-            if (data != null) {
-                draggable.SetData(data);
-            }
+            if (data != null) draggable.SetData(data);
 
             _draggables.Add(draggable._data.ID, draggable);
             draggable.gameObject.SetActive(true);
@@ -47,16 +44,14 @@ namespace Levitan {
         }
 
         public void ClearField() {
-            foreach (Transform child in _draggableHolder) {
-                Destroy(child.gameObject);
-            }
+            foreach (Transform child in _draggableHolder) Destroy(child.gameObject);
 
             _draggables.Clear();
         }
 
         public void LoadWorkspace(List<DraggableData> draggables) {
             ClearField();
-            foreach (DraggableData draggableData in draggables) {
+            foreach (DraggableData draggableData in draggables)
                 try {
                     switch (draggableData.Type) {
                         case DraggableType.Dialog:
@@ -81,33 +76,27 @@ namespace Levitan {
                     }
                 }
                 catch {
-                    AppManager.Instance._LogManager.Log(draggableData._dialogData.name +" couldnt spawn it.");
+                    AppManager.Instance._LogManager.Log(draggableData._dialogData.name + " couldnt spawn it.");
                 }
-            }
 
-            foreach (IDraggable idraggable in _draggables.Values) {
+            foreach (IDraggable idraggable in _draggables.Values)
                 try {
                     idraggable.SpawnConnections();
                 }
                 catch {
                     AppManager.Instance._LogManager.Log(idraggable.Name + "has no connection");
                 }
-            }
         }
 
         public List<DraggableData> CollectWorkspace() {
             List<DraggableData> datas = new();
-            foreach (var idraggable in _draggables.Values) {
-                datas.Add(idraggable.CollectData());
-            }
+            foreach (IDraggable idraggable in _draggables.Values) datas.Add(idraggable.CollectData());
 
             return datas;
         }
 
         public void CollectExportData() {
-            foreach (var idraggable in _draggables.Values) {
-                (idraggable as DraggableDialog)?.CollectDialogData();
-            }
+            foreach (IDraggable idraggable in _draggables.Values) (idraggable as DraggableDialog)?.CollectDialogData();
         }
 
         public void InstantiateDialog(DraggableData data = null) {

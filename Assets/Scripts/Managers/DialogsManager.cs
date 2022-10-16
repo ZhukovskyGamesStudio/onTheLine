@@ -6,14 +6,14 @@ using UnityEngine;
 public class DialogsManager : MonoBehaviour {
     #region Singleton
 
-    public static DialogsManager instance;
+    public static DialogsManager Instance;
 
     private void Awake() {
-        if (instance != null) {
-            Destroy(gameObject);
+        if (Instance != null) {
+            Destroy(this);
         } else {
-            instance = this;
-            DontDestroyOnLoad(instance);
+            Instance = this;
+            DontDestroyOnLoad(Instance);
         }
     }
 

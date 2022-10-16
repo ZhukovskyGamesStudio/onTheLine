@@ -7,14 +7,14 @@ public class DialogsParserWindow : EditorWindow {
     [SerializeField]
     private TextAsset[] jsonDialogs;
 
-    void OnGUI() {
+    private void OnGUI() {
         ScriptableObject target = this;
         SerializedObject so = new(target);
         SerializedProperty stringsProperty = so.FindProperty("jsonDialogs");
         EditorGUILayout.PropertyField(stringsProperty, true);
         so.ApplyModifiedProperties();
 
-        if (GUI.Button(new Rect(10, position.height - 60, position.width - 20, 50), "Parse")) {
+        if (GUI.Button(new Rect(10, position.height - 60, position.width - 20, 50), "Parse"))
             try {
                 for (int i = 0; i < stringsProperty.arraySize; i++) {
                     TextAsset jsonDialog = stringsProperty.GetArrayElementAtIndex(i).objectReferenceValue as TextAsset;
@@ -25,7 +25,6 @@ public class DialogsParserWindow : EditorWindow {
                 Debug.Log("Parse error");
                 throw;
             }
-        }
     }
 
     private void Parse(TextAsset data, bool isFocusingWindow) {
@@ -34,9 +33,9 @@ public class DialogsParserWindow : EditorWindow {
         JsonUtility.FromJsonOverwrite(text, dialog);
 
         string path = "Assets/Dialogs/" + data.name.Substring(0, data.name.IndexOf('_')) + "/" + data.name + ".asset";
-        if (!File.Exists(path))
+        if (!File.Exists(path)) {
             AssetDatabase.CreateAsset(dialog, path);
-        else {
+        } else {
             Dialog old = (Dialog) AssetDatabase.LoadAssetAtPath(path, typeof(Dialog));
             old.Copy(dialog);
             EditorUtility.SetDirty(old);

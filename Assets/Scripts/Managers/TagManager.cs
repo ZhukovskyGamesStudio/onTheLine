@@ -1,42 +1,51 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class TagManager : MonoBehaviour {
-    public static TagManager instance;
+    private static TagManager Instance;
     public List<string> tags;
 
     private void Awake() {
-        if (instance == null) {
-            instance = this;
+        if (Instance == null) {
+            Instance = this;
             tags = new List<string>();
-
+            Clear();
             DontDestroyOnLoad(this);
         } else {
-            Destroy(gameObject);
+            Destroy(this);
         }
+    }
+    
+    public static List<string> Tags => Instance.tags;
+
+    public static void SetLoadedTags(List<string> loadedTags) {
+        Instance.tags = loadedTags;
     }
 
     public static void AddTag(string newTag) {
-        if (!instance.tags.Contains(newTag)) {
+        if (!Instance.tags.Contains(newTag)) {
             TryInvokeEventByTag(newTag);
-            instance.tags.Add(newTag);
+            Instance.tags.Add(newTag);
         }
     }
 
     public static void RemoveTag(string removeTag) {
         string tag = removeTag.Substring(1);
         if (CheckTag(removeTag))
-            instance.tags.Remove(tag);
+            Instance.tags.Remove(tag);
     }
 
     public static bool CheckTag(string toCheck) {
-        return instance.tags.Contains(toCheck);
+        return Instance.tags.Contains(toCheck);
     }
 
-    public void Clear() {
-        tags = tags.Where(tag => overdayTags.Contains(tag)).ToList();
+    public static void Clear() {
+        Instance.tags =  Instance.tags.Where(tag =>  Instance._overdayTags.Contains(tag)).ToList();
+    }
+
+    public static void ClearAll() {
+        Instance.tags = new List<string>();
     }
 
     private static void TryInvokeEventByTag(string tag) {
@@ -61,7 +70,7 @@ public class TagManager : MonoBehaviour {
         }
     }
 
-    private readonly List<string> overdayTags = new() {
+    private readonly List<string> _overdayTags = new() {
         "Attacked",
         "Police called"
     };

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,7 +8,7 @@ public class SaveManager : MonoBehaviour {
 
     private void Awake() {
         if (instance != null) {
-            Destroy(this.gameObject);
+            Destroy(this);
         } else {
             instance = this;
             DontDestroyOnLoad(instance);
@@ -31,7 +30,7 @@ public class SaveManager : MonoBehaviour {
     private int _profile = 1;
 
     public static void Save() {
-        sv.tags = TagManager.instance.tags;
+        sv.tags = TagManager.Tags;
         JsonUtil.Save(sv, instance._profile);
     }
 
@@ -39,7 +38,7 @@ public class SaveManager : MonoBehaviour {
         sv.dayResult = new DayResult();
     }
 
-    public static Day GetDay() => instance.days[Mathf.Min(sv.currentDay, instance.days.Length-1)];
+    public static Day GetDay() => instance.days[Mathf.Min(sv.currentDay, instance.days.Length - 1)];
 
     public static void ChangeMoney(int delta) {
         sv.money += delta;
@@ -50,7 +49,7 @@ public class SaveManager : MonoBehaviour {
     public static SaveProfile LoadSave(int profile) {
         instance._profile = profile;
         sv = JsonUtil.Load(profile);
-        TagManager.instance.tags = sv.tags;
+        TagManager.SetLoadedTags(sv.tags);
         return sv;
     }
 

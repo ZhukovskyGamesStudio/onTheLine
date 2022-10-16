@@ -34,11 +34,10 @@ namespace Levitan {
 
                 try {
                     if (t.Length > 0) {
-                        if (t[0] == '-') {
+                        if (t[0] == '-')
                             dialog.lines[^1] += "\n" + t.Remove(0, 1);
-                        } else {
+                        else
                             dialog.lines.Add(t);
-                        }
                     }
                 }
                 catch {
