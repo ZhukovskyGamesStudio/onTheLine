@@ -34,7 +34,7 @@ public class CharacterTalking : MonoBehaviour
     {
         //if (Settings.instance.isWaitingForOperatorHello)
         //AddBubble("Повторите пожалуйста.", "/hello/");
-        AddBubble("Повторите пожалуйста.", "/repeat/");
+        AddBubble("Повторите, пожалуйста.", "/repeat/");
         foreach (var VARIABLE in alreadyBubbles) {
             AddBubble(VARIABLE);
         }

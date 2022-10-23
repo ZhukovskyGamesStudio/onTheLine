@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using Levitan;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,11 +12,24 @@ public class PersonBehindHole : MonoBehaviour {
     public Hole curHole;
 
     public Person person;
-    
+
     private Dialog _dialog;
     protected PersonState CurState;
     private SettingsConfig _settings;
     private Coroutine _coroutine;
+
+    private readonly List<string> _helloStringList = new() {
+        "Алло", ". . .", "Здравствуйте", "Aлло, здравствуйте"
+    };
+
+    private readonly string _betweenRandomNumbers = "Видимо ошибка связи.";
+
+    private const string DIALOG_END = "/dialogEnd/";
+
+    [NotNull]
+    private const string HELLO_1 = "/hello1/";
+
+    private string RandomHelloString => _helloStringList[Random.Range(0, _helloStringList.Count)];
 
     void Start() {
         _settings = Settings.config;
@@ -36,14 +51,14 @@ public class PersonBehindHole : MonoBehaviour {
         CurState = PersonState.Picked;
 
         if (!Settings.config.isWaitingForOperatorHello && curHole.isOpros && _dialog != null)
-            Hear("/hello1/");
+            Hear(HELLO_1);
         else {
             if (curHole.number == 2 - 1) {
                 //номер милиции
                 _dialog = DayManager.DialogsQueue.PoliceGeneral;
-                Hear("/hello1/");
+                Hear(HELLO_1);
             } else {
-                TalkingBubble.Say("Ало", delegate { curHole.PassSound("/picked/"); });
+                TalkingBubble.Say(RandomHelloString, delegate { curHole.PassSound("/picked/"); });
                 StartStopWaiting(true);
             }
         }
@@ -69,24 +84,24 @@ public class PersonBehindHole : MonoBehaviour {
 
         if (!_dialog.IsCorrectNumber(curHole.number + 1)) {
             Say("Вы не туда попали", delegate {
-                curHole.PassSound("/dialogEnd/");
+                curHole.PassSound(DIALOG_END);
                 Drop();
             });
         } else if (_dialog.lines.Count == lineIndex) {
-            TransitionData autoNext = _dialog.Transitions.FirstOrDefault(t => t.thought == "/dialogEnd/");
+            TransitionData autoNext = _dialog.Transitions.FirstOrDefault(t => t.thought == DIALOG_END);
             if (autoNext != null) {
                 //авто смена диалога на следующий, если есть тег dialogEnd
                 Dialog nextDialog = DialogsManager.Instance.GetDialogById(autoNext.dialog);
                 AddEndDialogTags(_dialog);
                 if (nextDialog.requirementFrom.roomNumber == curHole.number + 1) {
-                    ChooseAnswer("/dialogEnd/");
+                    ChooseAnswer(DIALOG_END);
                 } else {
-                    curHole.PassSound("/dialogEnd/");
+                    curHole.PassSound(DIALOG_END);
                 }
             } else {
                 //окончание диалога, т.к. сказана последняя реплика
                 Say(". . .", delegate {
-                    curHole.PassSound("/dialogEnd/");
+                    curHole.PassSound(DIALOG_END);
                     Drop(true);
                 });
             }
@@ -130,7 +145,7 @@ public class PersonBehindHole : MonoBehaviour {
                         if (_dialog != null) {
                             curHole.mistakeEvent.Invoke("Абоненты доложили что разговор подслушан!");
                             Drop();
-                            curHole.PassSound("/dialogEnd/");
+                            curHole.PassSound(DIALOG_END);
                             return true;
                         }
                     } else if (CurState == PersonState.WaitingForConnection) {
@@ -141,12 +156,12 @@ public class PersonBehindHole : MonoBehaviour {
                     }
                 } else {
                     //Диалог со случайным номером
-                    Say("Я вас не вызывала.", delegate { Drop(); });
+                    Say(_betweenRandomNumbers, delegate { Drop(); });
                 }
 
                 return true;
 
-            case "/hello1/":
+            case HELLO_1:
                 if (CurState == PersonState.DialogStarted || CurState == PersonState.WaitingForConnection ||
                     _dialog == null)
                     return false;
@@ -171,7 +186,7 @@ public class PersonBehindHole : MonoBehaviour {
 
                 return false;
 
-            case "/dialogEnd/":
+            case DIALOG_END:
                 Drop();
                 return true;
 
