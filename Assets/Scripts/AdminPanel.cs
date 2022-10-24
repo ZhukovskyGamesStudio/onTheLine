@@ -36,6 +36,7 @@ public class AdminPanel : MonoBehaviour {
     }
 
     public void ReloadDay() {
+        TagManager.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
