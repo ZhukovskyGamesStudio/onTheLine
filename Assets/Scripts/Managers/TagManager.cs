@@ -56,7 +56,7 @@ public class TagManager : MonoBehaviour {
         switch (tag) {
             case "OpenDoor":
                 DoorNumber door4 = GameObject.Find("DoorNumber 4").GetComponent<DoorNumber>();
-                door4.isOpen = true;
+                door4.Open();
                 break;
 
             case "SoundStarted":

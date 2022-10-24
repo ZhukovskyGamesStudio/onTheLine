@@ -30,5 +30,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 08e25cc9622b226489d133733f789578, type: 2}
   - {fileID: 11400000, guid: f6db91119217aec4e8bd9d6e9f30bc17, type: 2}
   - {fileID: 11400000, guid: b7233410a5ef13b468b03a7cf8fd0f41, type: 2}
-  - {fileID: 11400000, guid: 44bf492b328b913458a8b47b4687e064, type: 2}
   PoliceGeneral: {fileID: 11400000, guid: d1aea3d5de51bdf41b5d9f0c36214093, type: 2}
