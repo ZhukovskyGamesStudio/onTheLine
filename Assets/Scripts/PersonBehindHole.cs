@@ -242,7 +242,7 @@ public class PersonBehindHole : MonoBehaviour {
 
     protected virtual void EndOfPhrazeToOperator() {
         if (_dialog.lines.Count == 0) {
-            Drop();
+            Drop(true);
         } else {
             StartStopWaiting(true);
         }

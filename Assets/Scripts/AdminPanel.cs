@@ -41,10 +41,10 @@ public class AdminPanel : MonoBehaviour {
 
     public void EraseSavedData() {
         SaveManager.sv = new SaveProfile();
-
+        TagManager.ClearAll();
+        
         SaveManager.Save();
         SceneManager.LoadScene("Menu");
-        TagManager.ClearAll();
     }
 
     public void StopCalls() {

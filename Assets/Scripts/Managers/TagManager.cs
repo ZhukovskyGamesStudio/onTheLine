@@ -20,7 +20,7 @@ public class TagManager : MonoBehaviour {
     public static List<string> Tags => Instance.tags;
 
     public static void SetLoadedTags(List<string> loadedTags) {
-        Instance.tags = loadedTags;
+        Instance.tags = loadedTags.Intersect(Instance._overdayTags).ToList();
     }
 
     public static void AddTag(string newTag) {
@@ -31,9 +31,13 @@ public class TagManager : MonoBehaviour {
     }
 
     public static void RemoveTag(string removeTag) {
-        string tag = removeTag.Substring(1);
-        if (CheckTag(removeTag))
-            Instance.tags.Remove(tag);
+        if (removeTag[0] == '!') {
+            removeTag = removeTag.Substring(1);
+        }
+
+        if (CheckTag(removeTag)) {
+            Instance.tags.Remove(removeTag);
+        }
     }
 
     public static bool CheckTag(string toCheck) {
@@ -66,6 +70,21 @@ public class TagManager : MonoBehaviour {
 
             case "EndTraining":
                 FindObjectOfType<TrainingManager>().Finish();
+                break;
+
+            case "Headphone on":
+            case "Number seen":
+            case "Plug 1 in":
+                if (TrainingManager.instance != null) {
+                    TrainingManager.instance.StartTooLongWaiting();
+                }
+
+                break;
+            case "Button pressed":
+                if (TrainingManager.instance != null) {
+                    TrainingManager.instance.StopTooLongWaiting();
+                }
+
                 break;
         }
     }
