@@ -1,20 +1,15 @@
 using UnityEngine;
 
-
-public class InteractableObject : MonoBehaviour
-{
+public class InteractableObject : MonoBehaviour {
     bool _isDragging;
 
     [HideInInspector]
-    public virtual void OnmouseDown()
-    {
+    public virtual void OnmouseDown() {
         _isDragging = true;
     }
 
-    protected virtual void Update()
-    {
-        if (_isDragging)
-        {
+    protected virtual void Update() {
+        if (_isDragging) {
             OnmouseDrag();
 
             if (Input.GetMouseButtonUp(0))
@@ -22,12 +17,10 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    protected virtual void OnmouseUp()
-    {
+    protected virtual void OnmouseUp() {
         _isDragging = false;
     }
 
-    protected virtual void OnmouseDrag()
-    {
+    protected virtual void OnmouseDrag() {
     }
 }

@@ -32,6 +32,10 @@ public class CursorManager : MonoBehaviour
         Cursor.lockState = InMenu ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
+    static void LookAt() {
+        
+    }
+
     public static void BackToPreviousState()
     {
         bool state = instance.PreviousState.Pop();
@@ -39,3 +43,4 @@ public class CursorManager : MonoBehaviour
     }
 
 }
+

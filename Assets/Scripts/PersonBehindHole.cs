@@ -221,7 +221,7 @@ public class PersonBehindHole : MonoBehaviour {
             if (lineToSay.Contains(informationData.line)) {
                 lineToSay = lineToSay.Replace(informationData.line, "$" + informationData.line + "$");
                 TalkingBubble.AddListenedCallback(delegate {
-                    CharacterTalking.instance.AddBubble(informationData.thought);
+                    Notebook.instance.AddLine(informationData.thought);
                 });
             }
         }
