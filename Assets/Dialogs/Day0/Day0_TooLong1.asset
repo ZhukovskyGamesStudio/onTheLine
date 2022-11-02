@@ -43,6 +43,7 @@ MonoBehaviour:
   forbiddenTags:
   - Headphone on
   - Number seen
+  - AlreadyOnPhone
   Transitions: []
   Informations: []
   priority: 0

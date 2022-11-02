@@ -42,6 +42,7 @@ MonoBehaviour:
   forbiddenTags:
   - Number seen
   - Plug 1 in
+  - AlreadyOnPhone
   Transitions: []
   Informations: []
   priority: 0

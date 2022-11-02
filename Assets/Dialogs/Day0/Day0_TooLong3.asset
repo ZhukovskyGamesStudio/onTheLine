@@ -49,6 +49,7 @@ MonoBehaviour:
   forbiddenTags:
   - Plug 1 in
   - Button pressed
+  - AlreadyOnPhone
   Transitions: []
   Informations: []
   priority: 0

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TagManager : MonoBehaviour {
     private static TagManager Instance;
@@ -71,6 +72,10 @@ public class TagManager : MonoBehaviour {
             case "EndTraining":
                 FindObjectOfType<TrainingManager>().Finish();
                 break;
+            
+            case "EnableExplainText":
+                GameObject.Find("HowToSay ExplainText").GetComponent<Text>(). enabled = true;
+                break;
 
             case "Headphone on":
             case "Number seen":
@@ -88,7 +93,8 @@ public class TagManager : MonoBehaviour {
                 break;
         }
     }
-
+    
+    
     private readonly List<string> _overdayTags = new() {
         "Attacked",
         "Police called"

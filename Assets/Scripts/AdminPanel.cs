@@ -19,6 +19,15 @@ public class AdminPanel : MonoBehaviour {
     [SerializeField]
     private Slider _mouseSenseSlider, _speechSpeedSlider;
 
+    [SerializeField]
+    private Image _soundsToggleImage, _pauseImage;
+
+    [SerializeField]
+    private Toggle _soundsToggle;
+
+    [SerializeField]
+    private Sprite _soundOn, _soundOff;
+
     private MouseLook _mouseLook;
 
     private void Awake() {
@@ -31,13 +40,18 @@ public class AdminPanel : MonoBehaviour {
     private void Start() {
         float mouseSense = PlayerPrefs.GetFloat("mouseSense", 0.7f);
         _mouseSenseSlider.SetValueWithoutNotify(mouseSense);
-        _speechSpeedSlider.onValueChanged.AddListener(delegate { OnMouseSenseChange(_mouseSenseSlider.value); });
         OnMouseSenseChange(mouseSense);
+        _mouseSenseSlider.onValueChanged.AddListener(delegate { OnMouseSenseChange(_mouseSenseSlider.value); });
 
         float speechSpeed = PlayerPrefs.GetFloat("speechSpeed", 1);
         _speechSpeedSlider.SetValueWithoutNotify(speechSpeed);
         OnSpeechSpeedChange(speechSpeed);
         _speechSpeedSlider.onValueChanged.AddListener(delegate { OnSpeechSpeedChange(_speechSpeedSlider.value); });
+
+        bool isSound = PlayerPrefs.GetInt("isSound", 1) == 1;
+        _soundsToggle.SetIsOnWithoutNotify(isSound);
+        SetSoundMuteMode(isSound);
+        _soundsToggle.onValueChanged.AddListener(delegate { SetSoundMuteMode(_soundsToggle.isOn); });
     }
 
     public void ReloadDay() {
@@ -53,12 +67,24 @@ public class AdminPanel : MonoBehaviour {
         SceneManager.LoadScene("Menu");
     }
 
+    private void SetSoundMuteMode(bool isSoundOn) {
+        _soundsToggleImage.sprite = isSoundOn ? _soundOn : _soundOff;
+        SetCurrentSound();
+        PlayerPrefs.SetInt("isSound", isSoundOn ? 1 : 0);
+    }
+
     public void StopCalls() {
         _dayManager.StopDayImmedeately();
     }
 
     public void StopTime() {
         Time.timeScale = Time.timeScale == 1 ? 0 : 1;
+        SetCurrentSound();
+        _pauseImage.gameObject.SetActive(Time.timeScale != 1);
+    }
+
+    private void SetCurrentSound() {
+        AudioListener.volume = Time.timeScale == 1 ? (_soundsToggle.isOn ? 1 : 0) : 0;
     }
 
     public void Quit() {
@@ -68,6 +94,10 @@ public class AdminPanel : MonoBehaviour {
     private void Update() {
         if (Input.GetKeyDown(KeyCode.BackQuote)) {
             OpenMenu(!_adminMenuPanel.activeSelf);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.P)) {
+            StopTime();
         }
     }
 
@@ -84,7 +114,7 @@ public class AdminPanel : MonoBehaviour {
         _mouseLook.SensivityMultiplier = value;
     }
 
-    public void OnSpeechSpeedChange(float value) {
+    private void OnSpeechSpeedChange(float value) {
         PlayerPrefs.SetFloat("speechSpeed", value);
         Settings.config.timeScale = value;
     }

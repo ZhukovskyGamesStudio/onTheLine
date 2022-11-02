@@ -5500,21 +5500,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 445303873}
     m_Modifications:
-    - target: {fileID: 4297687259517717983, guid: 8f9fe9542c5f87945b8df76d192ea382,
-        type: 3}
-      propertyPath: TakenPosition.x
-      value: -0.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4297687259517717983, guid: 8f9fe9542c5f87945b8df76d192ea382,
-        type: 3}
-      propertyPath: TakenPosition.y
-      value: 0.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 4297687259517717983, guid: 8f9fe9542c5f87945b8df76d192ea382,
-        type: 3}
-      propertyPath: TakenPosition.z
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 5316457745372316856, guid: 8f9fe9542c5f87945b8df76d192ea382,
         type: 3}
       propertyPath: m_RootOrder
@@ -36900,7 +36885,6 @@ MonoBehaviour:
   DoorNumber: {fileID: 0}
   isOpros: 1
   isOnLine: 0
-  timeBeforeBubbleClears: 5
 --- !u!4 &1162534152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5718736017543500148, guid: 252aae4557540f54291cadaf4703c973,
@@ -44061,7 +44045,6 @@ MonoBehaviour:
   DoorNumber: {fileID: 0}
   isOpros: 1
   isOnLine: 0
-  timeBeforeBubbleClears: 5
 --- !u!1001 &1263674937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75135,7 +75118,6 @@ MonoBehaviour:
   DoorNumber: {fileID: 0}
   isOpros: 1
   isOnLine: 0
-  timeBeforeBubbleClears: 5
 --- !u!4 &2318753459181719714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2285386637601632870, guid: e3debf28855b82d458ebc1be8793be30,
@@ -93930,6 +93912,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1109809643531585366, guid: 23bbe3898d379884ebe74c2aa9de9faa,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109809643531585366, guid: 23bbe3898d379884ebe74c2aa9de9faa,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2178164552914647098, guid: 23bbe3898d379884ebe74c2aa9de9faa,
         type: 3}
       propertyPath: _dayManager
@@ -93940,6 +93932,11 @@ PrefabInstance:
       propertyPath: forceThisDay
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2408058792092921274, guid: 23bbe3898d379884ebe74c2aa9de9faa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2824051573068629657, guid: 23bbe3898d379884ebe74c2aa9de9faa,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -93969,6 +93966,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6623943385643274985, guid: 23bbe3898d379884ebe74c2aa9de9faa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7770905410598409149, guid: 23bbe3898d379884ebe74c2aa9de9faa,
         type: 3}
@@ -94100,6 +94102,11 @@ PrefabInstance:
     - target: {fileID: 7770905410871252926, guid: 23bbe3898d379884ebe74c2aa9de9faa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770905412315646181, guid: 23bbe3898d379884ebe74c2aa9de9faa,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7770905412360238661, guid: 23bbe3898d379884ebe74c2aa9de9faa,

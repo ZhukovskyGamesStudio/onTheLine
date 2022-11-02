@@ -42,6 +42,7 @@ MonoBehaviour:
   produceTags: []
   forbiddenTags:
   - Button pressed
+  - AlreadyOnPhone
   Transitions: []
   Informations: []
   priority: 0

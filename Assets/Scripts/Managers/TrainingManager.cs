@@ -25,10 +25,32 @@ public class TrainingManager : MonoBehaviour {
     private void Start() {
         SaveManager.sv.isTrainingStarted = true;
         Instantiate(_eyeSightDetector, GameObject.Find("DoorNumber 4").transform);
-
         _hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
+
+        DisableOtherHoles();
         _hole4.OnShtekerIn += AddPlugInTag;
         StartTooLongWaiting();
+    }
+
+   
+
+    private void DisableOtherHoles() {
+        Transform baseTransform = FindObjectOfType<Commutator>().transform.Find("Holes");
+        baseTransform.Find("Hole 1").GetComponent<Hole>().enabled = false;
+        //baseTransform.Find("Hole 2").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 3").GetComponent<Hole>().enabled = false;
+        //GameObject.Find("Hole 4").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 5").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 6").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 7").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 8").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 9").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 10").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 11").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 12").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 13").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 14").GetComponent<Hole>().enabled = false;
+        //GameObject.Find("Hole 15").GetComponent<Hole>().enabled = false;
     }
 
     private void AddPlugInTag() {
