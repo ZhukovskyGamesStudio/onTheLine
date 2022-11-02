@@ -104,6 +104,12 @@ public class TalkingBubble : MonoBehaviour {
                 yield return new WaitForSeconds(_settings.TimePauseDoubleDash);
                 continue;
             }
+            
+            if (toSay[i] == '@') {
+                while(true) {
+                    yield return new WaitForSeconds(1);
+                }
+            }
 
             if (toSay[i] == '$') {
                 isImportant = !isImportant;
