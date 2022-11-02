@@ -12,7 +12,7 @@ public class TrainingManager : MonoBehaviour {
 
     private Hole _hole4;
 
-    private const float WAIT_BEFORE_TOO_LONG = 30;
+    private const float WAIT_BEFORE_TOO_LONG = 45;
     private const float WAIT_END_TRAINING = 10;
     private const string TOO_LONG_TAG = "Too long";
 
@@ -51,6 +51,16 @@ public class TrainingManager : MonoBehaviour {
         baseTransform.Find("Hole 13").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 14").GetComponent<Hole>().enabled = false;
         //GameObject.Find("Hole 15").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 16").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 17").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 18").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 19").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 20").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 21").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 22").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 23").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 24").GetComponent<Hole>().enabled = false;
+        GameObject.Find("Hole 25").GetComponent<Hole>().enabled = false;
     }
 
     private void AddPlugInTag() {
