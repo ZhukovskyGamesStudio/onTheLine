@@ -17,7 +17,7 @@ public class TagManager : MonoBehaviour {
             Destroy(this);
         }
     }
-    
+
     public static List<string> Tags => Instance.tags;
 
     public static void SetLoadedTags(List<string> loadedTags) {
@@ -46,7 +46,7 @@ public class TagManager : MonoBehaviour {
     }
 
     public static void Clear() {
-        Instance.tags =  Instance.tags.Where(tag =>  Instance._overdayTags.Contains(tag)).ToList();
+        Instance.tags = Instance.tags.Where(tag => Instance._overdayTags.Contains(tag)).ToList();
     }
 
     public static void ClearAll() {
@@ -70,11 +70,11 @@ public class TagManager : MonoBehaviour {
                 break;
 
             case "EndTraining":
-                FindObjectOfType<TrainingManager>().Finish();
+                HowToExplainText.instance.ShowText("Перед тем как уйти, не забудьте повесить наушники на крючок");
                 break;
-            
+
             case "EnableExplainText":
-                GameObject.Find("HowToSay ExplainText").GetComponent<Text>(). enabled = true;
+                HowToExplainText.instance.ShowText("Выберите фразу из блокнота, чтобы зачитать её вслух");
                 break;
 
             case "Headphone on":
@@ -85,6 +85,7 @@ public class TagManager : MonoBehaviour {
                 }
 
                 break;
+
             case "Button pressed":
                 if (TrainingManager.instance != null) {
                     TrainingManager.instance.StopTooLongWaiting();
@@ -93,8 +94,7 @@ public class TagManager : MonoBehaviour {
                 break;
         }
     }
-    
-    
+
     private readonly List<string> _overdayTags = new() {
         "Attacked",
         "Police called"

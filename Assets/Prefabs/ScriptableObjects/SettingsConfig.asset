@@ -19,7 +19,7 @@ MonoBehaviour:
   endDayHour: 18
   minTimeBetweenCalls: 30
   randomTimeBetweenCalls: 10
-  isInstaExitOnEndOfDay: 1
+  isInstaExitOnEndOfDay: 0
   isAlphaNumericTumblers: 1
   isSpaceAlphaButtons: 1
   payForDay: 10
@@ -29,8 +29,6 @@ MonoBehaviour:
   foodPrice: 25
   isWaitingForOperatorHello: 0
   ringingTimeUntilMistake: 2
-  timeBetweenLetters: 0.05
-  timePauseDoubleDash: 1
   timeBetweenTwoPeople: 0.35
   timeBeforeBubbleDissappears: 5
   timeRingingBeforePick: 2
@@ -38,5 +36,6 @@ MonoBehaviour:
   waitForOperatorAnswer: 60
   waitForOperatorRing: 60
   waitForAbonentPick: 30
+  timeScale: 0.01
   dragDistance: 1
   ImportantTextColor: {r: 0.4056604, g: 0, b: 0, a: 1}

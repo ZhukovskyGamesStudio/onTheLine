@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -16,6 +17,10 @@ public class TalkingBubble : MonoBehaviour {
     private SettingsConfig _settings;
     private bool _isTalkingNow;
     private bool _isOn;
+    
+    private List<char> randomSymbol = new() {
+        '@', '#', '!', '~', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+'
+    };
 
     private void Start() {
         _settings = Settings.config;
@@ -142,8 +147,13 @@ public class TalkingBubble : MonoBehaviour {
 
             if (isImportant)
                 curText.text = curText.text.Insert(curText.text.Length - 12, toSay[i].ToString());
-            else
-                curText.text += toSay[i];
+            else {
+                if(Headphones.IsCanHear || toSay[i] == '\n') {
+                    curText.text += toSay[i];
+                } else {
+                    curText.text += randomSymbol[Random.Range(0,randomSymbol.Count)];
+                }
+            }
             yield return new WaitForSeconds(_settings.TimeBetweenLetters);
         }
 
@@ -155,4 +165,6 @@ public class TalkingBubble : MonoBehaviour {
         yield return new WaitForSeconds(_settings.timeBeforeBubbleDissappears);
         curText.text = emptyTextSymbols;
     }
+
+   
 }

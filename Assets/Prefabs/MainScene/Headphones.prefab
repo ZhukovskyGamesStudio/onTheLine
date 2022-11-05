@@ -54,6 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2b194d6a41c764a9da34fd230e34ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 10
+  luftDistance: 0.005
+  ItemTakenPos: {fileID: 0}
   bellSource: {fileID: 4801482679332194353}
   talkingSource:
   - {fileID: 7392679666035516464}
@@ -62,7 +65,6 @@ MonoBehaviour:
   - {fileID: 8820554133400597635}
   - {fileID: 1412710952200699082}
   Commutator: {fileID: 0}
-  _animation: {fileID: 354032645035873084}
 --- !u!82 &4801482679332194353
 AudioSource:
   m_ObjectHideFlags: 0

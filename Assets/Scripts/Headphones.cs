@@ -10,9 +10,13 @@ public class Headphones : TableItemBehaviour {
     public Dictionary<GameObject, int> talksDict;
 
     private bool _isOnHead;
+    private bool _isCanHear;
+    public static bool IsCanHear => instance._isCanHear;
+    private Transform OnHeadPos;
 
     protected override void Awake() {
         base.Awake();
+        OnHeadPos = ItemTakenPos;
         talksDict = new Dictionary<GameObject, int>();
         instance = this;
         for (int i = 0; i < talkingSource.Length; i++) {
@@ -59,6 +63,26 @@ public class Headphones : TableItemBehaviour {
         //_animation.Play("PutOn");
         AddTag();
         _isOnHead = true;
+        _isCanHear = true;
+    }
+
+    public void PutOnHook(Transform hook) {
+        if (!_isOnHead)
+            return;
+
+        ItemTakenPos = hook;
+
+        TagManager.AddTag("Headphone off");
+    }
+
+    public void MoveBetween(Transform hook, Transform moving, float percent) {
+        if (!_isOnHead)
+            return;
+        _isCanHear = percent == 0;
+
+        moving.position = Vector3.Lerp(OnHeadPos.position, hook.position, percent);
+        moving.rotation = Quaternion.Lerp(OnHeadPos.rotation, hook.rotation, percent);
+        ItemTakenPos = moving;
     }
 
     public void AddTag() {

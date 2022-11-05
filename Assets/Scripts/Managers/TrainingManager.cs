@@ -75,6 +75,7 @@ public class TrainingManager : MonoBehaviour {
     }
 
     public void Finish() {
+        
         StartCoroutine(FinishTrainingCoroutine());
     }
 

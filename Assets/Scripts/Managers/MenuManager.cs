@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MenuManager : MonoBehaviour {
@@ -13,15 +14,19 @@ public class MenuManager : MonoBehaviour {
 
     private void Awake() {
         toActivate = new List<TableObjectData>();
-        TableObjectDataList dataList = tableObjectsList.Find(list => list.day == SaveManager.sv.currentDay);
-        if (dataList == null)
-            dataList = tableObjectsList.Find(list => list.day == -1);
+        TableObjectDataList dataList;
+        if (SaveManager.sv != null) {
+            dataList = tableObjectsList.FirstOrDefault(list => list.day == SaveManager.sv.currentDay) ??
+                       tableObjectsList.FirstOrDefault(list => list.day == -1);
+        } else {
+            dataList = tableObjectsList.FirstOrDefault(list => list.day == -1);
+        }
+       
 
         foreach (var toSpawn in dataList.tableObjectsToSpawn) {
             toActivate.Add(tableObjects.Find(data => data.name == toSpawn));
         }
     }
-
 
     private void Start() {
         foreach (var tableObject in toActivate) {
@@ -35,7 +40,6 @@ internal class TableObjectDataList {
     public int day;
     public List<string> tableObjectsToSpawn;
 }
-
 
 [Serializable]
 internal class TableObjectData {

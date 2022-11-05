@@ -2,99 +2,83 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 
-public class Clock : InteractableObject
-{
+public class Clock : InteractableObject {
     public static Clock instance;
     public float SecondsInOneMinute = 1;
     public Transform HoursTransform, MinutesTransform;
     public int hours, minutes;
     public bool isGoing;
-    public UnityEvent OnClockClicked;
-    AudioSource audioSource;
+    private AudioSource _audioSource;
     public AudioClip click1, click2, ring;
-    bool isDayEnded;
-    bool firstRingRang;
-    float curTime;
-    int curTick;
+    private bool _isDayEnded;
+    private bool _firstRingRang;
+    private float _curTime;
+    private int _curTick;
 
     public UnityAction onStartDay, onEndDay;
-    void Awake()
-    {
+
+    void Awake() {
         instance = this;
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
+    private void Start() {
         StartClock(Settings.config.arriveHour);
     }
 
-    public void StartClock(int startHours, int startMinutes)
-    {
+    public void StartClock(int startHours, int startMinutes) {
         isGoing = true;
         SetTime(startHours, startMinutes);
     }
 
-    public void StartClock(float time)
-    {
+    public void StartClock(float time) {
         isGoing = true;
         SetTime(Mathf.FloorToInt(time), Mathf.FloorToInt((time - Mathf.FloorToInt(time)) * 60));
     }
 
     public void RingClock() {
-        audioSource.PlayOneShot(ring);
-    }
-    void StopClock()
-    {
-        isGoing = false;
-        audioSource.PlayOneShot(ring);
+        _audioSource.PlayOneShot(ring);
     }
 
-    public float GetTime()
-    {
+    void StopClock() {
+        isGoing = false;
+        _audioSource.PlayOneShot(ring);
+    }
+
+    public float GetTime() {
         float time = hours + (minutes * 1f / 60);
         return time;
     }
 
-    [HideInInspector]
-    public override void OnmouseDown()
-    {
-        OnClockClicked.Invoke();
-    }
-
-    public bool IsWorkTime()
-    {
+    public bool IsWorkTime() {
         return GetTime() > Settings.config.startDayHour && GetTime() < Settings.config.endDayHour;
     }
 
-    void SetTime(int hours, int minutes)
-    {
+    void SetTime(int hours, int minutes) {
         this.hours = hours;
         this.minutes = minutes;
         UpdateArrows();
     }
 
-    void UpdateArrows()
-    {
-        curTick++;
-        audioSource.PlayOneShot((curTick % 2 == 0) ? click1 : click2);
+    void UpdateArrows() {
+        _curTick++;
+        _audioSource.PlayOneShot((_curTick % 2 == 0) ? click1 : click2);
         HoursTransform.localRotation = Quaternion.Euler(0, 0, 30 * hours);
         MinutesTransform.localRotation = Quaternion.Euler(0, 0, 6 * minutes);
     }
-    void StartDay()
-    {
-        isDayEnded = false;
+
+    void StartDay() {
+        _isDayEnded = false;
         onStartDay.Invoke();
-        audioSource.PlayOneShot(ring);
-    }
-    void RingBell()
-    {
-        audioSource.PlayOneShot(ring);
+        _audioSource.PlayOneShot(ring);
     }
 
-    public void EndDay()
-    {
-        isDayEnded = true;
+    void RingBell() {
+        _audioSource.PlayOneShot(ring);
+    }
+
+    public void EndDay() {
+        _isDayEnded = true;
         onEndDay?.Invoke();
         SaveManager.sv.currentDay++;
         SaveManager.sv.dayResult.isWorkedAllDay = true;
@@ -103,41 +87,35 @@ public class Clock : InteractableObject
         Debug.Log("Рабочий день закончен. Обслужите последние звонки");
     }
 
-    public void Leave()
-    {
-        
+    public void Leave() {
         SceneManager.LoadScene("Menu");
     }
 
-    protected override void Update()
-    {
+    protected override void Update() {
         base.Update();
-        if (!isGoing)
-        {
-            curTime = 0;
+        if (!isGoing) {
+            _curTime = 0;
             return;
         }
 
-        curTime += Time.deltaTime;
-        if (curTime >= SecondsInOneMinute)
-        {
-            curTime = 0;
+        _curTime += Time.deltaTime;
+        if (_curTime >= SecondsInOneMinute) {
+            _curTime = 0;
             minutes++;
-            if (minutes > 59)
-            {
+            if (minutes > 59) {
                 minutes = 0;
                 hours++;
             }
+
             UpdateArrows();
         }
-        if (hours + minutes / 60f > Settings.config.startDayHour && !firstRingRang)
-        {
+
+        if (hours + minutes / 60f > Settings.config.startDayHour && !_firstRingRang) {
             StartDay();
-            firstRingRang = true;
+            _firstRingRang = true;
         }
 
-        if (hours + minutes / 60f > Settings.config.leaveHour && !isDayEnded)
-        {
+        if (hours + minutes / 60f > Settings.config.leaveHour && !_isDayEnded) {
             EndDay();
             if (Settings.config.isInstaExitOnEndOfDay)
                 Leave();
