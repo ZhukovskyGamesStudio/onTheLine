@@ -46,7 +46,7 @@ public class Headphones : TableItemBehaviour {
             instance.talkingSource[instance.talksDict[objIndex]].UnPause();
         else {
             instance.talkingSource[instance.talksDict[objIndex]].Pause();
-            //instance.talksDict.Remove(objIndex);
+            //Instance.talksDict.Remove(objIndex);
         }
     }
 

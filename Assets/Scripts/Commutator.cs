@@ -54,7 +54,7 @@ public class Commutator : MonoBehaviour
         if (newCall.from == -1) {
             virtualHole.NewCall(newCall);
         } else {
-            //Building.instance.GetNewCall
+            //Building.Instance.GetNewCall
             //bulbs[newCall.from].ChangeState(1);   
             holes[newCall.from-1].NewCall(newCall);
         }

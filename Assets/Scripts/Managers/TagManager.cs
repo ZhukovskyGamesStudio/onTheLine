@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TagManager : MonoBehaviour {
     private static TagManager Instance;
@@ -55,9 +54,12 @@ public class TagManager : MonoBehaviour {
 
     private static void TryInvokeEventByTag(string tag) {
         switch (tag) {
+            
             case "OpenDoor":
                 DoorNumber door4 = GameObject.Find("DoorNumber 4").GetComponent<DoorNumber>();
                 door4.Open();
+                GameObject.Find("Hole 4").GetComponent<Hole>().enabled = true;
+                GameObject.Find("Hole 15").GetComponent<Hole>().enabled = true;
                 break;
 
             case "SoundStarted":
@@ -77,18 +79,23 @@ public class TagManager : MonoBehaviour {
                 HowToExplainText.instance.ShowText("Выберите фразу из блокнота, чтобы зачитать её вслух");
                 break;
 
+            case "To call Police":
+                GameObject.Find("Hole 2").GetComponent<Hole>().enabled = true;
+                break;
+
             case "Headphone on":
             case "Number seen":
             case "Plug 1 in":
-                if (TrainingManager.instance != null) {
-                    TrainingManager.instance.StartTooLongWaiting();
+                if (TrainingManager.Instance != null) {
+                    TrainingManager.Instance.StartTooLongWaiting();
                 }
 
                 break;
 
             case "Button pressed":
-                if (TrainingManager.instance != null) {
-                    TrainingManager.instance.StopTooLongWaiting();
+                GameObject.Find("Hole 15").GetComponent<Hole>().enabled = true;
+                if (TrainingManager.Instance != null) {
+                    TrainingManager.Instance.StopTooLongWaiting();
                 }
 
                 break;

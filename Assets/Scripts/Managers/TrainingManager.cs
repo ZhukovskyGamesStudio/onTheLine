@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
 public class TrainingManager : MonoBehaviour {
-    public static TrainingManager instance;
+    public static TrainingManager Instance;
 
     [SerializeField]
     private GameObject _eyeSightDetector;
@@ -19,7 +18,7 @@ public class TrainingManager : MonoBehaviour {
     private Coroutine _coroutine;
 
     private void Awake() {
-        instance = this;
+        Instance = this;
         Instantiate(_headphonesTrainingStartingPos);
     }
 
@@ -37,9 +36,9 @@ public class TrainingManager : MonoBehaviour {
     private void DisableOtherHoles() {
         Transform baseTransform = FindObjectOfType<Commutator>().transform.Find("Holes");
         baseTransform.Find("Hole 1").GetComponent<Hole>().enabled = false;
-        //baseTransform.Find("Hole 2").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 2").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 3").GetComponent<Hole>().enabled = false;
-        //GameObject.Find("Hole 4").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 4").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 5").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 6").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 7").GetComponent<Hole>().enabled = false;
@@ -50,17 +49,17 @@ public class TrainingManager : MonoBehaviour {
         baseTransform.Find("Hole 12").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 13").GetComponent<Hole>().enabled = false;
         baseTransform.Find("Hole 14").GetComponent<Hole>().enabled = false;
-        //GameObject.Find("Hole 15").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 16").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 17").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 18").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 19").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 20").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 21").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 22").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 23").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 24").GetComponent<Hole>().enabled = false;
-        GameObject.Find("Hole 25").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 15").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 16").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 17").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 18").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 19").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 20").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 21").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 22").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 23").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 24").GetComponent<Hole>().enabled = false;
+        baseTransform.Find("Hole 25").GetComponent<Hole>().enabled = false;
     }
 
     private void AddPlugInTag() {
