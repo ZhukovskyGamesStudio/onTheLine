@@ -28,7 +28,7 @@ public class DayManager : MonoBehaviour {
             _currentDay = SaveManager.GetDay();
         }
 
-        if (!SaveManager.sv.isTrainingComplete || _forceTraining)
+        if (SaveManager.sv.currentDay == 0)
             Instantiate(TrainingManager);
         DialogsQueue = new DialogsQueue(_currentDay.CallsTimeTable, Commutator);
     }

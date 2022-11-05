@@ -67,12 +67,6 @@ public class TrainingManager : MonoBehaviour {
         TagManager.AddTag("Plug 1 in");
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.F)) {
-            FinishTraining();
-        }
-    }
-
     public void StartTooLongWaiting() {
         StopTooLongWaiting();
         _coroutine = StartCoroutine(TooLongCoroutine());
@@ -88,12 +82,5 @@ public class TrainingManager : MonoBehaviour {
         TagManager.RemoveTag(TOO_LONG_TAG);
         yield return new WaitForSeconds(WAIT_BEFORE_TOO_LONG);
         TagManager.AddTag(TOO_LONG_TAG);
-    }
-
-    private void FinishTraining() {
-        SaveManager.sv.isTrainingComplete = true;
-        SaveManager.sv.currentDay++;
-        SaveManager.Save();
-        SceneLoadManager.LoadScene("Menu");
     }
 }

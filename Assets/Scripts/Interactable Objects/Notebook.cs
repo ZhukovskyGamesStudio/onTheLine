@@ -79,6 +79,7 @@ public class Notebook : InteractableObject {
             SelectPhraze(newButton.name);
         });
         newButton.gameObject.SetActive(true);
+        newButton.interactable = _isTaken;
         _sayLines.Add(newButton);
         _linesContainer.CalculateLayoutInputVertical();
     }

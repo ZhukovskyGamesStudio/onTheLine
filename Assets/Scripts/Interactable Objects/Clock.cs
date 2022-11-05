@@ -40,7 +40,7 @@ public class Clock : InteractableObject {
         _audioSource.PlayOneShot(ring);
     }
 
-    void StopClock() {
+    private void StopClock() {
         isGoing = false;
         _audioSource.PlayOneShot(ring);
     }
@@ -80,9 +80,7 @@ public class Clock : InteractableObject {
     public void EndDay() {
         _isDayEnded = true;
         onEndDay?.Invoke();
-        SaveManager.sv.currentDay++;
         SaveManager.sv.dayResult.isWorkedAllDay = true;
-        SaveManager.Save();
         RingBell();
         Debug.Log("Рабочий день закончен. Обслужите последние звонки");
     }

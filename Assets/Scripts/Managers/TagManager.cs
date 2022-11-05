@@ -6,6 +6,8 @@ public class TagManager : MonoBehaviour {
     private static TagManager Instance;
     public List<string> tags;
 
+    private static Transform _baseTransform;
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -53,18 +55,22 @@ public class TagManager : MonoBehaviour {
     }
 
     private static void TryInvokeEventByTag(string tag) {
+        if (_baseTransform == null) {
+            _baseTransform = FindObjectOfType<Commutator>().transform;
+        }
+
         switch (tag) {
-            
             case "OpenDoor":
-                DoorNumber door4 = GameObject.Find("DoorNumber 4").GetComponent<DoorNumber>();
+
+                DoorNumber door4 = _baseTransform.Find("Door Numbers/DoorNumber 4").GetComponent<DoorNumber>();
                 door4.Open();
-                GameObject.Find("Hole 4").GetComponent<Hole>().enabled = true;
-                GameObject.Find("Hole 15").GetComponent<Hole>().enabled = true;
+                _baseTransform.Find("Holes/Hole 4").GetComponent<Hole>().enabled = true;
+                _baseTransform.Find("Holes/Hole 15").GetComponent<Hole>().enabled = true;
                 break;
 
             case "SoundStarted":
-                Hole hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
-                Hole hole15 = GameObject.Find("Hole 15").GetComponent<Hole>();
+                Hole hole4 = _baseTransform.Find("Holes/Hole 4").GetComponent<Hole>();
+                Hole hole15 = _baseTransform.Find("Holes/Hole 15").GetComponent<Hole>();
                 string isOnline = hole4.isOpros ? "Online" : "Offline";
                 hole4.Hear(isOnline);
                 hole15.Hear(isOnline);
@@ -80,7 +86,7 @@ public class TagManager : MonoBehaviour {
                 break;
 
             case "To call Police":
-                GameObject.Find("Hole 2").GetComponent<Hole>().enabled = true;
+                _baseTransform.Find("Holes/Hole 2").GetComponent<Hole>().enabled = true;
                 break;
 
             case "Headphone on":
@@ -93,7 +99,7 @@ public class TagManager : MonoBehaviour {
                 break;
 
             case "Button pressed":
-                GameObject.Find("Hole 15").GetComponent<Hole>().enabled = true;
+                _baseTransform.Find("Holes/Hole 15").GetComponent<Hole>().enabled = true;
                 if (TrainingManager.Instance != null) {
                     TrainingManager.Instance.StopTooLongWaiting();
                 }
