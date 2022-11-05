@@ -45,7 +45,7 @@ MonoBehaviour:
   lines: []
   bubbleLines: []
   requireTags:
-  - Police called
+  - "Police\u0421alled"
   - AttackEnds
   produceTags:
   - EndTraining

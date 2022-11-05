@@ -56,7 +56,7 @@ MonoBehaviour:
   lines: []
   bubbleLines: []
   requireTags:
-  - PoliceCalled
+  - "Police\u0421alled"
   produceTags: []
   forbiddenTags:
   - Attacked

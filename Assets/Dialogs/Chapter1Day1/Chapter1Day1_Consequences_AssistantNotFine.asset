@@ -56,7 +56,7 @@ MonoBehaviour:
   produceTags:
   - 15 broken
   forbiddenTags:
-  - PoliceCalled
+  - "Police\u0421alled"
   Transitions: []
   Informations: []
   priority: 0

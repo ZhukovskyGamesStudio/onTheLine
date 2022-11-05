@@ -43,7 +43,7 @@ MonoBehaviour:
   produceTags:
   - EndTraining
   forbiddenTags:
-  - Police called
+  - "Police\u0421alled"
   Transitions: []
   Informations: []
   priority: 0

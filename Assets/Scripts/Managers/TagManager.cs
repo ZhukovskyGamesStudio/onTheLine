@@ -104,6 +104,6 @@ public class TagManager : MonoBehaviour {
 
     private readonly List<string> _overdayTags = new() {
         "Attacked",
-        "Police called"
+        "PoliceСalled"
     };
 }
