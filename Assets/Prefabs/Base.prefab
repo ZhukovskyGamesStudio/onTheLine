@@ -21361,8 +21361,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1076282234446756194, guid: e3debf28855b82d458ebc1be8793be30,
         type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076282234446756194, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076282234446756194, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1076282234446756194, guid: e3debf28855b82d458ebc1be8793be30,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 1558496833958543040, guid: e3debf28855b82d458ebc1be8793be30,
         type: 3}
@@ -21672,19 +21687,38 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4674359697247578780, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
     - {fileID: 1558496833958543040, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
+    - {fileID: 6394635780824772423, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e3debf28855b82d458ebc1be8793be30, type: 3}
---- !u!114 &1385060032344221066 stripped
+--- !u!114 &894923630185940587 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6394635780824772423, guid: e3debf28855b82d458ebc1be8793be30,
+  m_CorrespondingSourceObject: {fileID: 5182974473857518758, guid: e3debf28855b82d458ebc1be8793be30,
     type: 3}
   m_PrefabInstance: {fileID: 5442309458177280717}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95ac12162bcb3e544ba825e9fd73a5af, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1958738954230692317 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5811931798070113040, guid: e3debf28855b82d458ebc1be8793be30,
+    type: 3}
+  m_PrefabInstance: {fileID: 5442309458177280717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2674602444328008154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7969382730824168215, guid: e3debf28855b82d458ebc1be8793be30,
+    type: 3}
+  m_PrefabInstance: {fileID: 5442309458177280717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2701255864277700690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7996772788798053023, guid: e3debf28855b82d458ebc1be8793be30,
@@ -21704,7 +21738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   betweenRandomDialog: {fileID: 0}
-  TalkingBubble: {fileID: 1385060032344221066}
+  TalkingBubble: {fileID: 9219626538622603945}
   curHole: {fileID: 1613884253561615914}
   person: {fileID: 0}
 --- !u!114 &1613884253561615914
@@ -21719,7 +21753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748c13323b142b842b4725564918d7c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TalkingBubble: {fileID: 1385060032344221066}
+  TalkingBubble: {fileID: 9219626538622603945}
   personBehindHole: {fileID: 155711030436105548}
   number: 0
   mistakeEvent:
@@ -21739,13 +21773,51 @@ MonoBehaviour:
   DoorNumber: {fileID: 0}
   isOpros: 1
   isOnLine: 0
-  timeBeforeBubbleClears: 5
 --- !u!4 &6066811144860645547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2285386637601632870, guid: e3debf28855b82d458ebc1be8793be30,
     type: 3}
   m_PrefabInstance: {fileID: 5442309458177280717}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6436858474957691746 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1356330278652940719, guid: e3debf28855b82d458ebc1be8793be30,
+    type: 3}
+  m_PrefabInstance: {fileID: 5442309458177280717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9219626538622603945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6436858474957691746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c8ff321c502ce34392fb576ada745d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BubbleRight: {fileID: 2674602444328008154}
+  BubbleLeft: {fileID: 0}
+  curText: {fileID: 0}
+  RightText: {fileID: 894923630185940587}
+  LeftText: {fileID: 1958738954230692317}
+  emptyTextSymbols: 
+  onTalkEnds:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1613884253561615914}
+        m_TargetAssemblyTypeName: VirtualHole, Assembly-CSharp
+        m_MethodName: ClearBubble
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &5579446395867841506
 PrefabInstance:
   m_ObjectHideFlags: 0

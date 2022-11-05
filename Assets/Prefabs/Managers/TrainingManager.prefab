@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eyeSightDetector: {fileID: 5823130899858277335, guid: e3f84233209c90746b8c9748ecf9f7db,
     type: 3}
+  _headphonesTrainingStartingPos: {fileID: 3350808427274476632, guid: 8576ffc29bea658488591d672a4d4981,
+    type: 3}

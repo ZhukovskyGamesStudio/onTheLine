@@ -17,7 +17,7 @@ public class TalkingBubble : MonoBehaviour {
     private SettingsConfig _settings;
     private bool _isTalkingNow;
     private bool _isOn;
-    
+
     private List<char> randomSymbol = new() {
         '@', '#', '!', '~', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+'
     };
@@ -109,9 +109,9 @@ public class TalkingBubble : MonoBehaviour {
                 yield return new WaitForSeconds(_settings.TimePauseDoubleDash);
                 continue;
             }
-            
+
             if (toSay[i] == '@') {
-                while(true) {
+                while (true) {
                     yield return new WaitForSeconds(1);
                 }
             }
@@ -148,12 +148,9 @@ public class TalkingBubble : MonoBehaviour {
             if (isImportant)
                 curText.text = curText.text.Insert(curText.text.Length - 12, toSay[i].ToString());
             else {
-                if(Headphones.IsCanHear || toSay[i] == '\n') {
-                    curText.text += toSay[i];
-                } else {
-                    curText.text += randomSymbol[Random.Range(0,randomSymbol.Count)];
-                }
+                PrintSymbol(toSay[i]);
             }
+
             yield return new WaitForSeconds(_settings.TimeBetweenLetters);
         }
 
@@ -166,5 +163,11 @@ public class TalkingBubble : MonoBehaviour {
         curText.text = emptyTextSymbols;
     }
 
-   
+    protected virtual void PrintSymbol(char symbol) {
+        if (Headphones.IsCanHear || symbol == '\n') {
+            curText.text += symbol;
+        } else {
+            curText.text += randomSymbol[Random.Range(0, randomSymbol.Count)];
+        }
+    }
 }

@@ -102,4 +102,11 @@ public class Headphones : TableItemBehaviour {
 
         return false;
     }
+
+    public void ChangeStartingPlace(Transform newStart) {
+        startPos = newStart.position;
+        startRot= newStart.rotation;
+        transform.position = startPos;
+        transform.rotation= startRot;
+    }
 }

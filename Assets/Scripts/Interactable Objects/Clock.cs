@@ -69,7 +69,7 @@ public class Clock : InteractableObject {
 
     void StartDay() {
         _isDayEnded = false;
-        onStartDay.Invoke();
+        onStartDay?.Invoke();
         _audioSource.PlayOneShot(ring);
     }
 
