@@ -6,8 +6,6 @@ public class SaveProfile {
     public int profile;
     public int money;
     public int hunger;
-    public bool isTrainingStarted = false;
-    public bool isTrainingComplete = false;
     public DayResult dayResult;
     public List<string> tags;
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class TalkingBubble : MonoBehaviour {
     public GameObject BubbleRight, BubbleLeft;
@@ -19,7 +20,7 @@ public class TalkingBubble : MonoBehaviour {
     private bool _isOn;
 
     private List<char> randomSymbol = new() {
-        '@', '#', '!', '~', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+'
+        '@', '#', '!', '~', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', '.', '{', '}'
     };
 
     private void Start() {
@@ -106,30 +107,20 @@ public class TalkingBubble : MonoBehaviour {
 
         for (int i = 0; i < toSay.Length; i++) {
             if (toSay[i] == '~') {
+                Headphones.PlayStopTalking(gameObject, false);
                 yield return new WaitForSeconds(_settings.TimePauseDoubleDash);
                 continue;
             }
 
             if (toSay[i] == '@') {
+                Headphones.PlayStopTalking(gameObject, false);
                 while (true) {
                     yield return new WaitForSeconds(1);
                 }
             }
 
-            if (toSay[i] == '$') {
-                isImportant = !isImportant;
-                if (isImportant) {
-                    isListeningImportant = _isOn;
-                    curText.text += "<b><color=#" + ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) +
-                                    "></color></b>";
-                } else {
-                    if (isListeningImportant)
-                        _listenedImportantCallback?.Invoke();
-                    isListeningImportant = false;
-                    _listenedImportantCallback.RemoveAllListeners();
-                }
-
-                continue;
+            if (toSay[i] != '.') {
+                Headphones.PlayStopTalking(gameObject, _isOn);
             }
 
             if (toSay[i] == '{') {
@@ -145,10 +136,29 @@ public class TalkingBubble : MonoBehaviour {
                 continue;
             }
 
-            if (isImportant)
-                curText.text = curText.text.Insert(curText.text.Length - 12, toSay[i].ToString());
-            else {
-                PrintSymbol(toSay[i]);
+            if (toSay[i] == '$') {
+                isImportant = !isImportant;
+
+                if (isImportant) {
+                    isListeningImportant = _isOn && Headphones.IsCanHear;
+
+                    curText.text += "<b><color=#" +
+                                    ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) +
+                                    "></color></b>";
+                } else {
+                    if (isListeningImportant)
+                        _listenedImportantCallback?.Invoke();
+                    isListeningImportant = false;
+                    _listenedImportantCallback.RemoveAllListeners();
+                }
+
+                continue;
+            }
+
+            if (isImportant && Headphones.IsCanHear) {
+                curText.text = curText.text.Insert(curText.text.Length - 12, SymbolToPrint(toSay[i]).ToString());
+            } else {
+                curText.text += SymbolToPrint(toSay[i]);
             }
 
             yield return new WaitForSeconds(_settings.TimeBetweenLetters);
@@ -163,11 +173,11 @@ public class TalkingBubble : MonoBehaviour {
         curText.text = emptyTextSymbols;
     }
 
-    protected virtual void PrintSymbol(char symbol) {
+    protected virtual char SymbolToPrint(char symbol) {
         if (Headphones.IsCanHear || symbol == '\n') {
-            curText.text += symbol;
+            return symbol;
         } else {
-            curText.text += randomSymbol[Random.Range(0, randomSymbol.Count)];
+            return randomSymbol[Random.Range(0, randomSymbol.Count)];
         }
     }
 }

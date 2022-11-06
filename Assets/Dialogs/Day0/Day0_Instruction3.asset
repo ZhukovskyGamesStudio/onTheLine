@@ -40,6 +40,7 @@ MonoBehaviour:
   bubbleLines: []
   requireTags:
   - Number seen
+  - Headphone on
   produceTags: []
   forbiddenTags: []
   Transitions: []

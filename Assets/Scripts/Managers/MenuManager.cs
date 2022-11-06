@@ -29,6 +29,7 @@ public class MenuManager : MonoBehaviour {
     }
 
     private void Start() {
+        TagManager.Clear();
         foreach (var tableObject in toActivate) {
             tableObject.gameObject.SetActive(true);
         }

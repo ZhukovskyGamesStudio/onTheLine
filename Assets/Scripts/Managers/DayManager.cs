@@ -13,12 +13,10 @@ public class DayManager : MonoBehaviour {
     private Clock _clock;
     private Day _forceThisDay;
     private Day _currentDay;
-    private bool _forceTraining;
     private DayShedule _dayShedule;
 
-    public void SetAdminOverrideDay(Day forceThisDay, bool forceTraining) {
+    public void SetAdminOverrideDay(Day forceThisDay) {
         _forceThisDay = forceThisDay;
-        _forceTraining = forceTraining;
     }
 
     void Init() {
@@ -43,6 +41,7 @@ public class DayManager : MonoBehaviour {
 
     public void StartDay() {
         SaveManager.StartNewDay();
+        TagManager.Clear();
         StartCoroutine(CallsCoroutine());
     }
 

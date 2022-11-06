@@ -12,7 +12,6 @@ public class TagManager : MonoBehaviour {
         if (Instance == null) {
             Instance = this;
             tags = new List<string>();
-            Clear();
             DontDestroyOnLoad(this);
         } else {
             Destroy(this);

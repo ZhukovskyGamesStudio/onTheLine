@@ -36,7 +36,7 @@ MonoBehaviour:
   bubbleLines: []
   requireTags: []
   produceTags:
-  - Police called
+  - PoliceCalled
   forbiddenTags: []
   Transitions: []
   Informations: []

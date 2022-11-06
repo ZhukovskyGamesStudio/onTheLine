@@ -84,7 +84,7 @@ public class DialogsQueue
         List<QueuePos> available = new List<QueuePos>();
         for (int i = 0; i < timedCallsList.Count; i++)
         {
-            if (timedCallsList[i].IsTimeWithinRange(curTime))
+            if (timedCallsList[i].IsTimeWithinRange(curTime) && CheckRequirements(timedCallsList[i].dialog))
             {
                 available.Add(timedCallsList[i]);
             }

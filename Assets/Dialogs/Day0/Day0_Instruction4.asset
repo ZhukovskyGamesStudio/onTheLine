@@ -46,6 +46,7 @@ MonoBehaviour:
   bubbleLines: []
   requireTags:
   - Plug 1 in
+  - Headphone on
   produceTags:
   - StartCall
   forbiddenTags: []

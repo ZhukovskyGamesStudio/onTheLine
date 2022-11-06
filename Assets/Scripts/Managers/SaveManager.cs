@@ -38,7 +38,7 @@ public class SaveManager : MonoBehaviour {
         sv.dayResult = new DayResult();
     }
 
-    public static Day GetDay() => instance.days[Mathf.Min(sv.currentDay, instance.days.Length - 1)];
+    public static Day GetDay() => instance.days[Mathf.Min(sv?.currentDay ?? 0, instance.days.Length - 1)];
 
     public static void ChangeMoney(int delta) {
         sv.money += delta;
@@ -51,17 +51,6 @@ public class SaveManager : MonoBehaviour {
         sv = JsonUtil.Load(profile);
         TagManager.SetLoadedTags(sv.tags);
         return sv;
-    }
-
-    public static int LoadDay() {
-        if (!sv.isTrainingComplete)
-            return 0;
-        return sv.currentDay;
-    }
-
-    public static void SetTrainingComplete() {
-        Debug.Log("Обучение завершено.");
-        sv.isTrainingComplete = true;
     }
 
     public static void AddServedCall() {

@@ -24,7 +24,6 @@ public class TrainingManager : MonoBehaviour {
 
     private void Start() {
         Headphones.instance.ChangeStartingPlace(_headphonesTrainingStartingPos.transform);
-        SaveManager.sv.isTrainingStarted = true;
         Instantiate(_eyeSightDetector, GameObject.Find("DoorNumber 4").transform);
         _hole4 = GameObject.Find("Hole 4").GetComponent<Hole>();
 
