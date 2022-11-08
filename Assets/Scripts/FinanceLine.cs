@@ -8,8 +8,8 @@ public class FinanceLine : MonoBehaviour
     public GameObject CrossedLine;
     public void SetValues(string name, int price)
     {
-        this.nameText.text = name;
-        this.priceText.text = price.ToString() + " P";
+        nameText.text = name;
+        priceText.text = price + " P";
     }
 
     public void SetCrossed(bool isCrossed)
