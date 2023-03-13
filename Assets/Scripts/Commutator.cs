@@ -23,14 +23,14 @@ public class Commutator : MonoBehaviour
         dragWallStatic = DragWall;
         for (int i = 0; i < holes.Length; i++)
         {
-            holes[i].number = i;
+            holes[i].SetNumber(i+1);
             holes[i].DoorNumber = DoorNumbers[i];
             holes[i].mistakeEvent.AddListener(OnPlayerMistake);
             holes[i].endOfCall.AddListener(EndOfCall);
             holes[i].endOfCallWrongNumber.AddListener(EndOfCallWrongNumber);
             holes[i].turnMyBulb.AddListener(TurnBulb);
         }
-        virtualHole.number = -1;
+        virtualHole.SetNumber(-1);
         virtualHole.mistakeEvent.AddListener(OnPlayerMistake);
         virtualHole.endOfCall.AddListener(EndOfCall);
         

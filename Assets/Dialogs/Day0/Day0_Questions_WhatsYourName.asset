@@ -39,7 +39,7 @@ MonoBehaviour:
   produceTags: []
   forbiddenTags: []
   Transitions:
-  - thought: "\u0412\u043E\u043F\u0440\u043E\u0441\u043E\u0432 \u043D\u0435\u0442"
-    dialog: 06da6ab7-600c-4cea-b551-8bf794f72704
+  - thought: /dialogEnd/
+    dialog: 79dccdb5-afa0-4e9e-8b02-4463d47512aa
   Informations: []
   priority: 0

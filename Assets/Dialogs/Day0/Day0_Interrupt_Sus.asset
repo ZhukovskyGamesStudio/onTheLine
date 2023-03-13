@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
+  m_Name: Day0_Interrupt_Sus
+  m_EditorClassIdentifier: 
+  Id: feb3baf9-649b-4c50-807b-a7812417d177
+  requirementFrom:
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: -1
+  requirementTo:
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 0
+  SayToOperator: "\u041E\u043F\u0435\u0440\u0430\u0442\u043E\u0440, \u0432\u0435\u0440\u043D\u0438\u0442\u0435
+    \u0441\u0432\u044F\u0437\u044C, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430,
+    \n\u0447\u0442\u043E-\u0442\u043E \u0443 \u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043D\u0442\u0430
+    \u0441\u0442\u0440\u0430\u043D\u043D\u043E\u0435 \u0442\u0432\u043E\u0440\u0438\u0442\u0441\u044F."
+  lines: []
+  bubbleLines: []
+  requireTags: []
+  produceTags: []
+  forbiddenTags: []
+  Transitions: []
+  Informations: []
+  priority: 0

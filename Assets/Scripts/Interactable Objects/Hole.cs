@@ -10,7 +10,7 @@ public class Hole : MonoBehaviour
 
     public TalkingBubble TalkingBubble;
     public PersonBehindHole personBehindHole;
-    [HideInInspector] public int number;
+    [HideInInspector] private int _number;
     [HideInInspector] public UnityEvent<string> mistakeEvent;
     [HideInInspector] public UnityEvent<Call> endOfCall;
     [HideInInspector] public UnityEvent<Call, int> endOfCallWrongNumber;
@@ -23,6 +23,13 @@ public class Hole : MonoBehaviour
     public bool isOpros;
     public bool isOnLine = false;
     float ringingTime, timeout, timeOutTime;
+
+    public int Number => _number ;
+    
+    public void SetNumber(int number) {
+        _number = number;
+    }
+    
     void Start()
     {
         timeout = 5f;
@@ -59,12 +66,12 @@ public class Hole : MonoBehaviour
 
             if (connectedHole)
             {
-                connectedHole.personBehindHole.Hear("/disconnectSound/");
+                //connectedHole.personBehindHole.Hear("/disconnectSound/");
                 connectedHole.connectedHole = null;
                 connectedHole = null;
             }
             ChangeOpros(false);
-            personBehindHole.Hear("/disconnectSound/");
+            //personBehindHole.Hear("/disconnectSound/");
         }
     }
 
@@ -84,8 +91,8 @@ public class Hole : MonoBehaviour
         }
 
         TalkingBubble.TurnOn(isOn, isRight);
-        if (!Settings.config.isWaitingForOperatorHello && isOn)
-            Hear("/hello1/");
+        /*if (!Settings.config.isWaitingForOperatorHello && isOn)
+            Hear("/hello1/");*/
     }
 
     public void Hear(string line)

@@ -39,8 +39,8 @@ MonoBehaviour:
   lines: []
   bubbleLines: []
   requireTags:
-  - Number seen
   - Headphone on
+  - Number seen
   produceTags: []
   forbiddenTags: []
   Transitions: []

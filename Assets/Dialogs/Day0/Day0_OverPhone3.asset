@@ -77,5 +77,7 @@ MonoBehaviour:
     dialog: 918aa2c1-dede-4191-94c9-1719073f9056
   - thought: Offline
     dialog: 471bf666-7b5c-4855-bbda-ebbd1d185cdc
+  - thought: /connectionLost/
+    dialog: 94583c3a-9feb-45b3-be3d-8378b1076a82
   Informations: []
   priority: 0

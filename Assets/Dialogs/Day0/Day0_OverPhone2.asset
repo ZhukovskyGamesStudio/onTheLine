@@ -87,7 +87,7 @@ MonoBehaviour:
   produceTags: []
   forbiddenTags: []
   Transitions:
-  - thought: "\u0421\u0434\u0435\u043B\u0430\u043D\u043E"
+  - thought: "\u0421\u0434\u0435\u043B\u0430\u043D\u043E."
     dialog: 2529b235-e94e-4f65-9fa4-41b9d88a3120
   - thought: /dialogEnd/
     dialog: 2529b235-e94e-4f65-9fa4-41b9d88a3120
@@ -95,8 +95,10 @@ MonoBehaviour:
     dialog: 471bf666-7b5c-4855-bbda-ebbd1d185cdc
   - thought: Online
     dialog: 918aa2c1-dede-4191-94c9-1719073f9056
+  - thought: /connectionLost/
+    dialog: 94583c3a-9feb-45b3-be3d-8378b1076a82
   Informations:
   - line: "\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0435, \u043A\u043E\u0433\u0434\u0430
       \u0441\u0434\u0435\u043B\u0430\u0435\u0442\u0435."
-    thought: "\u0421\u0434\u0435\u043B\u0430\u043D\u043E"
+    thought: "\u0421\u0434\u0435\u043B\u0430\u043D\u043E."
   priority: 0

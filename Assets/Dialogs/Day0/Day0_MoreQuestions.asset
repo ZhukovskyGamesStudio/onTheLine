@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803a13d4e89da2e49b270007d0a8873f, type: 3}
+  m_Name: Day0_MoreQuestions
+  m_EditorClassIdentifier: 
+  Id: 79dccdb5-afa0-4e9e-8b02-4463d47512aa
+  requirementFrom:
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 4
+  requirementTo:
+    Work: -1
+    Temperament: -1
+    Age: -1
+    Sex: -1
+    Criminal: -1
+    isDead: 0
+    roomNumber: 0
+  SayToOperator: "\u0415\u0449\u0435 \u0432\u043E\u043F\u0440\u043E\u0441\u044B?@"
+  lines: []
+  bubbleLines: []
+  requireTags: []
+  produceTags: []
+  forbiddenTags: []
+  Transitions:
+  - thought: "\u041A\u0430\u043A \u0432\u0430\u0441 \u0437\u043E\u0432\u0443\u0442?"
+    dialog: a8096c94-cea5-4e79-bdfe-ed30965e6a10
+  - thought: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u0440\u043E
+      \u0448\u0442\u043E\u0440\u043A\u0438."
+    dialog: 3910db68-40bf-447e-a595-babe583a1606
+  - thought: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u0440\u043E
+      \u0448\u0442\u0435\u043A\u0435\u0440\u044B."
+    dialog: 68a5a189-6121-4b33-b0e0-2bc5bb255e72
+  - thought: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u043F\u0440\u043E
+      \u043A\u043D\u043E\u043F\u043A\u0443."
+    dialog: bb83226c-d1e9-4846-bc8c-5839364dab1b
+  - thought: "\u0412\u043E\u043F\u0440\u043E\u0441\u043E\u0432 \u043D\u0435\u0442."
+    dialog: 06da6ab7-600c-4cea-b551-8bf794f72704
+  Informations: []
+  priority: 0
