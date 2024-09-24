@@ -77,7 +77,7 @@ public class Shteker : InteractableObject
             bodyTransform.position = finPos;
             transform.rotation = targetRot;
             targetPos = finPos;
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             curHole = curHoleGameobject.GetComponent<Hole>();
             curHole.ShtekerIn(this);
         }
