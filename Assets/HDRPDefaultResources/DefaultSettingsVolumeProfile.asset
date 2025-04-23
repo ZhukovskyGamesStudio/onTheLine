@@ -1026,9 +1026,15 @@ MonoBehaviour:
   m_PhysicallyBased:
     m_OverrideState: 1
     m_Value: 0
+  m_AdaptiveSamplingWeight:
+    m_OverrideState: 1
+    m_Value: 0.75
   m_LimitManualRangeNearBlur:
     m_OverrideState: 1
     m_Value: 0
+  coCStabilization:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &-1578074540736952926
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -2588,6 +2594,9 @@ MonoBehaviour:
   tileOpacityThreshold:
     m_OverrideState: 1
     m_Value: 1
+  writeDepthAlphaThreshold:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &9081434609828200265
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -2662,3 +2671,6 @@ MonoBehaviour:
   cullingDistance:
     m_OverrideState: 1
     m_Value: 1000
+  minSolidAngle:
+    m_OverrideState: 1
+    m_Value: 4
