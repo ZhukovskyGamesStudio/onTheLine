@@ -86,12 +86,12 @@ public class PersonBehindHole : MonoBehaviour {
 
         if (curHole.Number == POLICE_NUMBER) {
             _dialog = DayManager.DialogsQueue.PoliceGeneral;
-            Hear(HELLO_1);
+            Hear(OPERATOR_HELLO);
             return;
         }
 
         if (!Settings.config.isWaitingForOperatorHello && curHole.isOpros && _dialog != null) {
-            Hear(HELLO_1);
+            Hear(OPERATOR_HELLO);
             return;
         }
 

@@ -31,7 +31,7 @@ public class SaveManager : MonoBehaviour {
 
     public static void Save() {
         sv.tags = TagManager.Tags;
-        JsonUtil.Save(sv, instance._profile);
+        JsonPlayerPrefsSaver.Save(sv, instance._profile);
     }
 
     public static void StartNewDay() {
@@ -48,7 +48,7 @@ public class SaveManager : MonoBehaviour {
 
     public static SaveProfile LoadSave(int profile) {
         instance._profile = profile;
-        sv = JsonUtil.Load(profile);
+        sv = JsonPlayerPrefsSaver.Load(profile);
         TagManager.SetLoadedTags(sv.tags);
         return sv;
     }
@@ -65,6 +65,6 @@ public class SaveManager : MonoBehaviour {
 
     private void OnDestroy() {
         OnUnloadScene?.Invoke();
-        JsonUtil.Save(sv, _profile);
+        JsonPlayerPrefsSaver.Save(sv, _profile);
     }
 }

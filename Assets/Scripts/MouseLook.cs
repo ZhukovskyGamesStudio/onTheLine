@@ -33,12 +33,18 @@ public class MouseLook : MonoBehaviour {
     }
 
     void Update() {
-        if (isFixed)
+        if (isFixed) {
             return;
+        }
         if (Input.GetKeyDown(KeyCode.F)) {
             isFixed = !isFixed;
         }
 
+        RotateHead();
+        TryInteractMouseClick();
+    }
+
+    private void RotateHead() {
         if (axes == RotationAxes.MouseXAndY) {
             float rotationX = headTransform.localEulerAngles.y +
                               Input.GetAxis("Mouse X") * sensitivityX * SensivityMultiplier;
@@ -56,12 +62,21 @@ public class MouseLook : MonoBehaviour {
 
             headTransform.localEulerAngles = new Vector3(-rotationY, headTransform.localEulerAngles.y, 0);
         }
+    }
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit)) {
-            if (hit.transform.gameObject.GetComponent<InteractableObject>()) {
-                if (Input.GetMouseButtonDown(0))
-                    hit.transform.gameObject.GetComponent<InteractableObject>().OnmouseDown();
-                //Debug.Log("Hitted Interactable");
+    private static void TryInteractMouseClick() {
+        Vector3 mousePos = Input.mousePosition;
+
+        if (mousePos.x < 0 || mousePos.y < 0 || mousePos.x > Screen.width || mousePos.y > Screen.height) {
+            return;
+        }
+
+        if (Camera.main != null && Physics.Raycast(Camera.main.ScreenPointToRay(mousePos), out RaycastHit hit)) {
+            InteractableObject obj = hit.transform.GetComponent<InteractableObject>();
+            if (obj != null) {
+                if (Input.GetMouseButtonDown(0)) {
+                    obj.OnmouseDown();
+                }
             }
         }
     }
