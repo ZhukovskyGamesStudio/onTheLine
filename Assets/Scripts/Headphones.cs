@@ -61,7 +61,7 @@ public class Headphones : TableItemBehaviour {
         if (_isOnHead)
             return;
         //_animation.Play("PutOn");
-        AddTag();
+        TagManager.AddTag("Headphone on");
         _isOnHead = true;
         _isCanHear = true;
     }
@@ -83,10 +83,6 @@ public class Headphones : TableItemBehaviour {
         moving.position = Vector3.Lerp(OnHeadPos.position, hook.position, percent);
         moving.rotation = Quaternion.Lerp(OnHeadPos.rotation, hook.rotation, percent);
         ItemTakenPos = moving;
-    }
-
-    public void AddTag() {
-        TagManager.AddTag("Headphone on");
     }
 
     protected override void Update() {

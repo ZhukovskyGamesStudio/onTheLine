@@ -18,7 +18,7 @@ MonoBehaviour:
   startDayHour: 8
   endDayHour: 18
   minTimeBetweenCalls: 30
-  randomTimeBetweenCalls: 10
+  randomTimeBetweenCalls: 5
   isInstaExitOnEndOfDay: 0
   isAlphaNumericTumblers: 1
   isSpaceAlphaButtons: 1

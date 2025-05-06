@@ -147,7 +147,7 @@ public class Hole : MonoBehaviour
         if (ringingTime >= settings.timeRingingBeforePick + Random.Range(-1, 1f))
         {
             ringingTime = 0;
-            personBehindHole.Pick();
+            personBehindHole.PickFromRinging();
         }
     }
 }

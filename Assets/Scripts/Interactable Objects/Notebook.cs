@@ -30,7 +30,7 @@ public class Notebook : InteractableObject {
     private void Start() {
         AddLine("Добрый день, ТС Белокаменного района", PersonBehindHole.OPERATOR_HELLO);
         AddLine("Связь установлена", PersonBehindHole.OPERATOR_CONNECTION_OK);
-        AddLine("Повторите, пожалуйста.", "/repeat/");
+        AddLine("Повторите, пожалуйста.", PersonBehindHole.OPERATOR_REPEAT);
         foreach (var VARIABLE in _alreadyLines) {
             AddLine(VARIABLE);
         }

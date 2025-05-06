@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,12 @@ public class TalkingBubble : MonoBehaviour {
     public UnityEvent onTalkEnds;
 
     private Coroutine _printingCoroutine;
-    private UnityEvent _callback;
-    private UnityEvent _listenedImportantCallback;
+    private Action _endedSayingCallback;
+    private Action<string> _listenedImportantCallback;
     private SettingsConfig _settings;
     private bool _isTalkingNow;
     private bool _isOn;
+    private string _importantHeard = "";
 
     private List<char> randomSymbol = new() {
         '@', '#', '!', '~', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', '.', '{', '}'
@@ -25,35 +27,31 @@ public class TalkingBubble : MonoBehaviour {
 
     private void Start() {
         _settings = Settings.config;
-        _callback = new UnityEvent();
-        _listenedImportantCallback = new UnityEvent();
         curText = RightText;
         _isTalkingNow = false;
         RightText.text = emptyTextSymbols;
         LeftText.text = emptyTextSymbols;
     }
 
-    public void Say(string toSay, UnityAction callbackAction) {
-        _callback.RemoveAllListeners();
-        if (callbackAction != null) {
-            _callback.AddListener(callbackAction);
-        }
+    public void Say(string toSay, Action callbackAction) {
+        Debug.Log("Say");
+        _endedSayingCallback = callbackAction;
 
         if (_printingCoroutine != null)
             StopCoroutine(_printingCoroutine);
         _printingCoroutine = StartCoroutine(PrintNumerator(toSay));
     }
 
-    public void AddListenedCallback(UnityAction callbackAction) {
-        _listenedImportantCallback.RemoveAllListeners();
-        _listenedImportantCallback.AddListener(callbackAction);
+    public void AddListenedCallback(Action<string> callbackAction) {
+        _listenedImportantCallback = callbackAction;
     }
 
     public void StopSaying() {
         if (_printingCoroutine != null)
             StopCoroutine(_printingCoroutine);
         Headphones.PlayStopTalking(gameObject, false);
-        _callback.RemoveAllListeners();
+        Debug.Log("StopSaying");
+        _endedSayingCallback = null;
         curText.text = emptyTextSymbols;
     }
 
@@ -146,19 +144,22 @@ public class TalkingBubble : MonoBehaviour {
                                     ColorUtility.ToHtmlStringRGB(Settings.config.ImportantTextColor) +
                                     "></color></b>";
                 } else {
-                    if (isListeningImportant)
-                        _listenedImportantCallback?.Invoke();
+                    if (isListeningImportant) {
+                        _listenedImportantCallback?.Invoke(_importantHeard.TrimStart().TrimEnd());
+                    }
                     isListeningImportant = false;
-                    _listenedImportantCallback.RemoveAllListeners();
+                    _importantHeard = "";
                 }
 
                 continue;
             }
 
+            char symbol = SymbolToPrint(toSay[i]);
             if (isImportant && Headphones.IsCanHear) {
-                curText.text = curText.text.Insert(curText.text.Length - 12, SymbolToPrint(toSay[i]).ToString());
+                _importantHeard += symbol;
+                curText.text = curText.text.Insert(curText.text.Length - 12, symbol.ToString());
             } else {
-                curText.text += SymbolToPrint(toSay[i]);
+                curText.text += symbol;
             }
 
             yield return new WaitForSeconds(_settings.TimeBetweenLetters);
@@ -168,7 +169,9 @@ public class TalkingBubble : MonoBehaviour {
         Headphones.PlayStopTalking(gameObject, false);
         onTalkEnds?.Invoke();
         yield return new WaitForSeconds(_settings.timeBetweenTwoPeople);
-        _callback?.Invoke();
+        Debug.Log("_endedSayingCallback invoke");
+        _endedSayingCallback?.Invoke();
+        _endedSayingCallback = null;
         yield return new WaitForSeconds(_settings.timeBeforeBubbleDissappears);
         curText.text = emptyTextSymbols;
     }
